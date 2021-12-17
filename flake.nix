@@ -70,6 +70,10 @@
 
         inventorySpecs = [
           {
+            type = "melpa";
+            path = ./recipes;
+          }
+          {
             type = "elpa";
             path = inputs.gnu-elpa.outPath + "/elpa-packages";
           }

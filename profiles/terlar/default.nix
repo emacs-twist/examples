@@ -19,12 +19,7 @@ in
     initFile
   ];
   lockFile = ./flake.lock;
-  inventorySpecs = [
-    {
-      type = "melpa";
-      path = ./recipes;
-    }
-  ] ++ inventorySpecs;
+  inherit inventorySpecs;
   inputOverrides = {
     bbdb = _: super: {
       inventory = null;
