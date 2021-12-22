@@ -1,0 +1,170 @@
+{
+  "adaptive-wrap": {
+    "archive": {
+      "narHash": "sha256-AnDqA7uYSRiLMVAKzw0S2bV+QMagbGxgy38paPaUN4o=",
+      "type": "tarball",
+      "url": "https://elpa.gnu.org/packages/adaptive-wrap-0.8.tar"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.gnu.org/packages/"
+    },
+    "packageRequires": {},
+    "version": "0.8"
+  },
+  "bbdb": {
+    "archive": {
+      "narHash": "sha256-nldTaqGYqmeQlzgB2vbLADqkx1V/ZfR8ERQfcikg/kk=",
+      "type": "tarball",
+      "url": "https://elpa.gnu.org/packages/bbdb-3.2.tar"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.gnu.org/packages/"
+    },
+    "packageRequires": {
+      "cl-lib": "0.5",
+      "emacs": "24",
+      "vm": "0"
+    },
+    "version": "3.2"
+  },
+  "corfu": {
+    "archive": {
+      "narHash": "sha256-DsvO/kM000PqV2yoslxWc0mWa05w7bto11IpKtrt42o=",
+      "type": "tarball",
+      "url": "https://elpa.gnu.org/packages/corfu-0.16.tar"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.gnu.org/packages/"
+    },
+    "packageRequires": {
+      "emacs": "27.1"
+    },
+    "version": "0.16"
+  },
+  "csv-mode": {
+    "archive": {
+      "narHash": "sha256-czf6u0fY97KybCtKY7Az9SLmti0rQwu2rKFcBABgoPI=",
+      "type": "tarball",
+      "url": "https://elpa.gnu.org/packages/csv-mode-1.17.tar"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.gnu.org/packages/"
+    },
+    "packageRequires": {
+      "cl-lib": "0.5",
+      "emacs": "24.1"
+    },
+    "version": "1.17"
+  },
+  "cycle-quotes": {
+    "archive": {
+      "narHash": "sha256-kLKvs9anXuLEqCkuR8hF9XWBtMvMeCFNcabOOI/RXrY=",
+      "type": "tarball",
+      "url": "https://elpa.gnu.org/packages/cycle-quotes-0.1.tar"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.gnu.org/packages/"
+    },
+    "packageRequires": {},
+    "version": "0.1"
+  },
+  "org-contrib": {
+    "archive": {
+      "narHash": "sha256-64+uyRPyNJ7O42W7dU6cvFaKbkqt8Rs6Jg5r0clakfE=",
+      "type": "tarball",
+      "url": "https://elpa.nongnu.org/nongnu/org-contrib-0.3.tar"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.nongnu.org/nongnu/"
+    },
+    "packageRequires": {
+      "emacs": "25.1",
+      "org": "9.4.6"
+    },
+    "version": "0.3"
+  },
+  "pdf-tools": {
+    "archive": {
+      "narHash": "sha256-QKQE1b9TdGVm2nynkPFyiXVFsTyvgia2LjyKE4/iD7U=",
+      "type": "tarball",
+      "url": "https://elpa.nongnu.org/nongnu/pdf-tools-1.0.tar"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.nongnu.org/nongnu/"
+    },
+    "packageRequires": {
+      "emacs": "24.3",
+      "let-alist": "1.0.4",
+      "tablist": "1.0"
+    },
+    "version": "1.0"
+  },
+  "slime": {
+    "archive": {
+      "narHash": "sha256-Rqc39eMuiT3dKv95kwqiGZQ8D5n5k650IIpIuC1st9g=",
+      "type": "tarball",
+      "url": "https://elpa.nongnu.org/nongnu/slime-2.26.1.tar"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.nongnu.org/nongnu/"
+    },
+    "packageRequires": {
+      "cl-lib": "0.5",
+      "macrostep": "0.9"
+    },
+    "version": "2.26.1"
+  },
+  "spinner": {
+    "archive": {
+      "narHash": "sha256-hbuLTaAjM+Chk7vC0GqxLKkrG5bgYf6tD+lXikwDRMo=",
+      "type": "tarball",
+      "url": "https://elpa.gnu.org/packages/spinner-1.7.4.tar"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.gnu.org/packages/"
+    },
+    "packageRequires": {
+      "emacs": "24.3"
+    },
+    "version": "1.7.4"
+  },
+  "valign": {
+    "archive": {
+      "narHash": "sha256-TuqDeg9WrcM4uKv4YG+SOcjubI9CPjSvHJY6YsXPIGw=",
+      "type": "tarball",
+      "url": "https://elpa.gnu.org/packages/valign-3.1.1.tar"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.gnu.org/packages/"
+    },
+    "packageRequires": {
+      "emacs": "26.0"
+    },
+    "version": "3.1.1"
+  },
+  "vertico": {
+    "archive": {
+      "narHash": "sha256-B5qUNLbN0uWq9a6z/I9FQWX4F36wDRnBTgjnBGCkrWU=",
+      "type": "tarball",
+      "url": "https://elpa.gnu.org/packages/vertico-0.17.tar"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.gnu.org/packages/"
+    },
+    "packageRequires": {
+      "emacs": "27.1"
+    },
+    "version": "0.17"
+  }
+}

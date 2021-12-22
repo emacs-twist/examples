@@ -14,12 +14,6 @@
       repo = "ace-window";
       type = "github";
     };
-    adaptive-wrap = {
-      flake = false;
-      owner = "emacsmirror";
-      repo = "adaptive-wrap";
-      type = "github";
-    };
     affe = {
       flake = false;
       owner = "minad";
@@ -91,11 +85,6 @@
       owner = "sebasmonia";
       repo = "awscli-capf";
       type = "github";
-    };
-    bbdb = {
-      flake = false;
-      type = "tarball";
-      url = "https://elpa.gnu.org/packages/bbdb-3.2.tar";
     };
     bibliothek = {
       flake = false;
@@ -169,12 +158,6 @@
       repo = "consult";
       type = "github";
     };
-    corfu = {
-      flake = false;
-      owner = "minad";
-      repo = "corfu";
-      type = "github";
-    };
     coverlay = {
       flake = false;
       owner = "twada";
@@ -187,12 +170,6 @@
       repo = "emacs-crystal-mode";
       type = "github";
     };
-    csv-mode = {
-      flake = false;
-      owner = "emacsmirror";
-      repo = "csv-mode";
-      type = "github";
-    };
     ctrlf = {
       flake = false;
       owner = "raxod502";
@@ -203,12 +180,6 @@
       flake = false;
       owner = "muffinmad";
       repo = "emacs-ctrlxo";
-      type = "github";
-    };
-    cycle-quotes = {
-      flake = false;
-      owner = "emacsmirror";
-      repo = "cycle-quotes";
       type = "github";
     };
     dash = {
@@ -227,6 +198,12 @@
       flake = false;
       owner = "purcell";
       repo = "default-text-scale";
+      type = "github";
+    };
+    deferred = {
+      flake = false;
+      owner = "kiwanami";
+      repo = "emacs-deferred";
       type = "github";
     };
     defrepeater = {
@@ -249,7 +226,7 @@
     };
     dired-git-info = {
       flake = false;
-      owner = "clemera";
+      owner = "emacsmirror";
       repo = "dired-git-info";
       type = "github";
     };
@@ -547,7 +524,7 @@
     gcmh = {
       flake = false;
       type = "git";
-      url = "https://gitlab.com/koral/gcmh";
+      url = "https://gitlab.com/koral/gcmh.git";
     };
     general = {
       flake = false;
@@ -1002,11 +979,6 @@
       repo = "org-cliplink";
       type = "github";
     };
-    org-contrib = {
-      flake = false;
-      type = "git";
-      url = "https://git.sr.ht/~bzg/org-contrib";
-    };
     org-fragtog = {
       flake = false;
       owner = "io12";
@@ -1100,12 +1072,6 @@
       flake = false;
       owner = "clojure-emacs";
       repo = "parseedn";
-      type = "github";
-    };
-    pdf-tools = {
-      flake = false;
-      owner = "vedang";
-      repo = "pdf-tools";
       type = "github";
     };
     pkg-info = {
@@ -1299,10 +1265,10 @@
       repo = "shrface";
       type = "github";
     };
-    slime = {
+    shut-up = {
       flake = false;
-      owner = "slime";
-      repo = "slime";
+      owner = "cask";
+      repo = "shut-up";
       type = "github";
     };
     sly = {
@@ -1317,6 +1283,12 @@
       repo = "smartparens";
       type = "github";
     };
+    sml-mode = {
+      flake = false;
+      owner = "emacsmirror";
+      repo = "sml-mode";
+      type = "github";
+    };
     source-peek = {
       flake = false;
       owner = "iqbalansari";
@@ -1327,12 +1299,6 @@
       flake = false;
       owner = "alvinfrancis";
       repo = "spark";
-      type = "github";
-    };
-    spinner = {
-      flake = false;
-      owner = "Malabarba";
-      repo = "spinner.el";
       type = "github";
     };
     spray = {
@@ -1412,22 +1378,10 @@
       repo = "use-package";
       type = "github";
     };
-    valign = {
-      flake = false;
-      owner = "casouri";
-      repo = "valign";
-      type = "github";
-    };
     vc-msg = {
       flake = false;
       owner = "redguardtoo";
       repo = "vc-msg";
-      type = "github";
-    };
-    vertico = {
-      flake = false;
-      owner = "minad";
-      repo = "vertico";
       type = "github";
     };
     virtual-auto-fill = {
@@ -1546,7 +1500,7 @@
     };
     yasnippet = {
       flake = false;
-      owner = "capitaomorte";
+      owner = "joaotavora";
       repo = "yasnippet";
       type = "github";
     };

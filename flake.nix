@@ -11,7 +11,7 @@
     };
 
     twist = {
-      url = "github:akirak/emacs-twist";
+      url = "github:akirak/emacs-twist/devel";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
@@ -31,6 +31,11 @@
     };
     epkgs = {
       url = "github:emacsmirror/epkgs";
+      flake = false;
+    };
+
+    emacs = {
+      url = "github:emacs-mirror/emacs";
       flake = false;
     };
 
@@ -68,24 +73,40 @@
           ];
         };
 
-        inventorySpecs = [
+        inventories = [
           {
             type = "melpa";
             path = ./recipes;
           }
           {
-            type = "elpa";
+            type = "elpa-core";
             path = inputs.gnu-elpa.outPath + "/elpa-packages";
+            src = inputs.emacs.outPath;
           }
           {
-            type = "elpa";
-            path = inputs.nongnu-elpa.outPath + "/elpa-packages";
-          }
-          {
+            name = "melpa";
             type = "melpa";
             path = inputs.melpa.outPath + "/recipes";
+            exclude = [
+              "pdf-tools"
+              "bbdb"
+              "slime"
+            ];
           }
           {
+            name = "gnu";
+            type = "archive";
+            url = "https://elpa.gnu.org/packages/";
+          }
+          # Duplicate attribute set for the locked packages, but would be no
+          # problem in functionality.
+          {
+            name = "nongnu";
+            type = "archive";
+            url = "https://elpa.nongnu.org/nongnu/";
+          }
+          {
+            name = "emacsmirror";
             type = "gitmodules";
             path = inputs.epkgs.outPath + "/.gitmodules";
           }
@@ -95,7 +116,7 @@
           (name: path: pkgs.callPackage path {
             src = inputs.${name};
             org-babel = inputs.org-babel.lib;
-            inherit inventorySpecs;
+            inherit inventories;
           })
           {
             terlar = ./profiles/terlar;
@@ -105,7 +126,41 @@
         packages = flake-utils.lib.flattenTree {
           inherit (profiles) terlar;
         };
- 
+
+        apps.update-elpa = flake-utils.lib.mkApp {
+          drv = pkgs.writeShellApplication {
+            name = "update-elpa";
+            runtimeInputs = [
+              pkgs.jq
+            ];
+            text = ''
+              tmp=$(mktemp -t archive-XXX.lock)
+              cleanup() {
+                rm -f "$tmp"
+              }
+              trap cleanup EXIT ERR      
+
+              cwd="$(pwd)"
+              # shellcheck disable=SC2041
+              for name in ${lib.escapeShellArgs (builtins.attrNames profiles)}
+              do
+                dir="$cwd/profiles/$name"
+
+                if [[ ! -e "$dir/archive.lock" ]]
+                then
+                  touch "$dir/archive.lock"
+                  git add "$dir/archive.lock"
+                fi
+      
+                nix eval --impure --json ".#packages.${system}.$name.archiveLock" "$@" \
+                  | jq \
+                  > "$tmp"
+                cp "$tmp" "$dir/archive.lock"
+              done
+            '';
+          };
+        };
+
         apps.lock = flake-utils.lib.mkApp {
           drv = pkgs.writeShellApplication {
             name = "lock";
