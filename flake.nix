@@ -62,17 +62,20 @@
           ];
         };
 
-        inventories = import ./inventories.nix inputs;
+        inventories = import ./lib/inventories.nix inputs;
 
         profiles = lib.mapAttrs
-          (name: path: pkgs.callPackage path {
-            src = inputs.${name};
-            org-babel = inputs.org-babel.lib;
+          (name: attrs: pkgs.callPackage ./lib/profile.nix ({
             inherit inventories;
-            inputOverrides = import ./inputs.nix { inherit (pkgs) lib; };
-          })
+          } // attrs))
           {
-            terlar = ./profiles/terlar;
+            terlar = {
+              emacsPackage = pkgs.emacs_28;
+              lockDir = ./profiles/terlar/lock;
+              initFiles = [
+                (pkgs.tangleOrgBabelFile "init.el" (inputs.terlar + "/init.org") { })
+              ];
+            };
           };
       in
       rec {

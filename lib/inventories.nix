@@ -2,7 +2,7 @@ inputs:
 [
   {
     type = "melpa";
-    path = ./recipes;
+    path = ../recipes;
   }
   {
     type = "elpa-core";
