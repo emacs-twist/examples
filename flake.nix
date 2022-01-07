@@ -67,6 +67,7 @@
         profiles = lib.mapAttrs
           (name: attrs: pkgs.callPackage ./lib/profile.nix ({
             inherit inventories;
+            withSandbox = pkgs.callPackage ./lib/sandbox.nix { };
           } // attrs))
           {
             terlar = {
@@ -78,13 +79,15 @@
             };
           };
       in
-      rec {
-        packages = flake-utils.lib.flattenTree {
-          inherit (profiles) terlar;
-        };
+        rec {
+          packages = flake-utils.lib.flattenTree profiles;
 
-        apps.lock = flake-utils.lib.mkApp {
-          drv = profiles.terlar.lock.writeToDir "profiles/terlar/lock";
-        };
-      });
+          apps = {
+            lock = flake-utils.lib.mkApp {
+              drv = profiles.terlar.lock.writeToDir "profiles/terlar/lock";
+            };
+          } // lib.mapAttrs (name: package: flake-utils.lib.mkApp {
+            drv = package.sandboxed;
+          }) profiles;
+        });
 }
