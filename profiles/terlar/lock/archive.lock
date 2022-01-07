@@ -24,8 +24,7 @@
     },
     "packageRequires": {
       "cl-lib": "0.5",
-      "emacs": "24",
-      "vm": "0"
+      "emacs": "24"
     },
     "version": "3.2"
   },
@@ -88,39 +87,6 @@
       "org": "9.4.6"
     },
     "version": "0.3"
-  },
-  "pdf-tools": {
-    "archive": {
-      "narHash": "sha256-QKQE1b9TdGVm2nynkPFyiXVFsTyvgia2LjyKE4/iD7U=",
-      "type": "tarball",
-      "url": "https://elpa.nongnu.org/nongnu/pdf-tools-1.0.tar"
-    },
-    "inventory": {
-      "type": "archive",
-      "url": "https://elpa.nongnu.org/nongnu/"
-    },
-    "packageRequires": {
-      "emacs": "24.3",
-      "let-alist": "1.0.4",
-      "tablist": "1.0"
-    },
-    "version": "1.0"
-  },
-  "slime": {
-    "archive": {
-      "narHash": "sha256-Rqc39eMuiT3dKv95kwqiGZQ8D5n5k650IIpIuC1st9g=",
-      "type": "tarball",
-      "url": "https://elpa.nongnu.org/nongnu/slime-2.26.1.tar"
-    },
-    "inventory": {
-      "type": "archive",
-      "url": "https://elpa.nongnu.org/nongnu/"
-    },
-    "packageRequires": {
-      "cl-lib": "0.5",
-      "macrostep": "0.9"
-    },
-    "version": "2.26.1"
   },
   "spinner": {
     "archive": {

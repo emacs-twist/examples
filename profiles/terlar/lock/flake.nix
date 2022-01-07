@@ -364,7 +364,8 @@
     };
     emr = {
       flake = false;
-      owner = "Wilfred";
+      owner = "akirak";
+      ref = "require-compile";
       repo = "emacs-refactor";
       type = "github";
     };
@@ -462,6 +463,12 @@
       type = "git";
       url = "https://gitlab.com/marcowahl/fit-text-scale.git";
     };
+    flycheck = {
+      flake = false;
+      owner = "flycheck";
+      repo = "flycheck";
+      type = "github";
+    };
     flymake-diagnostic-at-point = {
       flake = false;
       owner = "meqif";
@@ -525,6 +532,11 @@
       flake = false;
       type = "git";
       url = "https://gitlab.com/koral/gcmh.git";
+    };
+    geiser = {
+      flake = false;
+      type = "git";
+      url = "https://gitlab.com/emacs-geiser/geiser.git";
     };
     general = {
       flake = false;
@@ -639,6 +651,18 @@
       repo = "hl-todo";
       type = "github";
     };
+    ht = {
+      flake = false;
+      owner = "Wilfred";
+      repo = "ht.el";
+      type = "github";
+    };
+    hy-mode = {
+      flake = false;
+      owner = "hylang";
+      repo = "hy-mode";
+      type = "github";
+    };
     hydra = {
       flake = false;
       owner = "abo-abo";
@@ -688,7 +712,8 @@
     };
     indium = {
       flake = false;
-      owner = "NicolasPetton";
+      owner = "akirak";
+      ref = "fix-build-error";
       repo = "Indium";
       type = "github";
     };
@@ -726,6 +751,12 @@
       flake = false;
       owner = "Emiller88";
       repo = "emacs-jest";
+      type = "github";
+    };
+    js-comint = {
+      flake = false;
+      owner = "redguardtoo";
+      repo = "js-comint";
       type = "github";
     };
     js2-mode = {
@@ -816,6 +847,12 @@
       flake = false;
       owner = "Wilfred";
       repo = "loop.el";
+      type = "github";
+    };
+    lsp-mode = {
+      flake = false;
+      owner = "emacs-lsp";
+      repo = "lsp-mode";
       type = "github";
     };
     lua-mode = {
@@ -1074,6 +1111,12 @@
       repo = "parseedn";
       type = "github";
     };
+    pdf-tools = {
+      flake = false;
+      owner = "vedang";
+      repo = "pdf-tools";
+      type = "github";
+    };
     pkg-info = {
       flake = false;
       owner = "emacsorphanage";
@@ -1271,6 +1314,12 @@
       repo = "shut-up";
       type = "github";
     };
+    slime = {
+      flake = false;
+      owner = "slime";
+      repo = "slime";
+      type = "github";
+    };
     sly = {
       flake = false;
       owner = "joaotavora";
@@ -1406,12 +1455,6 @@
       flake = false;
       owner = "m00natic";
       repo = "vlfi";
-      type = "github";
-    };
-    vm = {
-      flake = false;
-      owner = "emacsorphanage";
-      repo = "vm";
       type = "github";
     };
     vterm = {

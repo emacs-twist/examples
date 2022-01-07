@@ -14,9 +14,7 @@ inputs:
     type = "melpa";
     path = inputs.melpa.outPath + "/recipes";
     exclude = [
-      "pdf-tools"
       "bbdb"
-      "slime"
     ];
   }
   {
