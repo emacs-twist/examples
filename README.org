@@ -3,7 +3,7 @@ This repository is a collection of examples that wraps (hopefully) various Emacs
 It is provided as a Nix flake, so hopefully you will be able to run a configuration as a Nix app without officially installing it!
 I am thinking of providing another layer of wrappers using [[https://github.com/containers/bubblewrap][bubblewrap]] on Linux.
 
-*Disclaimer*: I don't mean I will maintain these configurations forever. I use this repository as a testbed for the library, and configurations in this repository are likely to be outdated. Also, the original authors of the configurations are not directly related to this project. Please contact me or [[https://github.com/akirak/emacs-twist-examples/issues/new][create a ticket]] if you have found any issue with the use.
+*Disclaimer*: I am not going maintain these profiles forever. I use this repository as a testbed for the library, and configurations in this repository are likely to be outdated. Also, the original authors of the configurations are not directly related to this project. Please contact me or [[https://github.com/akirak/emacs-twist-examples/issues/new][create a ticket]] if you have found any issue with the use.
 ** Trying out
 To run [[https://github.com/terlar/emacs-config][terlar/emacs-config]] in a sandbox:
 
