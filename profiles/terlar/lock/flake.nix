@@ -1219,6 +1219,18 @@
       repo = "rake";
       type = "github";
     };
+    readable-mono-theme = {
+      flake = false;
+      owner = "terlar";
+      repo = "emacs-config";
+      type = "github";
+    };
+    readable-typo-theme = {
+      flake = false;
+      owner = "terlar";
+      repo = "emacs-config";
+      type = "github";
+    };
     redtick = {
       flake = false;
       owner = "ferfebles";

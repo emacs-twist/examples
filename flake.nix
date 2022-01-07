@@ -76,6 +76,20 @@
               initFiles = [
                 (pkgs.tangleOrgBabelFile "init.el" (inputs.terlar + "/init.org") { })
               ];
+              extraPackages = [
+                "use-package"
+                "readable-typo-theme"
+                "readable-mono-theme"
+              ];
+              extraRecipeDir = ./profiles/terlar/recipes;
+              extraInputOverrides = {
+                readable-typo-theme = _: _: {
+                  src = inputs.terlar;
+                };
+                readable-mono-theme = _: _: {
+                  src = inputs.terlar;
+                };
+              };
             };
           };
       in

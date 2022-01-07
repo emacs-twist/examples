@@ -3268,6 +3268,38 @@
         "type": "github"
       }
     },
+    "readable-mono-theme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1641030903,
+        "narHash": "sha256-StXCfmH8hmH9LJzwKainLQ5RY/fhbxm7HfOCNzlq+64=",
+        "owner": "terlar",
+        "repo": "emacs-config",
+        "rev": "bcefcfd436a98b5fed3a6cdede4997f5c4ff2109",
+        "type": "github"
+      },
+      "original": {
+        "owner": "terlar",
+        "repo": "emacs-config",
+        "type": "github"
+      }
+    },
+    "readable-typo-theme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1641030903,
+        "narHash": "sha256-StXCfmH8hmH9LJzwKainLQ5RY/fhbxm7HfOCNzlq+64=",
+        "owner": "terlar",
+        "repo": "emacs-config",
+        "rev": "bcefcfd436a98b5fed3a6cdede4997f5c4ff2109",
+        "type": "github"
+      },
+      "original": {
+        "owner": "terlar",
+        "repo": "emacs-config",
+        "type": "github"
+      }
+    },
     "redtick": {
       "flake": false,
       "locked": {
@@ -3554,6 +3586,8 @@
         "rainbow-identifiers": "rainbow-identifiers",
         "rainbow-mode": "rainbow-mode",
         "rake": "rake",
+        "readable-mono-theme": "readable-mono-theme",
+        "readable-typo-theme": "readable-typo-theme",
         "redtick": "redtick",
         "reformatter": "reformatter",
         "relative-buffers": "relative-buffers",
