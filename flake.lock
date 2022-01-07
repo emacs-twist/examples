@@ -143,39 +143,16 @@
     },
     "org-babel": {
       "locked": {
-        "lastModified": 1639255322,
-        "narHash": "sha256-DnfbZitTtorOOy8j0LwkRGljNxiAcnUA/Ln+Ysq4J9Y=",
+        "lastModified": 1641201870,
+        "narHash": "sha256-mEkzFnjFSbdWkV0kmjSgYyPTqNZGRv5Yj1dHn8WBTvs=",
         "owner": "akirak",
         "repo": "nix-org-babel",
-        "rev": "bed6e7d7f51a619c122d497abeb632e24e592fa0",
+        "rev": "3adb6617b1bab46545ce375c07780fc01df83284",
         "type": "github"
       },
       "original": {
         "owner": "akirak",
         "repo": "nix-org-babel",
-        "type": "github"
-      }
-    },
-    "pre-commit-hooks": {
-      "inputs": {
-        "flake-utils": [
-          "flake-utils"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1637745948,
-        "narHash": "sha256-DmQG1bZk24eS+BAHwnHPyYIadMLKbq0d1b//iapYIPU=",
-        "owner": "cachix",
-        "repo": "pre-commit-hooks.nix",
-        "rev": "c3b4f94350b0e59c2546fa85890cc70d03616b9c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "cachix",
-        "repo": "pre-commit-hooks.nix",
         "type": "github"
       }
     },
@@ -189,7 +166,6 @@
         "melpa": "melpa",
         "nixpkgs": "nixpkgs",
         "org-babel": "org-babel",
-        "pre-commit-hooks": "pre-commit-hooks",
         "terlar": "terlar",
         "twist": "twist"
       }

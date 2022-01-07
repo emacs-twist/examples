@@ -4,12 +4,6 @@
   inputs = {
     flake-utils.url = "github:numtide/flake-utils";
 
-    pre-commit-hooks = {
-      url = "github:cachix/pre-commit-hooks.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
-    };
-
     twist = {
       url = "github:akirak/emacs-twist/devel";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -49,7 +43,6 @@
     { self
     , nixpkgs
     , flake-utils
-    , pre-commit-hooks
     , ...
     } @ inputs:
     flake-utils.lib.eachDefaultSystem
@@ -88,17 +81,6 @@
         };
 
         apps.lock = flake-utils.lib.mkApp {
-        checks = {
-          pre-commit-check = pre-commit-hooks.lib.${system}.run {
-            src = ./.;
-            hooks = {
-              nixpkgs-fmt.enable = true;
-              nix-linter.enable = true;
-            };
-          };
-        };
-        devShell = pkgs.mkShell {
-          inherit (self.checks.${system}.pre-commit-check) shellHook;
           drv = profiles.terlar.lock.writeToDir "profiles/terlar/lock";
         };
       });
