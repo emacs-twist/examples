@@ -92,7 +92,6 @@ lib.extendDerivation true
         ]} \
         ${quoteShellArgs extraBubblewrapOptions} \
         ${emacsDirectoryOpts} \
-        --ro-bind ${../emacs/early-init.el} ${userEmacsDirectory'}/early-init.el \
         --ro-bind ${initEl} ${userEmacsDirectory'}/init.el \
         $opts \
         ${emacs}/bin/emacs ${quoteShellArgs emacsArguments} "$@"
