@@ -5,7 +5,7 @@
     flake-utils.url = "github:numtide/flake-utils";
 
     twist = {
-      url = "github:akirak/emacs-twist/devel";
+      url = "github:akirak/emacs-twist";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
