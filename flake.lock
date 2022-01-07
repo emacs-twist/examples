@@ -141,23 +141,6 @@
         "type": "indirect"
       }
     },
-    "nongnu-elpa": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1639957040,
-        "narHash": "sha256-jsTXRg9hrQGzqpzOh21d5bTWlxedDj1CYS595w5yrCo=",
-        "ref": "main",
-        "rev": "fc1eb870cc6336a04aa41057d2ae4eb6c7a4e8b2",
-        "revCount": 103,
-        "type": "git",
-        "url": "https://git.savannah.gnu.org/git/emacs/nongnu.git"
-      },
-      "original": {
-        "ref": "main",
-        "type": "git",
-        "url": "https://git.savannah.gnu.org/git/emacs/nongnu.git"
-      }
-    },
     "org-babel": {
       "locked": {
         "lastModified": 1639255322,
@@ -205,7 +188,6 @@
         "gnu-elpa": "gnu-elpa",
         "melpa": "melpa",
         "nixpkgs": "nixpkgs",
-        "nongnu-elpa": "nongnu-elpa",
         "org-babel": "org-babel",
         "pre-commit-hooks": "pre-commit-hooks",
         "terlar": "terlar",
