@@ -69,50 +69,14 @@
           ];
         };
 
-        inventories = [
-          {
-            type = "melpa";
-            path = ./recipes;
-          }
-          {
-            type = "elpa-core";
-            path = inputs.gnu-elpa.outPath + "/elpa-packages";
-            src = inputs.emacs.outPath;
-          }
-          {
-            name = "melpa";
-            type = "melpa";
-            path = inputs.melpa.outPath + "/recipes";
-            exclude = [
-              "pdf-tools"
-              "bbdb"
-              "slime"
-            ];
-          }
-          {
-            name = "gnu";
-            type = "archive";
-            url = "https://elpa.gnu.org/packages/";
-          }
-          # Duplicate attribute set for the locked packages, but would be no
-          # problem in functionality.
-          {
-            name = "nongnu";
-            type = "archive";
-            url = "https://elpa.nongnu.org/nongnu/";
-          }
-          {
-            name = "emacsmirror";
-            type = "gitmodules";
-            path = inputs.epkgs.outPath + "/.gitmodules";
-          }
-        ];
+        inventories = import ./inventories.nix inputs;
 
         profiles = lib.mapAttrs
           (name: path: pkgs.callPackage path {
             src = inputs.${name};
             org-babel = inputs.org-babel.lib;
             inherit inventories;
+            inputOverrides = import ./inputs.nix { inherit (pkgs) lib; };
           })
           {
             terlar = ./profiles/terlar;
@@ -123,75 +87,7 @@
           inherit (profiles) terlar;
         };
 
-        apps.update-elpa = flake-utils.lib.mkApp {
-          drv = pkgs.writeShellApplication {
-            name = "update-elpa";
-            runtimeInputs = [
-              pkgs.jq
-            ];
-            text = ''
-              tmp=$(mktemp -t archive-XXX.lock)
-              cleanup() {
-                rm -f "$tmp"
-              }
-              trap cleanup EXIT ERR      
-
-              cwd="$(pwd)"
-              # shellcheck disable=SC2041
-              for name in ${lib.escapeShellArgs (builtins.attrNames profiles)}
-              do
-                dir="$cwd/profiles/$name"
-
-                if [[ ! -e "$dir/archive.lock" ]]
-                then
-                  touch "$dir/archive.lock"
-                  git add "$dir/archive.lock"
-                fi
-      
-                nix eval --impure --json ".#packages.${system}.$name.archiveLock" "$@" \
-                  | jq \
-                  > "$tmp"
-                cp "$tmp" "$dir/archive.lock"
-              done
-            '';
-          };
-        };
-
         apps.lock = flake-utils.lib.mkApp {
-          drv = pkgs.writeShellApplication {
-            name = "lock";
-            runtimeInputs = [
-              pkgs.nixfmt
-            ];
-            text = ''
-              cwd="$(pwd)"
-              # shellcheck disable=SC2041
-              for name in ${lib.escapeShellArgs (builtins.attrNames profiles)}
-              do
-                dir="$cwd/profiles/$name"
-
-                if [[ ! -f "$dir/flake.nix" ]]
-                then
-                  touch "$dir/flake.nix"
-                  git add "$dir/flake.nix"
-                fi
-
-                nix eval --impure ".#packages.${system}.$name.flakeNix" "$@" \
-                | nixfmt \
-                | sed -e 's/<LAMBDA>/{ ... }: { }/' \
-                > "$dir/flake.nix"
-                cd "$dir"
-                nix flake lock
-
-                cd "$cwd"
-              done
-          '';
-          };
-        };
-
-       # defaultPackage = packages.hello;
-        # apps.hello = flake-utils.lib.mkApp { drv = packages.hello; };
-        # defaultApp = apps.hello;
         checks = {
           pre-commit-check = pre-commit-hooks.lib.${system}.run {
             src = ./.;
@@ -203,6 +99,7 @@
         };
         devShell = pkgs.mkShell {
           inherit (self.checks.${system}.pre-commit-check) shellHook;
+          drv = profiles.terlar.lock.writeToDir "profiles/terlar/lock";
         };
       });
 }
