@@ -1,0 +1,2 @@
+(vm :fetcher github :repo "emacsorphanage/vm"
+    :files ("lisp/*.el"))
