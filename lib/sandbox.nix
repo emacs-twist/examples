@@ -19,6 +19,8 @@ let
       (setq custom-file (locate-user-emacs-file "custom.el"))
       (when (file-exists-p custom-file)
         (load custom-file nil t))
+
+      (setq use-package-ensure-function #'ignore)
     ''
     +
     lib.concatMapStrings load emacs.initFiles
