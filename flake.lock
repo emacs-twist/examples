@@ -192,11 +192,11 @@
         "fromElisp": "fromElisp"
       },
       "locked": {
-        "lastModified": 1641719372,
-        "narHash": "sha256-1UkHW4i0kV4Jj2+2hT/qIUvU3fUcocTBMGw73F3thHY=",
+        "lastModified": 1641889149,
+        "narHash": "sha256-/V+s32jb/0V3BuW2016IFLLFXaLfXXNlGxl4twpC0Gk=",
         "owner": "akirak",
         "repo": "emacs-twist",
-        "rev": "d702033aa12ace3bae795052a3ed9c5383b6768d",
+        "rev": "6655b9bff8dbf58e5b5cc1c4ea6b3acf47d04a86",
         "type": "github"
       },
       "original": {

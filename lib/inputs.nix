@@ -1,8 +1,5 @@
 { lib }:
 with builtins;
-let
-  skipInfo = filter (file: match ".+\.texi(nfo)?" file == null);
-in
 {
   bbdb = _: super: {
     files = lib.subtractLists [
@@ -27,9 +24,6 @@ in
       eglot = "0";
       geiser = "0";
     };
-  };
-  geiser = _: super: {
-    files = skipInfo super.files;
   };
   indium = _: _: {
     origin = {
@@ -85,10 +79,7 @@ in
     };
   };
   ess = _: super: {
-    # texinfo fails, so just remove the source file to disable the build step
-    # for now.
     files = lib.pipe super.files [
-      (filter (file: match ".+\.texi" file == null))
       (lib.subtractLists [".dir-locals.el"])
     ];
   };
@@ -101,17 +92,6 @@ in
     packageRequires = {
       dash = "2";
     } // super.packageRequires;
-  };
-  sml-mode = _: super: {
-    files = lib.subtractLists [
-      "sml-mode.texi"
-    ] super.files;
-  };
-  queue = _: super: {
-    files = lib.subtractLists [
-      "fdl.texi"
-      "predictive-user-manual.texinfo"
-    ] super.files;
   };
   emr = _: _: {
     origin = {
