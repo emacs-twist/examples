@@ -27,7 +27,9 @@ let
       }
     ] ++ inventories;
     inputOverrides = (import ./inputs.nix { inherit lib; }) // extraInputOverrides;
-  }).overrideScope' (_: super: {
+  }).overrideScope' (self: super: {
+    # elispEnv = self.elispEnv.
+
     elispPackages = super.elispPackages.overrideScope' (eself: esuper: {
       slime = esuper.slime.overrideAttrs (old: {
         preBuild = ''
@@ -58,6 +60,24 @@ let
         preBuild = ''
         mkdir build
       '';
+      });
+
+      # Exclude info outputs that fail to build.
+
+      sml-mode = esuper.sml-mode.overrideAttrs (old: {
+        outputs = [ "out" ];
+      });
+
+      geiser = esuper.geiser.overrideAttrs (old: {
+        outputs = [ "out" ];
+      });
+
+      ess = esuper.ess.overrideAttrs (old: {
+        outputs = [ "out" ];
+      });
+
+      queue = esuper.queue.overrideAttrs (old: {
+        outputs = [ "out" ];
       });
     });
   });
