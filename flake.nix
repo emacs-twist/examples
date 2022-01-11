@@ -100,6 +100,9 @@
             lock = flake-utils.lib.mkApp {
               drv = profiles.terlar.lock.writeToDir "profiles/terlar/lock";
             };
+            update-elpa = flake-utils.lib.mkApp {
+              drv = profiles.terlar.update.writeToDir "profiles/terlar/lock";
+            };
           } // lib.mapAttrs (name: package: flake-utils.lib.mkApp {
             drv = package.sandboxed;
           }) profiles;
