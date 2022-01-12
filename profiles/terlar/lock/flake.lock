@@ -416,6 +416,22 @@
         "type": "github"
       }
     },
+    "corfu": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1641920632,
+        "narHash": "sha256-/9H7Zacdg+wuSyrokTJ3UZpLhJIyLPZrrPJ8ru0q5Qk=",
+        "owner": "minad",
+        "repo": "corfu",
+        "rev": "e8eab11bbd3ecfa6cf493ef7a8abc50d416856cf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "minad",
+        "repo": "corfu",
+        "type": "github"
+      }
+    },
     "coverlay": {
       "flake": false,
       "locked": {
@@ -3408,6 +3424,7 @@
         "comment-or-uncomment-sexp": "comment-or-uncomment-sexp",
         "company": "company",
         "consult": "consult",
+        "corfu": "corfu",
         "coverlay": "coverlay",
         "crystal-mode": "crystal-mode",
         "ctrlf": "ctrlf",
@@ -3624,6 +3641,7 @@
         "undo-propose": "undo-propose",
         "use-package": "use-package",
         "vc-msg": "vc-msg",
+        "vertico": "vertico",
         "virtual-auto-fill": "virtual-auto-fill",
         "visual-fill-column": "visual-fill-column",
         "visual-regexp": "visual-regexp",
@@ -4141,6 +4159,22 @@
       "original": {
         "owner": "redguardtoo",
         "repo": "vc-msg",
+        "type": "github"
+      }
+    },
+    "vertico": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1641929865,
+        "narHash": "sha256-8tnyyiQePwM2Dfoqsu6I1X/MvRawEwVrpZNHT5vHoeg=",
+        "owner": "minad",
+        "repo": "vertico",
+        "rev": "716b618791268d14a53a4aa13f56bba6ff3fb346",
+        "type": "github"
+      },
+      "original": {
+        "owner": "minad",
+        "repo": "vertico",
         "type": "github"
       }
     },
