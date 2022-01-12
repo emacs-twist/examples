@@ -28,21 +28,6 @@
     },
     "version": "3.2"
   },
-  "corfu": {
-    "archive": {
-      "narHash": "sha256-RyahW0l9JvJa7q+V4TaXgSMjBZHK2cIrrglFCl4wZHI=",
-      "type": "tarball",
-      "url": "https://elpa.gnu.org/packages/corfu-0.17.tar"
-    },
-    "inventory": {
-      "type": "archive",
-      "url": "https://elpa.gnu.org/packages/"
-    },
-    "packageRequires": {
-      "emacs": "27.1"
-    },
-    "version": "0.17"
-  },
   "csv-mode": {
     "archive": {
       "narHash": "sha256-7QhpAaywnp1qoCXa7iWfxxc5wwAZPqKGCpC2RkLwUuI=",
@@ -117,20 +102,5 @@
       "emacs": "26.0"
     },
     "version": "3.1.1"
-  },
-  "vertico": {
-    "archive": {
-      "narHash": "sha256-oSdW+b0KPeJoSKDks/95fDRaJilj84mmx0xO2kA+HIU=",
-      "type": "tarball",
-      "url": "https://elpa.gnu.org/packages/vertico-0.19.tar"
-    },
-    "inventory": {
-      "type": "archive",
-      "url": "https://elpa.gnu.org/packages/"
-    },
-    "packageRequires": {
-      "emacs": "27.1"
-    },
-    "version": "0.19"
   }
 }

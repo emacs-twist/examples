@@ -28,15 +28,7 @@ let
     ] ++ inventories;
     inputOverrides = (import ./inputs.nix { inherit lib; }) // extraInputOverrides;
   }).overrideScope' (self: super: {
-    # elispEnv = self.elispEnv.
-
     elispPackages = super.elispPackages.overrideScope' (eself: esuper: {
-      slime = esuper.slime.overrideAttrs (old: {
-        preBuild = ''
-        mkdir lib
-        cp hyperspec.el lib
-      '';
-      });
 
       vterm = esuper.vterm.overrideAttrs (old: {
         # Based on the configuration in nixpkgs available at the following URL:
@@ -47,19 +39,21 @@ let
           "-DEMACS_SOURCE=${super.emacs.src}"
         ];
         preBuild = ''
-      cmake
-      make
-      install -m444 -t . ../*.so
-      install -m600 -t . ../*.el
-      cp -r -t . ../etc
-      rm -rf {CMake*,build,*.c,*.h,Makefile,*.cmake}
-    '';
+          mkdir -p build
+          cd build
+          cmake ..
+          make
+          install -m444 -t . ../*.so
+          install -m600 -t . ../*.el
+          cp -r -t . ../etc
+          rm -rf {CMake*,build,*.c,*.h,Makefile,*.cmake}
+        '';
       });
 
       pdf-tools = esuper.pdf-tools.overrideAttrs (old: {
         preBuild = ''
-        mkdir build
-      '';
+          mkdir build
+        '';
       });
 
       # Exclude info outputs that fail to build.

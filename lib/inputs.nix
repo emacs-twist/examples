@@ -2,10 +2,10 @@
 with builtins;
 {
   bbdb = _: super: {
-    files = lib.subtractLists [
+    files = removeAttrs super.files [
       "bbdb-vm.el"
       "bbdb-vm-aux.el"
-    ] super.files;
+    ];
   };
   dired-subtree = _: super: {
     packageRequires = super.packageRequires // {
@@ -68,10 +68,10 @@ with builtins;
     };
   };
   org-babel-eval-in-repl = _: super: {
-    files = lib.subtractLists [
+    files = removeAttrs super.files [
       "eval-in-repl-ess.el"
       # "eval-in-repl-matlab.el"
-    ] super.files;
+    ];
   };
   request = _: super: {
     packageRequires = super.packageRequires // {
@@ -79,9 +79,7 @@ with builtins;
     };
   };
   ess = _: super: {
-    files = lib.pipe super.files [
-      (lib.subtractLists [".dir-locals.el"])
-    ];
+    files = removeAttrs super.files [".dir-locals.el"];
   };
   org-radiobutton = _: super: {
     packageRequires = super.packageRequires // {

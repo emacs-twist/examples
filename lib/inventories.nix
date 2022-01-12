@@ -5,9 +5,10 @@ inputs:
     path = ../recipes;
   }
   {
-    type = "elpa-core";
+    type = "elpa";
     path = inputs.gnu-elpa.outPath + "/elpa-packages";
-    src = inputs.emacs.outPath;
+    core-src = inputs.emacs.outPath;
+    auto-sync-only = true;
   }
   {
     name = "melpa";
@@ -18,14 +19,19 @@ inputs:
     ];
   }
   {
-    name = "gnu";
+    type = "elpa";
+    path = inputs.nongnu.outPath + "/elpa-packages";
+    exclude = [
+      "org-contrib"
+    ];
+  }
+  {
     type = "archive";
     url = "https://elpa.gnu.org/packages/";
   }
   # Duplicate attribute set for the locked packages, but would be no
   # problem in functionality.
   {
-    name = "nongnu";
     type = "archive";
     url = "https://elpa.nongnu.org/nongnu/";
   }

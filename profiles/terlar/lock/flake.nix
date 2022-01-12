@@ -158,6 +158,12 @@
       repo = "consult";
       type = "github";
     };
+    corfu = {
+      flake = false;
+      owner = "minad";
+      repo = "corfu";
+      type = "github";
+    };
     coverlay = {
       flake = false;
       owner = "twada";
@@ -1443,6 +1449,12 @@
       flake = false;
       owner = "redguardtoo";
       repo = "vc-msg";
+      type = "github";
+    };
+    vertico = {
+      flake = false;
+      owner = "minad";
+      repo = "vertico";
       type = "github";
     };
     virtual-auto-fill = {
