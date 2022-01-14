@@ -68,47 +68,51 @@
 
         inventories = import ./lib/inventories.nix inputs;
 
-        profiles = lib.mapAttrs
-          (name: attrs: pkgs.callPackage ./lib/profile.nix ({
-            inherit inventories;
-            withSandbox = pkgs.callPackage ./lib/sandbox.nix { };
-          } // attrs))
-          {
-            terlar = {
-              emacsPackage = pkgs.emacs_28;
-              lockDir = ./profiles/terlar/lock;
-              initFiles = [
-                (pkgs.tangleOrgBabelFile "init.el" (inputs.terlar + "/init.org") { })
-              ];
-              extraPackages = [
-                "use-package"
-                "readable-typo-theme"
-                "readable-mono-theme"
-              ];
-              extraRecipeDir = ./profiles/terlar/recipes;
-              extraInputOverrides = {
-                readable-typo-theme = _: _: {
-                  src = inputs.terlar;
-                };
-                readable-mono-theme = _: _: {
-                  src = inputs.terlar;
-                };
+        profiles = {
+          terlar = {
+            emacsPackage = pkgs.emacs_28;
+            lockDir = ./profiles/terlar/lock;
+            initFiles = [
+              (pkgs.tangleOrgBabelFile "init.el" (inputs.terlar + "/init.org") { })
+            ];
+            extraPackages = [
+              "use-package"
+              "readable-typo-theme"
+              "readable-mono-theme"
+            ];
+            extraRecipeDir = ./profiles/terlar/recipes;
+            extraInputOverrides = {
+              readable-typo-theme = _: _: {
+                src = inputs.terlar;
+              };
+              readable-mono-theme = _: _: {
+                src = inputs.terlar;
               };
             };
           };
+        };
       in
         rec {
-          packages = flake-utils.lib.flattenTree profiles;
-
-          apps = {
-            lock = flake-utils.lib.mkApp {
-              drv = profiles.terlar.lock.writeToDir "profiles/terlar/lock";
-            };
-            update-elpa = flake-utils.lib.mkApp {
-              drv = profiles.terlar.update.writeToDir "profiles/terlar/lock";
-            };
-          } // lib.mapAttrs (name: package: flake-utils.lib.mkApp {
-            drv = package.sandboxed;
-          }) profiles;
+          packages = lib.pipe profiles [
+            (lib.mapAttrsToList (name: attrs:
+              let
+                package = pkgs.callPackage ./lib/profile.nix ({
+                  inherit inventories;
+                  withSandbox = pkgs.callPackage ./lib/sandbox.nix { };
+                } // attrs);
+              in
+                [
+                  {
+                    inherit name;
+                    value = package;
+                  }
+                  {
+                    name = "${name}-admin";
+                    value = package.admin "profiles/${name}/lock";
+                  }
+                ]))
+            builtins.concatLists
+            builtins.listToAttrs
+          ];
         });
 }
