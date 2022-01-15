@@ -8,5 +8,5 @@ I am thinking of providing another layer of wrappers using [[https://github.com/
 To run [[https://github.com/terlar/emacs-config][terlar/emacs-config]] in a sandbox:
 
 #+begin_src sh
-nix run github:akirak/emacs-twist-examples#terlar
+nix run github:akirak/emacs-twist-examples#terlar.sandboxed
 #+end_src
