@@ -979,16 +979,15 @@
     "emr": {
       "flake": false,
       "locked": {
-        "lastModified": 1641537317,
-        "narHash": "sha256-ocA8iA87hyqD+bRZRclek1MQ/TfDAfUY5MqsXbqWp74=",
-        "owner": "akirak",
+        "lastModified": 1641620937,
+        "narHash": "sha256-UejbBJ17TPRzBqCA8qm6UDNXEPV53xiDd6OyD62dNRs=",
+        "owner": "Wilfred",
         "repo": "emacs-refactor",
-        "rev": "b79084724809e2c13dc7f9cd21cfea788facf791",
+        "rev": "cac1b52932926f56d7f6d2923732d20bbd20670d",
         "type": "github"
       },
       "original": {
-        "owner": "akirak",
-        "ref": "require-compile",
+        "owner": "Wilfred",
         "repo": "emacs-refactor",
         "type": "github"
       }

@@ -370,8 +370,7 @@
     };
     emr = {
       flake = false;
-      owner = "akirak";
-      ref = "require-compile";
+      owner = "Wilfred";
       repo = "emacs-refactor";
       type = "github";
     };

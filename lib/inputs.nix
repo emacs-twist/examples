@@ -91,14 +91,6 @@ with builtins;
       dash = "2";
     } // super.packageRequires;
   };
-  emr = _: _: {
-    origin = {
-      type = "github";
-      owner = "akirak";
-      repo = "emacs-refactor";
-      ref = "require-compile";
-    };
-  };
   suggest = _: super: {
     packageRequires = super.packageRequires // {
       shut-up = "0";
