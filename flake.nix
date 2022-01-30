@@ -5,11 +5,11 @@
     flake-utils.url = "github:numtide/flake-utils";
 
     twist = {
-      url = "github:akirak/emacs-twist";
+      url = "github:emacs-twist/twist.nix";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-utils.follows = "flake-utils";
     };
-    org-babel.url = "github:akirak/nix-org-babel";
+    org-babel.url = "github:emacs-twist/org-babel";
 
     melpa = {
       url = "github:melpa/melpa";
