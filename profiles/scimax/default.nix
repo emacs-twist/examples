@@ -56,7 +56,6 @@ in
           "scimax-lob"
           "scimax-md"
           "help-fns+"
-          "org-mime"
           "org-ref-ivy"
           "kitchingroup"
           "words"
@@ -111,42 +110,55 @@ in
       files = builtins.removeAttrs super.files [ "drag-stuff-pkg.el" ];
     };
   };
-  # Due to org-babel tangling, scimax-dir needs to be writable.
-  extraBubblewrapOptions = lib.pipe (builtins.readDir scimax) [
-    builtins.attrNames
-    (lib.subtractLists [ "init.el" ])
-    (map (name: [
-      "--symlink"
-      (scimax + "/${name}")
-      "$HOME/.emacs.d/${name}"
-    ]))
-    builtins.concatLists
-  ];
-  # Based on
-  # <https://github.com/jkitchin/scimax/blob/253c1ec31617fa22c7624cd93027a1be37957071/init.el>
-  initFileForSandbox = pkgs.writeText "init.el" ''
-    (setq gc-cons-threshold 80000000)
-    (defconst scimax-dir user-emacs-directory)
-    (setq scimax-user-dir user-emacs-directory)
-    (setq package-user-dir (locate-user-emacs-file "elpa/"))
-    (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")))
-    (setq scimax-load-user-dir nil)
 
-    (add-to-list 'load-path scimax-dir)
-    ;; (add-to-list 'load-path scimax-user-dir)
+  sandboxArgs = config: {
+    
+    # Due to org-babel tangling, scimax-dir needs to be writable.
+    extraBubblewrapOptions =
+      (lib.pipe (builtins.readDir scimax) [
+        builtins.attrNames
+        (lib.subtractLists [ "init.el" "org-mime" ])
+        (map (name: [
+          "--symlink"
+          (scimax + "/${name}")
+          "$HOME/.emacs.d/${name}"
+        ]))
+        builtins.concatLists
+      ])
+      ++
+      [
+        "--ro-bind"
+        (config.elispPackages.org-mime + "/share/emacs/site-lisp")
+        "$HOME/.emacs.d/org-mime"
+      ];
 
-    ;; bootstrap.el
-    (require 'use-package)
-    (setq use-package-ensure-function #'ignore)
+    # Based on
+    # <https://github.com/jkitchin/scimax/blob/253c1ec31617fa22c7624cd93027a1be37957071/init.el>
+    initFile = pkgs.writeText "init.el" ''
+      (setq gc-cons-threshold 80000000)
+      (defconst scimax-dir user-emacs-directory)
+      (setq scimax-user-dir user-emacs-directory)
+      (setq package-user-dir (locate-user-emacs-file "elpa/"))
+      (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")))
+      (setq scimax-load-user-dir nil)
+  
+      (add-to-list 'load-path scimax-dir)
+      ;; (add-to-list 'load-path scimax-user-dir)
+  
+      ;; bootstrap.el
+      (require 'use-package)
+      (setq use-package-ensure-function #'ignore)
+  
+      ;; See org-db.el
+      (require 'emacsql-sqlite)
+  
+      (require 'packages)
+  
+      (set-language-environment "UTF-8")
+  
+      (setq gc-cons-threshold 800000)
+      (provide 'init)
+    '';
 
-    ;; See org-db.el
-    (require 'emacsql-sqlite)
-
-    (require 'packages)
-
-    (set-language-environment "UTF-8")
-
-    (setq gc-cons-threshold 800000)
-    (provide 'init)
-  '';
+  };
 }

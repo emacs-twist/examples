@@ -13,8 +13,7 @@
 , extraPackages
 , extraRecipeDir
 , extraInputOverrides
-, extraBubblewrapOptions ? [ ]
-, initFileForSandbox ? null
+, sandboxArgs ? _: { }
 }:
 with builtins;
 let
@@ -96,8 +95,5 @@ let
   });
 in
 lib.extendDerivation true {
-  sandboxed = withSandbox package {
-    initFile = initFileForSandbox;
-    inherit extraBubblewrapOptions;
-  };
+  sandboxed = withSandbox package (sandboxArgs package);
 } package

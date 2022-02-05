@@ -1152,6 +1152,23 @@
         "type": "github"
       }
     },
+    "org-mime": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1520311875,
+        "narHash": "sha256-55zWhgQ4IdtROgyrSIPfaUu8ZO/JAcNPhAPOa7nR018=",
+        "owner": "jkitchin",
+        "repo": "org-mime",
+        "rev": "9bbf2faaddb7069bba0d3dc9134c3edd1705c834",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jkitchin",
+        "ref": "file-eqns",
+        "repo": "org-mime",
+        "type": "github"
+      }
+    },
     "org-ql": {
       "flake": false,
       "locked": {
@@ -1514,6 +1531,7 @@
         "magit-section": "magit-section",
         "multiple-cursors": "multiple-cursors",
         "mustache": "mustache",
+        "org-mime": "org-mime",
         "org-ql": "org-ql",
         "org-ref": "org-ref",
         "org-super-agenda": "org-super-agenda",
