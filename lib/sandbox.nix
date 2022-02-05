@@ -10,21 +10,25 @@ emacs:
 , userEmacsDirectory ? null
 , extraBubblewrapOptions ? [ ]
 , emacsArguments ? [ ]
+, initFile ? null
 }:
 let
   load = file: "(load \"${file}\" nil t)\n";
 
-  initEl = writeText "init.el" (
-    '';; -*- lexical-binding: t; no-byte-compile: t; -*-
-      (setq custom-file (locate-user-emacs-file "custom.el"))
-      (when (file-exists-p custom-file)
-        (load custom-file nil t))
-
-      (setq use-package-ensure-function #'ignore)
-    ''
-    +
-    lib.concatMapStrings load emacs.initFiles
-  );
+  initEl =
+    if initFile != null
+    then initFile
+    else writeText "init.el" (
+      '';; -*- lexical-binding: t; no-byte-compile: t; -*-
+        (setq custom-file (locate-user-emacs-file "custom.el"))
+        (when (file-exists-p custom-file)
+          (load custom-file nil t))
+  
+        (setq use-package-ensure-function #'ignore)
+      ''
+      +
+      lib.concatMapStrings load emacs.initFiles
+    );
 
   emacsDirectoryOpts =
     if userEmacsDirectory == null

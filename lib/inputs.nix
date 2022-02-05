@@ -114,4 +114,10 @@ with builtins;
       js2-mode = "0";
     } // super.packageRequires;
   };
+  helm = _: super: {
+    files = removeAttrs super.files [".dir-locals.el"];
+  };
+  ghub = _: super: {
+    files = removeAttrs super.files [".dir-locals.el"];
+  };
 }

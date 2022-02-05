@@ -5,6 +5,7 @@ inputs:
     path = ../recipes;
   }
   {
+    name = "gnu";
     type = "elpa";
     path = inputs.gnu-elpa.outPath + "/elpa-packages";
     core-src = inputs.emacs.outPath;
