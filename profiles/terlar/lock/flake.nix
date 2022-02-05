@@ -116,6 +116,12 @@
       repo = "caml-mode";
       type = "github";
     };
+    cape = {
+      flake = false;
+      owner = "minad";
+      repo = "cape";
+      type = "github";
+    };
     cider = {
       flake = false;
       owner = "clojure-emacs";
@@ -162,6 +168,12 @@
       flake = false;
       owner = "minad";
       repo = "corfu";
+      type = "github";
+    };
+    corfu-doc = {
+      flake = false;
+      owner = "galeo";
+      repo = "corfu-doc";
       type = "github";
     };
     coverlay = {
@@ -446,6 +458,12 @@
       repo = "f.el";
       type = "github";
     };
+    fancy-dabbrev = {
+      flake = false;
+      owner = "jrosdahl";
+      repo = "fancy-dabbrev";
+      type = "github";
+    };
     find-file-rg = {
       flake = false;
       owner = "muffinmad";
@@ -514,12 +532,6 @@
       flake = false;
       owner = "larstvei";
       repo = "Focus";
-      type = "github";
-    };
-    format-all = {
-      flake = false;
-      owner = "lassik";
-      repo = "emacs-format-all-the-code";
       type = "github";
     };
     freeze-it = {
@@ -821,13 +833,6 @@
       flake = false;
       owner = "andreasjansson";
       repo = "language-detection.el";
-      type = "github";
-    };
-    language-id = {
-      flake = false;
-      owner = "akirak";
-      ref = "pcase";
-      repo = "emacs-language-id";
       type = "github";
     };
     ligature = {
