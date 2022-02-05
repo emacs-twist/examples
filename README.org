@@ -1,12 +1,27 @@
 * Examples for Emacs Twist
-This repository is a collection of examples that wraps (hopefully) various Emacs configurations using [[https://github.com/akirak/emacs-twist][Emacs Twist]].
-It is provided as a Nix flake, so hopefully you will be able to run a configuration as a Nix app without officially installing it!
-I am thinking of providing another layer of wrappers using [[https://github.com/containers/bubblewrap][bubblewrap]] on Linux.
+This repository is a collection of examples that wraps Emacs configurations using [[https://github.com/emacs-twist/twist.nix][Emacs Twist]].
+It is provided as a Nix flake with packages sandboxed with [[https://github.com/containers/bubblewrap][bubblewrap]].
+This means you can try out configurations without installation on Linux.
+For Mac, you need to install configurations somehow.
 
 *Disclaimer*: I am not going maintain these profiles forever. I use this repository as a testbed for the library, and configurations in this repository are likely to be outdated. Also, the original authors of the configurations are not directly related to this project. Please contact me or [[https://github.com/akirak/emacs-twist-examples/issues/new][create a ticket]] if you have found any issue with the use.
+
+Bug reports are welcome. Please feel free to [[https://github.com/emacs-twist/examples/issues/new][file an issue]].
 ** Trying out
-To run [[https://github.com/terlar/emacs-config][terlar/emacs-config]] in a sandbox:
+If you are using Linux with Nix 2.4 or later installed, you can try out a config inside a sandbox.
+
+Note: [[file:lib/sandbox.nix][The sandboxing script]] temporarily creates =~/.emacs.d= inside its namespace.
+If you have your Emacs configuration in =~/.config/emacs/= (or =${XDG_CONFIG_HOME}/emacs=), it may leave an empty =~/.emacs.d= directory.
+Please remove the directory after the sandboxed session finishes.
+
+To run [[https://github.com/terlar/emacs-config][terlar/emacs-config]] inside a sandbox:
 
 #+begin_src sh
-nix run github:akirak/emacs-twist-examples#terlar.sandboxed
+nix run github:emacs-twist/examples#terlar.sandboxed
+#+end_src
+
+Run [[https://github.com/jkitchin/scimax][scimax]] inside a sandbox:
+
+#+begin_src sh
+nix run github:emacs-twist/examples#scimax.sandboxed
 #+end_src
