@@ -1,4 +1,5 @@
 { pkgs, scimax, parseUsePackages, emacsBuiltinLibraries }:
+with builtins;
 let
   inherit (pkgs) lib;
 
@@ -11,15 +12,15 @@ in
   initFiles = [ ];
   extraPackages =
     let
-      files = lib.pipe (builtins.readDir scimax) [
+      files = lib.pipe (readDir scimax) [
         (lib.filterAttrs (_: type: type == "regular"))
-        builtins.attrNames
+        attrNames
       ];
 
       elispFiles =
         (lib.pipe files [
-          (builtins.filter (lib.hasSuffix ".el"))
-          (builtins.map (filename:
+          (filter (lib.hasSuffix ".el"))
+          (map (filename:
             # Nix parse strings containing control characters,
             # and page breaks in some source files cause errors.
             # Thus it is required to sanitize source files.
@@ -28,8 +29,8 @@ in
         ])
         ++
         (lib.pipe files [
-          (builtins.filter (lib.hasSuffix ".org"))
-          (builtins.map (filename:
+          (filter (lib.hasSuffix ".org"))
+          (map (filename:
             pkgs.tangleOrgBabelFile "${filename}.el"
               (scimax + "/${filename}")
               { }
@@ -42,10 +43,10 @@ in
         };
 
       packages = lib.pipe elispFiles [
-        (map builtins.readFile)
+        (map readFile)
         (map (parseUsePackages { alwaysEnsure = true; }))
         (lib.catAttrs "elispPackages")
-        builtins.concatLists
+        concatLists
         (lib.subtractLists builtinLibraries)
         (lib.subtractLists [
           # Contained in the repository (check :load-path in packages.el)
@@ -68,7 +69,7 @@ in
           # Requires git executable during byte-compilation
           "magithub"
         ])
-        (builtins.filter (name: !lib.hasPrefix "scimax" name))
+        (filter (name: !lib.hasPrefix "scimax" name))
       ];
     in
     packages
@@ -86,7 +87,7 @@ in
       } // super.packageRequires;
     };
     ob-ipython = _: super: {
-      packageRequires = builtins.removeAttrs super.packageRequires
+      packageRequires = removeAttrs super.packageRequires
         [ "dash-functional" ];
     };
     ov-highlight = _: super: {
@@ -107,23 +108,23 @@ in
       } // super.packageRequires;
     };
     drag-stuff = _: super: {
-      files = builtins.removeAttrs super.files [ "drag-stuff-pkg.el" ];
+      files = removeAttrs super.files [ "drag-stuff-pkg.el" ];
     };
   };
 
   sandboxArgs = config: {
-    
+
     # Due to org-babel tangling, scimax-dir needs to be writable.
     extraBubblewrapOptions =
-      (lib.pipe (builtins.readDir scimax) [
-        builtins.attrNames
+      (lib.pipe (readDir scimax) [
+        attrNames
         (lib.subtractLists [ "init.el" "org-mime" ])
         (map (name: [
           "--symlink"
           (scimax + "/${name}")
           "$HOME/.emacs.d/${name}"
         ]))
-        builtins.concatLists
+        concatLists
       ])
       ++
       [
