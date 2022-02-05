@@ -2,6 +2,7 @@
 , lib
 , cmake
 , gcc
+, sqlite
 , libvterm-neovim
 , withSandbox
 , inventories
@@ -12,6 +13,7 @@
 , extraPackages
 , extraRecipeDir
 , extraInputOverrides
+, sandboxArgs ? _: { }
 }:
 with builtins;
 let
@@ -56,6 +58,16 @@ let
         '';
       });
 
+      emacsql-sqlite = esuper.emacsql-sqlite.overrideAttrs (old: {
+        buildInputs = old.buildInputs ++ [ sqlite ];
+
+        postBuild = ''
+          cd sqlite
+          make
+          cd ..
+        '';
+      });
+
       # Exclude info outputs that fail to build.
 
       sml-mode = esuper.sml-mode.overrideAttrs (old: {
@@ -73,9 +85,15 @@ let
       queue = esuper.queue.overrideAttrs (old: {
         outputs = [ "out" ];
       });
+
+      # scimax
+      # > ov-highlight.el:170:1: Error: Wrong type argument: proper-list-p, (p . v)
+      ov-highlight = esuper.ov-highlight.overrideAttrs (old: {
+        dontByteCompile = true;
+      });
     });
   });
 in
 lib.extendDerivation true {
-  sandboxed = withSandbox package { };
+  sandboxed = withSandbox package (sandboxArgs package);
 } package

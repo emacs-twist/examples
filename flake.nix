@@ -39,12 +39,17 @@
       # Simply import as an Emacs configuration repository
       flake = false;
     };
+    scimax = {
+      url = "github:jkitchin/scimax";
+      flake = false;
+    };
   };
 
   outputs =
     { self
     , nixpkgs
     , flake-utils
+    , twist
     , ...
     } @ inputs:
     flake-utils.lib.eachDefaultSystem
@@ -67,27 +72,20 @@
         inventories = import ./lib/inventories.nix inputs;
 
         profiles = {
-          terlar = {
-            emacsPackage = pkgs.emacs_28;
-            lockDir = ./profiles/terlar/lock;
-            initFiles = [
-              (pkgs.tangleOrgBabelFile "init.el" (inputs.terlar + "/init.org") { })
-            ];
-            extraPackages = [
-              "use-package"
-              "readable-typo-theme"
-              "readable-mono-theme"
-            ];
-            extraRecipeDir = ./profiles/terlar/recipes;
-            extraInputOverrides = {
-              readable-typo-theme = _: _: {
-                src = inputs.terlar;
-              };
-              readable-mono-theme = _: _: {
-                src = inputs.terlar;
-              };
-            };
+
+          terlar = import ./profiles/terlar {
+            inherit pkgs;
+            inherit (inputs) terlar;
           };
+
+          scimax = import ./profiles/scimax {
+            inherit pkgs;
+            inherit (inputs) scimax;
+            inherit (twist.lib { inherit lib; })
+              parseUsePackages
+              emacsBuiltinLibraries;
+          };
+
         };
       in
         rec {
