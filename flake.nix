@@ -6,8 +6,6 @@
 
     twist = {
       url = "github:emacs-twist/twist.nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.flake-utils.follows = "flake-utils";
     };
     org-babel.url = "github:emacs-twist/org-babel";
 
