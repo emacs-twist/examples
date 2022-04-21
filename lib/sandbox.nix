@@ -1,34 +1,33 @@
-{ lib
-, bubblewrap
-, writeShellScriptBin
-, writeText
-, coreutils
-, bashInteractive
-}:
-emacs:
-{ name ? "emacs-sandboxed"
-, userEmacsDirectory ? null
-, extraBubblewrapOptions ? [ ]
-, emacsArguments ? [ ]
-, initFile ? null
-}:
-let
+{
+  lib,
+  bubblewrap,
+  writeShellScriptBin,
+  writeText,
+  coreutils,
+  bashInteractive,
+}: emacs: {
+  name ? "emacs-sandboxed",
+  userEmacsDirectory ? null,
+  extraBubblewrapOptions ? [],
+  emacsArguments ? [],
+  initFile ? null,
+}: let
   load = file: "(load \"${file}\" nil t)\n";
 
   initEl =
     if initFile != null
     then initFile
-    else writeText "init.el" (
-      '';; -*- lexical-binding: t; no-byte-compile: t; -*-
-        (setq custom-file (locate-user-emacs-file "custom.el"))
-        (when (file-exists-p custom-file)
-          (load custom-file nil t))
-  
-        (setq use-package-ensure-function #'ignore)
-      ''
-      +
-      lib.concatMapStrings load emacs.initFiles
-    );
+    else
+      writeText "init.el" (
+        ''          ;; -*- lexical-binding: t; no-byte-compile: t; -*-
+                  (setq custom-file (locate-user-emacs-file "custom.el"))
+                  (when (file-exists-p custom-file)
+                    (load custom-file nil t))
+
+                  (setq use-package-ensure-function #'ignore)
+        ''
+        + lib.concatMapStrings load emacs.initFiles
+      );
 
   emacsDirectoryOpts =
     if userEmacsDirectory == null
@@ -51,10 +50,10 @@ let
   # I want to allow use of environment variables passed as arguments.
   quoteShellArgs = lib.concatMapStringsSep " " (wrap "\"" "\"");
 in
-lib.extendDerivation true
-{
-  passthru.exePath = "/bin/${name}";
-}
+  lib.extendDerivation true
+  {
+    passthru.exePath = "/bin/${name}";
+  }
   (writeShellScriptBin name ''
     # If the first argument is an existing path, bind-mount it
     if [[ $# -gt 0 && -e "$1" ]]
@@ -93,9 +92,9 @@ lib.extendDerivation true
         --die-with-parent \
         --unshare-all \
         --setenv PATH ${lib.makeBinPath [
-          coreutils
-          bashInteractive
-        ]} \
+      coreutils
+      bashInteractive
+    ]} \
         ${quoteShellArgs extraBubblewrapOptions} \
         ${emacsDirectoryOpts} \
         --ro-bind ${initEl} ${userEmacsDirectory'}/init.el \

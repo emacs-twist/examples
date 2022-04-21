@@ -1,9 +1,11 @@
-{ pkgs, terlar }:
 {
+  pkgs,
+  terlar,
+}: {
   emacsPackage = pkgs.emacs_28;
   lockDir = ./lock;
   initFiles = [
-    (pkgs.tangleOrgBabelFile "init.el" (terlar + "/init.org") { })
+    (pkgs.tangleOrgBabelFile "init.el" (terlar + "/init.org") {})
   ];
   extraPackages = [
     "use-package"

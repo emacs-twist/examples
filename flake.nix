@@ -45,70 +45,67 @@
     };
   };
 
-  outputs =
-    { self
-    , nixpkgs
-    , flake-utils
-    , twist
-    , ...
-    } @ inputs:
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+    twist,
+    ...
+  } @ inputs:
     flake-utils.lib.eachDefaultSystem
-      (system:
-      let
-        inherit (nixpkgs) lib;
+    (system: let
+      inherit (nixpkgs) lib;
 
-        pkgs = import nixpkgs {
-          inherit system;
-          overlays = [
-            inputs.emacs-unstable.overlay
-            inputs.org-babel.overlay
-            inputs.twist.overlay
-            (pkgs': _super: {
-              emacs_28 = pkgs'.emacsUnstable.overrideAttrs (_: { version = "28.0.91"; });
-            })
-          ];
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [
+          inputs.emacs-unstable.overlay
+          inputs.org-babel.overlay
+          inputs.twist.overlay
+          (pkgs': _super: {
+            emacs_28 = pkgs'.emacsUnstable.overrideAttrs (_: {version = "28.0.91";});
+          })
+        ];
+      };
+
+      inventories = import ./lib/inventories.nix inputs;
+
+      profiles = {
+        terlar = import ./profiles/terlar {
+          inherit pkgs;
+          inherit (inputs) terlar;
         };
 
-        inventories = import ./lib/inventories.nix inputs;
-
-        profiles = {
-
-          terlar = import ./profiles/terlar {
-            inherit pkgs;
-            inherit (inputs) terlar;
-          };
-
-          scimax = import ./profiles/scimax {
-            inherit pkgs;
-            inherit (inputs) scimax;
-            inherit (twist.lib { inherit lib; })
-              parseUsePackages
-              emacsBuiltinLibraries;
-          };
-
+        scimax = import ./profiles/scimax {
+          inherit pkgs;
+          inherit (inputs) scimax;
+          inherit
+            (twist.lib {inherit lib;})
+            parseUsePackages
+            emacsBuiltinLibraries
+            ;
         };
-      in
-        rec {
-          packages = lib.pipe profiles [
-            (lib.mapAttrsToList (name: attrs:
-              let
-                package = pkgs.callPackage ./lib/profile.nix ({
-                  inherit inventories;
-                  withSandbox = pkgs.callPackage ./lib/sandbox.nix { };
-                } // attrs);
-              in
-                [
-                  {
-                    inherit name;
-                    value = package;
-                  }
-                  {
-                    name = "${name}-admin";
-                    value = package.admin "profiles/${name}/lock";
-                  }
-                ]))
-            builtins.concatLists
-            builtins.listToAttrs
-          ];
-        });
+      };
+    in rec {
+      packages = lib.pipe profiles [
+        (lib.mapAttrsToList (name: attrs: let
+          package = pkgs.callPackage ./lib/profile.nix ({
+              inherit inventories;
+              withSandbox = pkgs.callPackage ./lib/sandbox.nix {};
+            }
+            // attrs);
+        in [
+          {
+            inherit name;
+            value = package;
+          }
+          {
+            name = "${name}-admin";
+            value = package.admin "profiles/${name}/lock";
+          }
+        ]))
+        builtins.concatLists
+        builtins.listToAttrs
+      ];
+    });
 }
