@@ -25,3 +25,24 @@ Run [[https://github.com/jkitchin/scimax][scimax]] inside a sandbox:
 #+begin_src sh
 nix run github:emacs-twist/examples#scimax.sandboxed
 #+end_src
+** Development
+Before you run these operations, it is better to [[https://github.com/settings/tokens][generate a personal token]] on GitHub and add it to =~/.config/nix/nix.conf=:
+
+#+begin_src
+access-tokens = github.com=ghp_XXXXXX
+#+end_src
+
+Update the lock file:
+#+begin_src sh
+  nix run .#lock-terlar --impure
+#+end_src
+
+Update ELPA packages:
+#+begin_src sh
+  nix run .#update-terlar --impure
+#+end_src
+
+Replace =terlar= with a profile name.
+
+[[file:lib/inputs.nix][lib/inputs.nix]] defines input overrides, and [[file:lib/profile.nix][lib/profile.nix]] defines build overrides.
+Specific profiles are defined in [[file:profiles/][profiles]] directory.
