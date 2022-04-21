@@ -86,26 +86,34 @@
             ;
         };
       };
-    in rec {
-      packages = lib.pipe profiles [
-        (lib.mapAttrsToList (name: attrs: let
-          package = pkgs.callPackage ./lib/profile.nix ({
-              inherit inventories;
-              withSandbox = pkgs.callPackage ./lib/sandbox.nix {};
-            }
-            // attrs);
-        in [
-          {
-            inherit name;
-            value = package;
-          }
-          {
-            name = "${name}-admin";
-            value = package.admin "profiles/${name}/lock";
-          }
-        ]))
-        builtins.concatLists
-        builtins.listToAttrs
+
+      packages =
+        lib.mapAttrs (
+          _: attrs:
+            pkgs.callPackage ./lib/profile.nix ({
+                inherit inventories;
+                withSandbox = pkgs.callPackage ./lib/sandbox.nix {};
+              }
+              // attrs)
+        )
+        profiles;
+    in {
+      inherit packages;
+      apps = lib.pipe packages [
+        (lib.mapAttrsToList (
+          name: package: let
+            apps = package.makeApps {
+              lockDirName = "profiles/${name}/lock";
+            };
+          in
+            lib.mapAttrsToList (appName: app: {
+              name = "${appName}-${name}";
+              value = app;
+            })
+            apps
+        ))
+        lib.concatLists
+        lib.listToAttrs
       ];
     });
 }
