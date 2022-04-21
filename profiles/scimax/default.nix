@@ -8,8 +8,10 @@ with builtins; let
   inherit (pkgs) lib;
 
   inherit (pkgs.callPackage ./../../lib/utils.nix {}) sanitizeFile;
+
+  emacsPackage = pkgs.emacsUnstable;
 in {
-  emacsPackage = pkgs.emacs_28;
+  inherit emacsPackage;
   lockDir = ./lock;
   # Twist cannot handle use-package-always-ensure well right now.
   initFiles = [];
@@ -41,7 +43,7 @@ in {
       ]);
 
     builtinLibraries = pkgs.callPackage emacsBuiltinLibraries {
-      emacs = pkgs.emacs_28;
+      emacs = emacsPackage;
     };
 
     packages = lib.pipe elispFiles [

@@ -62,9 +62,6 @@
           inputs.emacs-unstable.overlay
           inputs.org-babel.overlay
           inputs.twist.overlay
-          (pkgs': _super: {
-            emacs_28 = pkgs'.emacsUnstable.overrideAttrs (_: {version = "28.0.91";});
-          })
         ];
       };
 
