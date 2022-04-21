@@ -1,0 +1,39 @@
+name: Update flake inputs
+
+on:
+  schedule:
+    - cron: '0 5 * * 6'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: cachix/install-nix-action@v17
+
+    - name: Update Nix libraries
+      run: |
+        nix flake lock \
+        --update-input twist \
+        --update-input flake-utils \
+        --update-input org-babel
+
+    - name: Update dependencies (terlar)
+      run: |
+        nix run .#update-terlar --impure
+        nix run .#lock-terlar --impure
+
+    # scimax doesn't build, so ignore it for now
+
+    - run: git diff-index --exit-code --name-status HEAD
+      id: diff
+      continue-on-error: true
+
+    - uses: peter-evans/create-pull-request@v4
+      if: ${{ steps.diff.outcome == 'failure' }}
+      with:
+        commit-message: 'Update flake inputs'
+        base: master
+        title: 'chore: Update dependencies'
+        branch: create-pull-request/update
+        labels: automation,update
