@@ -45,70 +45,72 @@
     };
   };
 
-  outputs =
-    { self
-    , nixpkgs
-    , flake-utils
-    , twist
-    , ...
-    } @ inputs:
+  outputs = {
+    self,
+    nixpkgs,
+    flake-utils,
+    twist,
+    ...
+  } @ inputs:
     flake-utils.lib.eachDefaultSystem
-      (system:
-      let
-        inherit (nixpkgs) lib;
+    (system: let
+      inherit (nixpkgs) lib;
 
-        pkgs = import nixpkgs {
-          inherit system;
-          overlays = [
-            inputs.emacs-unstable.overlay
-            inputs.org-babel.overlay
-            inputs.twist.overlay
-            (pkgs': _super: {
-              emacs_28 = pkgs'.emacsUnstable.overrideAttrs (_: { version = "28.0.91"; });
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [
+          inputs.emacs-unstable.overlay
+          inputs.org-babel.overlay
+          inputs.twist.overlay
+        ];
+      };
+
+      inventories = import ./lib/inventories.nix inputs;
+
+      profiles = {
+        terlar = import ./profiles/terlar {
+          inherit pkgs;
+          inherit (inputs) terlar;
+        };
+
+        scimax = import ./profiles/scimax {
+          inherit pkgs;
+          inherit (inputs) scimax;
+          inherit
+            (twist.lib {inherit lib;})
+            parseUsePackages
+            emacsBuiltinLibraries
+            ;
+        };
+      };
+
+      packages =
+        lib.mapAttrs (
+          _: attrs:
+            pkgs.callPackage ./lib/profile.nix ({
+                inherit inventories;
+                withSandbox = pkgs.callPackage ./lib/sandbox.nix {};
+              }
+              // attrs)
+        )
+        profiles;
+    in {
+      inherit packages;
+      apps = lib.pipe packages [
+        (lib.mapAttrsToList (
+          name: package: let
+            apps = package.makeApps {
+              lockDirName = "profiles/${name}/lock";
+            };
+          in
+            lib.mapAttrsToList (appName: app: {
+              name = "${appName}-${name}";
+              value = app;
             })
-          ];
-        };
-
-        inventories = import ./lib/inventories.nix inputs;
-
-        profiles = {
-
-          terlar = import ./profiles/terlar {
-            inherit pkgs;
-            inherit (inputs) terlar;
-          };
-
-          scimax = import ./profiles/scimax {
-            inherit pkgs;
-            inherit (inputs) scimax;
-            inherit (twist.lib { inherit lib; })
-              parseUsePackages
-              emacsBuiltinLibraries;
-          };
-
-        };
-      in
-        rec {
-          packages = lib.pipe profiles [
-            (lib.mapAttrsToList (name: attrs:
-              let
-                package = pkgs.callPackage ./lib/profile.nix ({
-                  inherit inventories;
-                  withSandbox = pkgs.callPackage ./lib/sandbox.nix { };
-                } // attrs);
-              in
-                [
-                  {
-                    inherit name;
-                    value = package;
-                  }
-                  {
-                    name = "${name}-admin";
-                    value = package.admin "profiles/${name}/lock";
-                  }
-                ]))
-            builtins.concatLists
-            builtins.listToAttrs
-          ];
-        });
+            apps
+        ))
+        lib.concatLists
+        lib.listToAttrs
+      ];
+    });
 }

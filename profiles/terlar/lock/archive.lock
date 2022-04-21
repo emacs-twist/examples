@@ -14,9 +14,9 @@
   },
   "bbdb": {
     "archive": {
-      "narHash": "sha256-nldTaqGYqmeQlzgB2vbLADqkx1V/ZfR8ERQfcikg/kk=",
+      "narHash": "sha256-3kkU51Xd1nmPgAzwf4S95m6eZ9w15aLCDdVei6ZIJ7o=",
       "type": "tarball",
-      "url": "https://elpa.gnu.org/packages/bbdb-3.2.tar"
+      "url": "https://elpa.gnu.org/packages/bbdb-3.2.2.2.tar"
     },
     "inventory": {
       "type": "archive",
@@ -26,13 +26,13 @@
       "cl-lib": "0.5",
       "emacs": "24"
     },
-    "version": "3.2"
+    "version": "3.2.2.2"
   },
   "csv-mode": {
     "archive": {
-      "narHash": "sha256-7QhpAaywnp1qoCXa7iWfxxc5wwAZPqKGCpC2RkLwUuI=",
+      "narHash": "sha256-9G0HAWvh5XVh7aykRI1vLhkbWp0XerW+DBVvYjLZrwk=",
       "type": "tarball",
-      "url": "https://elpa.gnu.org/packages/csv-mode-1.18.tar"
+      "url": "https://elpa.gnu.org/packages/csv-mode-1.19.tar"
     },
     "inventory": {
       "type": "archive",
@@ -42,7 +42,7 @@
       "cl-lib": "0.5",
       "emacs": "24.1"
     },
-    "version": "1.18"
+    "version": "1.19"
   },
   "cycle-quotes": {
     "archive": {

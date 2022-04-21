@@ -2,7 +2,7 @@
   description =
     "THIS IS AN AUTO-GENERATED FILE. PLEASE DON'T EDIT IT MANUALLY.";
   inputs = {
-    a = {
+    "a" = {
       flake = false;
       owner = "plexus";
       repo = "a.el";
@@ -18,6 +18,12 @@
       flake = false;
       owner = "minad";
       repo = "affe";
+      type = "github";
+    };
+    aio = {
+      flake = false;
+      owner = "skeeto";
+      repo = "emacs-aio";
       type = "github";
     };
     alchemist = {
@@ -452,7 +458,7 @@
       repo = "explain-pause-mode";
       type = "github";
     };
-    f = {
+    "f" = {
       flake = false;
       owner = "rejeep";
       repo = "f.el";
@@ -636,6 +642,12 @@
       flake = false;
       owner = "haskell";
       repo = "haskell-mode";
+      type = "github";
+    };
+    hcl-mode = {
+      flake = false;
+      owner = "purcell";
+      repo = "emacs-hcl-mode";
       type = "github";
     };
     helpful = {
@@ -827,6 +839,12 @@
       flake = false;
       owner = "gruggiero";
       repo = "kubernetes-tramp";
+      type = "github";
+    };
+    kv = {
+      flake = false;
+      owner = "nicferrier";
+      repo = "emacs-kv";
       type = "github";
     };
     language-detection = {
@@ -1030,6 +1048,12 @@
       flake = false;
       owner = "io12";
       repo = "org-fragtog";
+      type = "github";
+    };
+    org-modern = {
+      flake = false;
+      owner = "minad";
+      repo = "org-modern";
       type = "github";
     };
     org-noter = {
@@ -1253,6 +1277,12 @@
       repo = "emacs-reformatter";
       type = "github";
     };
+    rego-mode = {
+      flake = false;
+      owner = "psibi";
+      repo = "rego-mode";
+      type = "github";
+    };
     relative-buffers = {
       flake = false;
       owner = "emacsattic";
@@ -1294,7 +1324,7 @@
       repo = "rustic";
       type = "github";
     };
-    s = {
+    "s" = {
       flake = false;
       owner = "magnars";
       repo = "s.el";
@@ -1407,6 +1437,12 @@
       repo = "terraform-doc";
       type = "github";
     };
+    terraform-mode = {
+      flake = false;
+      owner = "emacsorphanage";
+      repo = "terraform-mode";
+      type = "github";
+    };
     theme-magic = {
       flake = false;
       owner = "jcaw";
@@ -1435,12 +1471,6 @@
       flake = false;
       owner = "emacs-typescript";
       repo = "typescript.el";
-      type = "github";
-    };
-    undo-propose = {
-      flake = false;
-      owner = "jackkamm";
-      repo = "undo-propose-el";
       type = "github";
     };
     use-package = {
