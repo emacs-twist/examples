@@ -1,5 +1,6 @@
 {
-  description = "THIS IS AN AUTO-GENERATED FILE. PLEASE DON'T EDIT IT MANUALLY.";
+  description =
+    "THIS IS AN AUTO-GENERATED FILE. PLEASE DON'T EDIT IT MANUALLY.";
   inputs = {
     ace-window = {
       flake = false;
@@ -592,9 +593,8 @@
     };
     undo-tree = {
       flake = false;
-      owner = "emacsmirror";
-      repo = "undo-tree";
-      type = "github";
+      type = "git";
+      url = "https://gitlab.com/tsc25/undo-tree";
     };
     use-package = {
       flake = false;
@@ -627,5 +627,5 @@
       type = "github";
     };
   };
-  outputs = {...}: {};
+  outputs = { ... }: { };
 }
