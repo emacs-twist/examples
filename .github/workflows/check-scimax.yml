@@ -1,0 +1,14 @@
+name: Check scimax
+
+on:
+  pull_request:
+    paths:
+      - 'profiles/scimax/**'
+      - 'flake.lock'
+
+jobs:
+  build:
+    steps:
+    - uses: actions/checkout@v3
+    - uses: cachix/install-nix-action@v17
+    - run: nix build .#scimax --dry-run
