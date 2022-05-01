@@ -1407,6 +1407,11 @@
       type = "git";
       url = "https://git.sr.ht/~iank/spray";
     };
+    stem-reading-mode = {
+      flake = false;
+      type = "git";
+      url = "https://gitlab.com/wavexx/stem-reading-mode.el.git";
+    };
     string-inflection = {
       flake = false;
       owner = "akicho8";

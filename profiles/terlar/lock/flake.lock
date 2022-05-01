@@ -3728,6 +3728,7 @@
         "source-peek": "source-peek",
         "spark": "spark",
         "spray": "spray",
+        "stem-reading-mode": "stem-reading-mode",
         "string-inflection": "string-inflection",
         "stripe-buffer": "stripe-buffer",
         "suggest": "suggest",
@@ -4052,6 +4053,22 @@
       "original": {
         "type": "git",
         "url": "https://git.sr.ht/~iank/spray"
+      }
+    },
+    "stem-reading-mode": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1650281780,
+        "narHash": "sha256-+O1778xy+IWq6TG5Sga5fleTX33gLuPxo6xLvjzOYkU=",
+        "ref": "master",
+        "rev": "a8bacd80fab6013c09e4e8d337fd88267cbe2ff8",
+        "revCount": 10,
+        "type": "git",
+        "url": "https://gitlab.com/wavexx/stem-reading-mode.el.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitlab.com/wavexx/stem-reading-mode.el.git"
       }
     },
     "string-inflection": {

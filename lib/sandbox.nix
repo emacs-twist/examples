@@ -9,6 +9,7 @@
   name ? "emacs-sandboxed",
   userEmacsDirectory ? null,
   extraBubblewrapOptions ? [],
+  enableWindow ? true,
   emacsArguments ? [],
   initFile ? null,
 }: let
@@ -87,8 +88,10 @@ in
         --ro-bind-try "$HOME/.zshenv" "$HOME/.zshenv" \
         --setenv DISPLAY ":0" \
         --ro-bind /tmp/.X11-unix/X0 /tmp/.X11-unix/X0 \
+        ${lib.optionalString enableWindow (lib.removeSuffix "\n" ''
         --ro-bind "$XAUTHORITY" "$XAUTHORITY" \
-        --new-session \
+        --new-session
+        '')} \
         --die-with-parent \
         --unshare-all \
         --setenv PATH ${lib.makeBinPath [
@@ -99,6 +102,6 @@ in
         ${emacsDirectoryOpts} \
         --ro-bind ${initEl} ${userEmacsDirectory'}/init.el \
         $opts \
-        ${emacs}/bin/emacs ${quoteShellArgs emacsArguments} "$@"
+        ${emacs}/bin/emacs ${quoteShellArgs emacsArguments} ${lib.optionalString (!enableWindow) "-nw"} "$@"
       )
   '')
