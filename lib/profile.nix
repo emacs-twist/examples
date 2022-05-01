@@ -98,6 +98,6 @@ with builtins; let
     });
 in
   lib.extendDerivation true {
-    sandboxed = withSandbox package (sandboxArgs package);
+    sandboxed = withSandbox package sandboxArgs;
   }
   package
