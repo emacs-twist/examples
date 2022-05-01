@@ -50,6 +50,48 @@
   # lib.escapeShellArgs quotes each argument with single quotes. It is safe, but
   # I want to allow use of environment variables passed as arguments.
   quoteShellArgs = lib.concatMapStringsSep " " (wrap "\"" "\"");
+
+  command = lib.concatStringsSep " " (
+      [
+        "${bubblewrap}/bin/bwrap"
+        "--dir" "$HOME"
+        "--proc" "/proc"
+        "--dev" "/dev"
+        "--dev-bind-try" "/dev/snd" "/dev/snd"
+        "--dev-bind-try" "/dev/video0" "/dev/video0"
+        "--dev-bind-try" "/dev/video1" "/dev/video1"
+        "--dev-bind" "/dev/dri"  "dev/dri"
+        "--ro-bind" "/nix" "/nix"
+        "--ro-bind" "/etc" "/etc"
+        "--ro-bind-try" "/bin" "/bin"
+        "--ro-bind-try"  "/usr/bin/env" "/usr/bin/env"
+        "--bind-try" "$HOME/.cache/fontconfig" "$HOME/.cache/fontconfig"
+        "--tmpfs" "/run"
+        "--tmpfs" "/tmp"
+        "--ro-bind" "$SHELL" "$SHELL"
+        "--ro-bind-try" "$HOME/.config/zsh/.zshenv" "$HOME/.config/zsh/.zshenv"
+        "--ro-bind-try" "$HOME/.config/zsh/.zshrc" "$HOME/.config/zsh/.zshrc"
+        "--ro-bind-try" "$HOME/.config/zsh/plugins" "$HOME/.config/zsh/plugins"
+        "--ro-bind-try" "$HOME/.zshenv" "$HOME/.zshenv"
+        "--setenv" "DISPLAY" ":0"
+        "--ro-bind" "/tmp/.X11-unix/X0" "/tmp/.X11-unix/X0"
+        "--die-with-parent"
+        "--unshare-all"
+      ] ++ [
+        "--setenv" "PATH" "${lib.makeBinPath [ coreutils bashInteractive ]}"
+      ] ++ lib.optionals enableWindow [
+        "--ro-bind" "$XAUTHORITY" "$XAUTHORITY"
+        "--new-session"
+      ] ++ [
+        "${quoteShellArgs extraBubblewrapOptions}"
+        "${emacsDirectoryOpts}"
+        "--ro-bind" "${initEl}" "${userEmacsDirectory'}/init.el"
+        "$opts"
+        "${emacs}/bin/emacs" "${quoteShellArgs emacsArguments}"
+        "${lib.optionalString (!enableWindow) "-nw"}"
+        "$@"
+      ]
+    );
 in
   lib.extendDerivation true
   {
@@ -66,42 +108,5 @@ in
     fi
 
     set -x
-    ( exec ${bubblewrap}/bin/bwrap \
-        --dir "$HOME" \
-        --proc /proc \
-        --dev /dev \
-        --dev-bind-try /dev/snd /dev/snd \
-        --dev-bind-try /dev/video0 /dev/video0 \
-        --dev-bind-try /dev/video1 /dev/video1 \
-        --dev-bind /dev/dri /dev/dri \
-        --ro-bind /nix /nix \
-        --ro-bind /etc /etc \
-        --ro-bind-try /bin /bin \
-        --ro-bind-try /usr/bin/env /usr/bin/env \
-        --bind-try "$HOME/.cache/fontconfig" "$HOME/.cache/fontconfig" \
-        --tmpfs /run \
-        --tmpfs /tmp \
-        --ro-bind "$SHELL" "$SHELL" \
-        --ro-bind-try "$HOME/.config/zsh/.zshenv" "$HOME/.config/zsh/.zshenv" \
-        --ro-bind-try "$HOME/.config/zsh/.zshrc" "$HOME/.config/zsh/.zshrc" \
-        --ro-bind-try "$HOME/.config/zsh/plugins" "$HOME/.config/zsh/plugins" \
-        --ro-bind-try "$HOME/.zshenv" "$HOME/.zshenv" \
-        --setenv DISPLAY ":0" \
-        --ro-bind /tmp/.X11-unix/X0 /tmp/.X11-unix/X0 \
-        ${lib.optionalString enableWindow (lib.removeSuffix "\n" ''
-        --ro-bind "$XAUTHORITY" "$XAUTHORITY" \
-        --new-session
-        '')} \
-        --die-with-parent \
-        --unshare-all \
-        --setenv PATH ${lib.makeBinPath [
-      coreutils
-      bashInteractive
-    ]} \
-        ${quoteShellArgs extraBubblewrapOptions} \
-        ${emacsDirectoryOpts} \
-        --ro-bind ${initEl} ${userEmacsDirectory'}/init.el \
-        $opts \
-        ${emacs}/bin/emacs ${quoteShellArgs emacsArguments} ${lib.optionalString (!enableWindow) "-nw"} "$@"
-      )
+    ${command}
   '')
