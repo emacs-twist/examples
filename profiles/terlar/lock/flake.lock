@@ -3330,22 +3330,6 @@
         "type": "github"
       }
     },
-    "rainbow-mode": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1606859583,
-        "narHash": "sha256-pTOKhTPDzdKx/Tm/0SgJTJCQjUl536ZYwnqUiITKJl0=",
-        "owner": "emacsmirror",
-        "repo": "rainbow-mode",
-        "rev": "347bd20a9872451ed54b5f5373d97550e46d9910",
-        "type": "github"
-      },
-      "original": {
-        "owner": "emacsmirror",
-        "repo": "rainbow-mode",
-        "type": "github"
-      }
-    },
     "rake": {
       "flake": false,
       "locked": {
@@ -3700,7 +3684,6 @@
         "racket-mode": "racket-mode",
         "rainbow-delimiters": "rainbow-delimiters",
         "rainbow-identifiers": "rainbow-identifiers",
-        "rainbow-mode": "rainbow-mode",
         "rake": "rake",
         "readable-mono-theme": "readable-mono-theme",
         "readable-typo-theme": "readable-typo-theme",

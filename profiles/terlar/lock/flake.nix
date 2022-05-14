@@ -1241,12 +1241,6 @@
       repo = "rainbow-identifiers";
       type = "github";
     };
-    rainbow-mode = {
-      flake = false;
-      owner = "emacsmirror";
-      repo = "rainbow-mode";
-      type = "github";
-    };
     rake = {
       flake = false;
       owner = "asok";
