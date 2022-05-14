@@ -1,0 +1,24 @@
+name: 'Update all inputs in the flake.lock'
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 5 3 * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: cachix/install-nix-action@v17
+
+    - name: Update flake inputs
+      run: nix flake update
+
+    - uses: peter-evans/create-pull-request@v4
+      with:
+        commit-message: 'Update flake inputs'
+        base: master
+        title: 'chore: Update dependencies'
+        branch: create-pull-request/update-all
+        labels: automation,update
