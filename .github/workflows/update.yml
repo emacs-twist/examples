@@ -24,7 +24,10 @@ jobs:
         nix run .#update-terlar --impure
         nix run .#lock-terlar --impure
 
-    # scimax doesn't build, so ignore it for now
+    - name: Update dependencies (scimax)
+      run: |
+        nix run .#update-scimax --impure
+        nix run .#lock-scimax --impure
 
     - uses: peter-evans/create-pull-request@v4
       with:
