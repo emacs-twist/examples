@@ -2,6 +2,7 @@ name: Check terlar
 
 on:
   workflow_dispatch:
+  workflow_call:
   pull_request:
     paths:
       - 'profiles/terlar/**'
