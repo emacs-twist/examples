@@ -537,12 +537,6 @@
       repo = "predictive";
       type = "github";
     };
-    rainbow-mode = {
-      flake = false;
-      owner = "emacsmirror";
-      repo = "rainbow-mode";
-      type = "github";
-    };
     rich-minority = {
       flake = false;
       owner = "Malabarba";

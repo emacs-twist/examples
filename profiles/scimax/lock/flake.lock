@@ -1425,22 +1425,6 @@
         "type": "github"
       }
     },
-    "rainbow-mode": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1606859583,
-        "narHash": "sha256-pTOKhTPDzdKx/Tm/0SgJTJCQjUl536ZYwnqUiITKJl0=",
-        "owner": "emacsmirror",
-        "repo": "rainbow-mode",
-        "rev": "347bd20a9872451ed54b5f5373d97550e46d9910",
-        "type": "github"
-      },
-      "original": {
-        "owner": "emacsmirror",
-        "repo": "rainbow-mode",
-        "type": "github"
-      }
-    },
     "rich-minority": {
       "flake": false,
       "locked": {
@@ -1548,7 +1532,6 @@
         "python-environment": "python-environment",
         "pyvenv": "pyvenv",
         "queue": "queue",
-        "rainbow-mode": "rainbow-mode",
         "rich-minority": "rich-minority",
         "s": "s",
         "smart-mode-line": "smart-mode-line",
