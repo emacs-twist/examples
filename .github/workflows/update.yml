@@ -8,6 +8,8 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    outputs:
+      updated: ${{ steps.pr.conclusion == 'success' }}
     steps:
     - uses: actions/checkout@v3
     - uses: cachix/install-nix-action@v17
@@ -30,9 +32,20 @@ jobs:
         nix run .#lock-scimax --impure
 
     - uses: peter-evans/create-pull-request@v4
+      id: pr
       with:
         commit-message: 'Update flake inputs'
         base: master
         title: 'chore: Update dependencies'
         branch: create-pull-request/update
         labels: automation,update
+
+  check-terlar:
+    needs: ['update']
+    if: ${{ needs.update.outputs.updated == 'true' }}
+    uses: ./.github/workflows/check-terlar.yml
+
+  check-scimax:
+    needs: ['update']
+    if: ${{ needs.update.outputs.updated == 'true' }}
+    uses: ./.github/workflows/check-scimax.yml
