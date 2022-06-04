@@ -58,7 +58,7 @@
     };
     apheleia = {
       flake = false;
-      owner = "raxod502";
+      owner = "radian-software";
       repo = "apheleia";
       type = "github";
     };
@@ -66,12 +66,6 @@
       flake = false;
       owner = "emacscollective";
       repo = "auto-compile";
-      type = "github";
-    };
-    auto-dictionary = {
-      flake = false;
-      owner = "nschum";
-      repo = "auto-dictionary-mode";
       type = "github";
     };
     auto-minor-mode = {
@@ -196,7 +190,7 @@
     };
     ctrlf = {
       flake = false;
-      owner = "raxod502";
+      owner = "radian-software";
       repo = "ctrlf";
       type = "github";
     };
@@ -638,6 +632,12 @@
       repo = "grugru";
       type = "github";
     };
+    guess-language = {
+      flake = false;
+      owner = "tmalsburg";
+      repo = "guess-language.el";
+      type = "github";
+    };
     haskell-mode = {
       flake = false;
       owner = "haskell";
@@ -701,7 +701,7 @@
     idle-highlight-mode = {
       flake = false;
       type = "git";
-      url = "https://gitlab.com/ideasman42/emacs-idle-highlight-mode.git";
+      url = "https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git";
     };
     iedit = {
       flake = false;
@@ -1400,6 +1400,11 @@
       flake = false;
       type = "git";
       url = "https://git.sr.ht/~iank/spray";
+    };
+    stem-reading-mode = {
+      flake = false;
+      type = "git";
+      url = "https://gitlab.com/wavexx/stem-reading-mode.el.git";
     };
     string-inflection = {
       flake = false;
