@@ -147,15 +147,15 @@
     "apheleia": {
       "flake": false,
       "locked": {
-        "lastModified": 1650221972,
-        "narHash": "sha256-LF+msH3hyRgWleaY/poHbdXb2uZnr19Jw6+3fd5TlJA=",
-        "owner": "raxod502",
+        "lastModified": 1654303285,
+        "narHash": "sha256-fRNlx3tLuKtykRBRrTED16732VPnzngW9aZufFjqprg=",
+        "owner": "radian-software",
         "repo": "apheleia",
-        "rev": "9804f241ac8235027ea91a49d3c6275ecbaae203",
+        "rev": "b25256f1b014ee02887c7882a789f95dc87d061b",
         "type": "github"
       },
       "original": {
-        "owner": "raxod502",
+        "owner": "radian-software",
         "repo": "apheleia",
         "type": "github"
       }
@@ -173,22 +173,6 @@
       "original": {
         "owner": "emacscollective",
         "repo": "auto-compile",
-        "type": "github"
-      }
-    },
-    "auto-dictionary": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1428682222,
-        "narHash": "sha256-98fBd+ak3wE3E1Rna4vlk6gvW9lkPaiDQEhYJTro0mU=",
-        "owner": "nschum",
-        "repo": "auto-dictionary-mode",
-        "rev": "b364e08009fe0062cf0927d8a0582fad5a12b8e7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nschum",
-        "repo": "auto-dictionary-mode",
         "type": "github"
       }
     },
@@ -515,15 +499,15 @@
     "ctrlf": {
       "flake": false,
       "locked": {
-        "lastModified": 1647729217,
-        "narHash": "sha256-QNBRV4HwgIattMgdPGXRSHlpotHxEOaVzX+ldVuNfSQ=",
-        "owner": "raxod502",
+        "lastModified": 1654102186,
+        "narHash": "sha256-Xe28w+J5suHXwDq67+7BGTUgMPzylF8/h4PMtQQUcKY=",
+        "owner": "radian-software",
         "repo": "ctrlf",
-        "rev": "56021fd53efd775d91db2730e4ab4d5c157c513f",
+        "rev": "cefb0aff9d316bd03e911f7f483f8d01f15cf5a2",
         "type": "github"
       },
       "original": {
-        "owner": "raxod502",
+        "owner": "radian-software",
         "repo": "ctrlf",
         "type": "github"
       }
@@ -1712,6 +1696,22 @@
         "type": "github"
       }
     },
+    "guess-language": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1649432707,
+        "narHash": "sha256-OwqYlYv6t2x2zszRgAc3y4isRWkTVtqkdbmArkzc/+k=",
+        "owner": "tmalsburg",
+        "repo": "guess-language.el",
+        "rev": "b1fc363ca2c30b8a8ddaf2e366bca7770c8cfbec",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tmalsburg",
+        "repo": "guess-language.el",
+        "type": "github"
+      }
+    },
     "haskell-mode": {
       "flake": false,
       "locked": {
@@ -1875,17 +1875,17 @@
     "idle-highlight-mode": {
       "flake": false,
       "locked": {
-        "lastModified": 1644558487,
-        "narHash": "sha256-6NxbNAx0VFNeFP5pn4y+83FQio0v46bZSCCSng+qq4Y=",
-        "ref": "master",
-        "rev": "0a24f8e402383b0da1f956d946781317fba14bbc",
-        "revCount": 58,
+        "lastModified": 1651922309,
+        "narHash": "sha256-khk5L3u7TTYkkWJO71N9wnBpWWD+Xio+4pTDMNnduDY=",
+        "ref": "refs/heads/master",
+        "rev": "5418252a11b00377a59295e50b7436f53afe68bb",
+        "revCount": 59,
         "type": "git",
-        "url": "https://gitlab.com/ideasman42/emacs-idle-highlight-mode.git"
+        "url": "https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git"
       },
       "original": {
         "type": "git",
-        "url": "https://gitlab.com/ideasman42/emacs-idle-highlight-mode.git"
+        "url": "https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git"
       }
     },
     "iedit": {
@@ -3487,7 +3487,6 @@
         "annotate": "annotate",
         "apheleia": "apheleia",
         "auto-compile": "auto-compile",
-        "auto-dictionary": "auto-dictionary",
         "auto-minor-mode": "auto-minor-mode",
         "avy": "avy",
         "awscli-capf": "awscli-capf",
@@ -3583,6 +3582,7 @@
         "gradle-mode": "gradle-mode",
         "groovy-mode": "groovy-mode",
         "grugru": "grugru",
+        "guess-language": "guess-language",
         "haskell-mode": "haskell-mode",
         "hcl-mode": "hcl-mode",
         "helpful": "helpful",
@@ -3711,6 +3711,7 @@
         "source-peek": "source-peek",
         "spark": "spark",
         "spray": "spray",
+        "stem-reading-mode": "stem-reading-mode",
         "string-inflection": "string-inflection",
         "stripe-buffer": "stripe-buffer",
         "suggest": "suggest",
@@ -4035,6 +4036,22 @@
       "original": {
         "type": "git",
         "url": "https://git.sr.ht/~iank/spray"
+      }
+    },
+    "stem-reading-mode": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1653216834,
+        "narHash": "sha256-X6XyhjfnXmKkj5xwspwhbCARq2cc3Xyj2cbc7pdxchI=",
+        "ref": "refs/heads/master",
+        "rev": "6efc9962e3a19a452c7ab9636cf1e2566a51bd38",
+        "revCount": 11,
+        "type": "git",
+        "url": "https://gitlab.com/wavexx/stem-reading-mode.el.git"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitlab.com/wavexx/stem-reading-mode.el.git"
       }
     },
     "string-inflection": {
