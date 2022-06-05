@@ -640,22 +640,6 @@
         "type": "github"
       }
     },
-    "dired-git-info": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1577647788,
-        "narHash": "sha256-M75kskJ2Gx1AllWGcbgsj4Kf6MT2myJ7z2oRXdKOJLc=",
-        "owner": "emacsmirror",
-        "repo": "dired-git-info",
-        "rev": "91d57e3a4c5104c66a3abc18e281ee55e8979176",
-        "type": "github"
-      },
-      "original": {
-        "owner": "emacsmirror",
-        "repo": "dired-git-info",
-        "type": "github"
-      }
-    },
     "dired-hacks-utils": {
       "flake": false,
       "locked": {
@@ -3516,7 +3500,6 @@
         "defrepeater": "defrepeater",
         "devdocs": "devdocs",
         "diff-hl": "diff-hl",
-        "dired-git-info": "dired-git-info",
         "dired-hacks-utils": "dired-hacks-utils",
         "dired-sidebar": "dired-sidebar",
         "dired-subtree": "dired-subtree",
@@ -3707,7 +3690,6 @@
         "slime": "slime",
         "sly": "sly",
         "smartparens": "smartparens",
-        "sml-mode": "sml-mode",
         "source-peek": "source-peek",
         "spark": "spark",
         "spray": "spray",
@@ -3971,22 +3953,6 @@
       "original": {
         "owner": "Fuco1",
         "repo": "smartparens",
-        "type": "github"
-      }
-    },
-    "sml-mode": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1606834874,
-        "narHash": "sha256-ZeYZJhsMF4OO9qBUtXTkzDEY/T73XjR4LGIlQt+ozAs=",
-        "owner": "emacsmirror",
-        "repo": "sml-mode",
-        "rev": "1460c3fa0df4464d15fe95bb2039d5ed739381d8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "emacsmirror",
-        "repo": "sml-mode",
         "type": "github"
       }
     },

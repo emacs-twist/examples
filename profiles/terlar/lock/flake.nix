@@ -242,12 +242,6 @@
       repo = "diff-hl";
       type = "github";
     };
-    dired-git-info = {
-      flake = false;
-      owner = "emacsmirror";
-      repo = "dired-git-info";
-      type = "github";
-    };
     dired-hacks-utils = {
       flake = false;
       owner = "Fuco1";
@@ -1376,12 +1370,6 @@
       flake = false;
       owner = "Fuco1";
       repo = "smartparens";
-      type = "github";
-    };
-    sml-mode = {
-      flake = false;
-      owner = "emacsmirror";
-      repo = "sml-mode";
       type = "github";
     };
     source-peek = {

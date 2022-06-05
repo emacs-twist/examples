@@ -57,6 +57,21 @@
     "packageRequires": {},
     "version": "0.1"
   },
+  "dired-git-info": {
+    "archive": {
+      "narHash": "sha256-jAO2VpVAFfBRmGiT8MJglYUr1TYl2RkvHfsbJsPovRw=",
+      "type": "file",
+      "url": "https://elpa.gnu.org/packages/dired-git-info-0.3.1.el"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.gnu.org/packages/"
+    },
+    "packageRequires": {
+      "emacs": "25"
+    },
+    "version": "0.3.1"
+  },
   "org-contrib": {
     "archive": {
       "narHash": "sha256-P4l7lnlKuBLKlwIYi40bcNjJEElGfjUBmQisABBl8A8=",
@@ -85,6 +100,22 @@
     },
     "packageRequires": {},
     "version": "1.0.6"
+  },
+  "sml-mode": {
+    "archive": {
+      "narHash": "sha256-Yy8edIthcsRro1UXf4vqQmubqWKhaM9nhaSvgnoxneY=",
+      "type": "file",
+      "url": "https://elpa.gnu.org/packages/sml-mode-6.10.el"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.gnu.org/packages/"
+    },
+    "packageRequires": {
+      "cl-lib": "0.5",
+      "emacs": "24.3"
+    },
+    "version": "6.10"
   },
   "spinner": {
     "archive": {
