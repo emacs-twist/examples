@@ -260,11 +260,11 @@
         "fromElisp": "fromElisp"
       },
       "locked": {
-        "lastModified": 1654258140,
-        "narHash": "sha256-HfZAQfwAPuDrGuiZC1XkUARPP4IwfYJ1jlkZ0R7eyL4=",
+        "lastModified": 1654455982,
+        "narHash": "sha256-Q9BN9WqZeJExEaUFhVRnIfd5vliukcqkhpaJeNi/YEc=",
         "owner": "emacs-twist",
         "repo": "twist.nix",
-        "rev": "3d522a6fcae9b9481d79b95f40d5ed9cae54f00b",
+        "rev": "f626e15c402c63caf0334930b10fdc3ac3f927f3",
         "type": "github"
       },
       "original": {
