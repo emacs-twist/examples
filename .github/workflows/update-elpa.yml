@@ -1,0 +1,25 @@
+name: Update ELPA packages
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 3 * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: cachix/install-nix-action@v17
+
+    - name: Update dependencies (terlar)
+      run: |
+        nix run .#update-terlar --impure
+
+    - name: Update dependencies (scimax)
+      run: |
+        nix run .#update-scimax --impure
+
+    - run: git push origin ${{ github.ref_name }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
