@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       updated: ${{ steps.pr.outputs.pull-request-operation == 'created' || steps.pr.outputs.pull-request-operation == 'updated' }}
+      ref: create-pull-request/update
     steps:
     - uses: actions/checkout@v3
     - uses: cachix/install-nix-action@v17
@@ -43,9 +44,9 @@ jobs:
   check-terlar:
     needs: ['update']
     if: ${{ needs.update.outputs.updated == 'true' }}
-    uses: ./.github/workflows/check-terlar.yml
+    uses: emacs-twist/examples/.github/workflows/check-terlar.yml@${{ jobs.update.outputs.ref }}
 
   check-scimax:
     needs: ['update']
     if: ${{ needs.update.outputs.updated == 'true' }}
-    uses: ./.github/workflows/check-scimax.yml
+    uses: emacs-twist/examples/.github/workflows/check-scimax.yml@${{ jobs.update.outputs.ref }}
