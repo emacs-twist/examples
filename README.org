@@ -8,7 +8,8 @@ For Mac, you need to install configurations somehow.
 
 Bug reports are welcome. Please feel free to [[https://github.com/emacs-twist/examples/issues/new][file an issue]].
 ** Trying out
-If you are using Linux with Nix 2.4 or later installed, you can try out a config inside a sandbox.
+Nix 2.9 is required.
+If you are using Linux, you can try out configs inside a sandbox.
 
 Note: [[file:lib/sandbox.nix][The sandboxing script]] temporarily creates =~/.emacs.d= inside its namespace.
 If you have your Emacs configuration in =~/.config/emacs/= (or =${XDG_CONFIG_HOME}/emacs=), it may leave an empty =~/.emacs.d= directory.
