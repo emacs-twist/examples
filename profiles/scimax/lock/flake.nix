@@ -74,11 +74,10 @@
       repo = "citeproc-el";
       type = "github";
     };
-    company = {
+    compat = {
       flake = false;
-      owner = "company-mode";
-      repo = "company-mode";
-      type = "github";
+      type = "git";
+      url = "https://git.sr.ht/~pkal/compat";
     };
     concurrent = {
       flake = false;
@@ -144,12 +143,6 @@
       flake = false;
       owner = "skeeto";
       repo = "elfeed";
-      type = "github";
-    };
-    elpy = {
-      flake = false;
-      owner = "jorgenschaefer";
-      repo = "elpy";
       type = "github";
     };
     emacsql = {
@@ -300,12 +293,6 @@
       flake = false;
       owner = "emacs-helm";
       repo = "helm";
-      type = "github";
-    };
-    highlight-indentation = {
-      flake = false;
-      owner = "antonj";
-      repo = "Highlight-Indentation-for-Emacs";
       type = "github";
     };
     ht = {
@@ -471,6 +458,12 @@
       repo = "ox-clip";
       type = "github";
     };
+    ox-pandoc = {
+      flake = false;
+      owner = "emacsorphanage";
+      repo = "ox-pandoc";
+      type = "github";
+    };
     parsebib = {
       flake = false;
       owner = "joostkremers";
@@ -523,12 +516,6 @@
       flake = false;
       owner = "tkf";
       repo = "emacs-python-environment";
-      type = "github";
-    };
-    pyvenv = {
-      flake = false;
-      owner = "jorgenschaefer";
-      repo = "pyvenv";
       type = "github";
     };
     queue = {

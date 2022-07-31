@@ -158,6 +158,11 @@
       repo = "company-mode";
       type = "github";
     };
+    compat = {
+      flake = false;
+      type = "git";
+      url = "https://git.sr.ht/~pkal/compat";
+    };
     consult = {
       flake = false;
       owner = "minad";
@@ -384,6 +389,12 @@
       flake = false;
       owner = "purcell";
       repo = "envrc";
+      type = "github";
+    };
+    epithet = {
+      flake = false;
+      owner = "emacsmirror";
+      repo = "epithet";
       type = "github";
     };
     epl = {
@@ -1177,7 +1188,7 @@
     };
     protobuf-mode = {
       flake = false;
-      owner = "google";
+      owner = "protocolbuffers";
       repo = "protobuf";
       type = "github";
     };
