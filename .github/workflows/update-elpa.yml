@@ -14,10 +14,12 @@ jobs:
 
     - name: Update dependencies (terlar)
       run: |
+        nix run .#lock-terlar --impure
         nix run .#update-terlar --impure
 
     - name: Update dependencies (scimax)
       run: |
+        nix run .#lock-scimax --impure
         nix run .#update-scimax --impure
 
     - run: git push origin ${{ github.ref_name }}

@@ -23,11 +23,17 @@ jobs:
 
     - name: Update dependencies (terlar)
       run: |
+        cd profiles/terlar
+        nix flake update
+        cd ../..
         nix run .#update-terlar --impure
         nix run .#lock-terlar --impure
 
     - name: Update dependencies (scimax)
       run: |
+        cd profiles/scimax
+        nix flake update
+        cd ../..
         nix run .#update-scimax --impure
         nix run .#lock-scimax --impure
 
