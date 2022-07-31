@@ -9,6 +9,9 @@ inputs: [
     path = inputs.gnu-elpa.outPath + "/elpa-packages";
     core-src = inputs.emacs.outPath;
     auto-sync-only = true;
+    exclude = [
+      "bbdb"
+    ];
   }
   {
     name = "melpa";

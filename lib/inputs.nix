@@ -1,11 +1,5 @@
 {lib}:
 with builtins; {
-  bbdb = _: super: {
-    files = removeAttrs super.files [
-      "bbdb-vm.el"
-      "bbdb-vm-aux.el"
-    ];
-  };
   dired-subtree = _: super: {
     packageRequires =
       super.packageRequires
