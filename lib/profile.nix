@@ -23,6 +23,7 @@ with builtins; let
       inherit emacsPackage;
       inherit lockDir;
       inherit extraPackages;
+      nativeCompileAheadDefault = false;
       inventories =
         [
           {
