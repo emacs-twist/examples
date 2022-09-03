@@ -64,6 +64,25 @@ in
       opts=""
     fi
 
+    for var in XAUTHORITY
+    do
+      if [[ -v "$var" ]]
+      then
+        value="$(\$$var)"
+        opts+=" --ro-bind \"$value\" \"$value\""
+      fi
+    done
+
+    if [[ -v DISPLAY ]]
+    then
+      opts+=" --setenv DISPLAY $DISPLAY"
+      if [[ $DISPLAY =~ ^:([[:digit:]]+) ]]
+      then
+        sock=/tmp/.X11-unix/X''${BASH_REMATCH[1]}
+        opts+=" --ro-bind $sock $sock"
+      fi
+    fi
+
     set -x
     ( exec ${bubblewrap}/bin/bwrap \
         --dir "$HOME" \
@@ -85,9 +104,6 @@ in
         --ro-bind-try "$HOME/.config/zsh/.zshrc" "$HOME/.config/zsh/.zshrc" \
         --ro-bind-try "$HOME/.config/zsh/plugins" "$HOME/.config/zsh/plugins" \
         --ro-bind-try "$HOME/.zshenv" "$HOME/.zshenv" \
-        --setenv DISPLAY ":0" \
-        --ro-bind /tmp/.X11-unix/X0 /tmp/.X11-unix/X0 \
-        --ro-bind "$XAUTHORITY" "$XAUTHORITY" \
         --new-session \
         --die-with-parent \
         --unshare-all \
