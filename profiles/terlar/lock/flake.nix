@@ -547,8 +547,9 @@
     };
     fullframe = {
       flake = false;
-      type = "git";
-      url = "https://git.sr.ht/~tomterl/fullframe";
+      owner = "~tomterl";
+      repo = "fullframe";
+      type = "sourcehut";
     };
     gcmh = {
       flake = false;
@@ -1039,7 +1040,6 @@
     org-babel-eval-in-repl = {
       flake = false;
       owner = "diadochos";
-      ref = "master";
       repo = "org-babel-eval-in-repl";
       type = "github";
     };
@@ -1290,8 +1290,9 @@
     };
     repl-toggle = {
       flake = false;
-      type = "git";
-      url = "https://git.sr.ht/~tomterl/repl-toggle";
+      owner = "~tomterl";
+      repo = "repl-toggle";
+      type = "sourcehut";
     };
     request = {
       flake = false;
@@ -1395,10 +1396,17 @@
       repo = "spark";
       type = "github";
     };
+    spinner = {
+      flake = false;
+      owner = "Malabarba";
+      repo = "spinner.el";
+      type = "github";
+    };
     spray = {
       flake = false;
-      type = "git";
-      url = "https://git.sr.ht/~iank/spray";
+      owner = "~iank";
+      repo = "spray";
+      type = "sourcehut";
     };
     stem-reading-mode = {
       flake = false;

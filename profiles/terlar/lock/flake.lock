@@ -1461,15 +1461,15 @@
       "locked": {
         "lastModified": 1614337055,
         "narHash": "sha256-S2UagqTTgAZQIuOSfpD4YZbkEiG/yu8/dKk/tcY1R+A=",
-        "ref": "refs/heads/master",
+        "owner": "~tomterl",
+        "repo": "fullframe",
         "rev": "886b831c001b44ec95aec4ff36e8bc1b3003c786",
-        "revCount": 99,
-        "type": "git",
-        "url": "https://git.sr.ht/~tomterl/fullframe"
+        "type": "sourcehut"
       },
       "original": {
-        "type": "git",
-        "url": "https://git.sr.ht/~tomterl/fullframe"
+        "owner": "~tomterl",
+        "repo": "fullframe",
+        "type": "sourcehut"
       }
     },
     "gcmh": {
@@ -2797,7 +2797,6 @@
       },
       "original": {
         "owner": "diadochos",
-        "ref": "master",
         "repo": "org-babel-eval-in-repl",
         "type": "github"
       }
@@ -3463,15 +3462,15 @@
       "locked": {
         "lastModified": 1614336957,
         "narHash": "sha256-13lj80VdtrbpgeJSIOYJ1yuqE6rko5JcVHNyThSqzFs=",
-        "ref": "refs/heads/master",
+        "owner": "~tomterl",
+        "repo": "repl-toggle",
         "rev": "7028ae65f136215f8e07a43afc33a6b99fe82857",
-        "revCount": 98,
-        "type": "git",
-        "url": "https://git.sr.ht/~tomterl/repl-toggle"
+        "type": "sourcehut"
       },
       "original": {
-        "type": "git",
-        "url": "https://git.sr.ht/~tomterl/repl-toggle"
+        "owner": "~tomterl",
+        "repo": "repl-toggle",
+        "type": "sourcehut"
       }
     },
     "request": {
@@ -3726,6 +3725,7 @@
         "smartparens": "smartparens",
         "source-peek": "source-peek",
         "spark": "spark",
+        "spinner": "spinner",
         "spray": "spray",
         "stem-reading-mode": "stem-reading-mode",
         "string-inflection": "string-inflection",
@@ -4022,20 +4022,36 @@
         "type": "github"
       }
     },
+    "spinner": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1625174439,
+        "narHash": "sha256-NBsCrg5JC4lL72TX9otzdSdEYl4aR+/enrUAG2QTB9U=",
+        "owner": "Malabarba",
+        "repo": "spinner.el",
+        "rev": "bca794fa6f6b007292cdac9b0a850a3711986db5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Malabarba",
+        "repo": "spinner.el",
+        "type": "github"
+      }
+    },
     "spray": {
       "flake": false,
       "locked": {
         "lastModified": 1526150182,
         "narHash": "sha256-Ih9/T9CUZeHr6mXPRJVhZdmUrHq7tP2mEc7tJkZ2a6s=",
-        "ref": "refs/heads/master",
+        "owner": "~iank",
+        "repo": "spray",
         "rev": "74d9dcfa2e8b38f96a43de9ab0eb13364300cb46",
-        "revCount": 70,
-        "type": "git",
-        "url": "https://git.sr.ht/~iank/spray"
+        "type": "sourcehut"
       },
       "original": {
-        "type": "git",
-        "url": "https://git.sr.ht/~iank/spray"
+        "owner": "~iank",
+        "repo": "spray",
+        "type": "sourcehut"
       }
     },
     "stem-reading-mode": {
