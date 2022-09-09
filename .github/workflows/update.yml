@@ -45,13 +45,3 @@ jobs:
         title: 'chore: Update dependencies'
         branch: create-pull-request/update
         labels: automation,update
-
-  check-terlar:
-    needs: ['update']
-    if: ${{ needs.update.outputs.updated == 'true' }}
-    uses: emacs-twist/examples/.github/workflows/check-terlar.yml@create-pull-request/update
-
-  check-scimax:
-    needs: ['update']
-    if: ${{ needs.update.outputs.updated == 'true' }}
-    uses: emacs-twist/examples/.github/workflows/check-scimax.yml@create-pull-request/update
