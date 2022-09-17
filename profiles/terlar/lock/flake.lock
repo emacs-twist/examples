@@ -947,15 +947,15 @@
     "emacsql": {
       "flake": false,
       "locked": {
-        "lastModified": 1649434493,
-        "narHash": "sha256-mkTCzBrq8ny40j//ZoNdZiH1rEZM08b9DkBcDGCQilw=",
-        "owner": "skeeto",
+        "lastModified": 1663326313,
+        "narHash": "sha256-uHxP5v+Vsw91teIbWXweNo7IHeETYvX+Rr9Ob7eEnHo=",
+        "owner": "magit",
         "repo": "emacsql",
-        "rev": "373975cbccf7776af771e23f86043b236a330702",
+        "rev": "6728a8649ae0209094c8c4b9e9f5786c004ab2ae",
         "type": "github"
       },
       "original": {
-        "owner": "skeeto",
+        "owner": "magit",
         "repo": "emacsql",
         "type": "github"
       }
