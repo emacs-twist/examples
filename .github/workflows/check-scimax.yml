@@ -13,5 +13,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: cachix/install-nix-action@v17
+    - uses: cachix/install-nix-action@v18
     - run: nix build .#scimax --dry-run
