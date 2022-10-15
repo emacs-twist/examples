@@ -12,7 +12,7 @@ jobs:
       updated: ${{ steps.pr.outputs.pull-request-operation == 'created' || steps.pr.outputs.pull-request-operation == 'updated' }}
     steps:
     - uses: actions/checkout@v3
-    - uses: cachix/install-nix-action@v17
+    - uses: cachix/install-nix-action@v18
 
     - name: Update Nix libraries
       run: |
