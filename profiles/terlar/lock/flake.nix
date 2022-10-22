@@ -319,12 +319,6 @@
       repo = "editorconfig-emacs";
       type = "github";
     };
-    eglot = {
-      flake = false;
-      owner = "joaotavora";
-      repo = "eglot";
-      type = "github";
-    };
     eglot-x = {
       flake = false;
       owner = "nemethf";
@@ -363,7 +357,7 @@
     };
     emacsql-sqlite = {
       flake = false;
-      owner = "skeeto";
+      owner = "magit";
       repo = "emacsql";
       type = "github";
     };
@@ -839,12 +833,6 @@
       flake = false;
       owner = "kubernetes-el";
       repo = "kubernetes-el";
-      type = "github";
-    };
-    kubernetes-tramp = {
-      flake = false;
-      owner = "gruggiero";
-      repo = "kubernetes-tramp";
       type = "github";
     };
     kv = {

@@ -848,22 +848,6 @@
         "type": "github"
       }
     },
-    "eglot": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1658844346,
-        "narHash": "sha256-dh2XoSOlCtVuC27BFkvYYcazjTWxLV+3GqaHvkUqi3Q=",
-        "owner": "joaotavora",
-        "repo": "eglot",
-        "rev": "000b7fdce93ed29c505a7fa75baaf87094fd690a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "joaotavora",
-        "repo": "eglot",
-        "type": "github"
-      }
-    },
     "eglot-x": {
       "flake": false,
       "locked": {
@@ -963,15 +947,15 @@
     "emacsql-sqlite": {
       "flake": false,
       "locked": {
-        "lastModified": 1649434493,
-        "narHash": "sha256-mkTCzBrq8ny40j//ZoNdZiH1rEZM08b9DkBcDGCQilw=",
-        "owner": "skeeto",
+        "lastModified": 1666264639,
+        "narHash": "sha256-4o3dwOd9WBmhPZ9y+wdAYq/b/wbqfhheoGxHppDfgVg=",
+        "owner": "magit",
         "repo": "emacsql",
-        "rev": "373975cbccf7776af771e23f86043b236a330702",
+        "rev": "67ca8124bc6c4b01ee19ebbd606ec7ab645b0e2e",
         "type": "github"
       },
       "original": {
-        "owner": "skeeto",
+        "owner": "magit",
         "repo": "emacsql",
         "type": "github"
       }
@@ -2257,22 +2241,6 @@
         "type": "github"
       }
     },
-    "kubernetes-tramp": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1545988922,
-        "narHash": "sha256-zmpyCKTCkNAEgHu8Zghpl746ixbDK8iEPhzT11+7qxc=",
-        "owner": "gruggiero",
-        "repo": "kubernetes-tramp",
-        "rev": "8713571b66940f8f3f496b55baa23cdf1df7a869",
-        "type": "github"
-      },
-      "original": {
-        "owner": "gruggiero",
-        "repo": "kubernetes-tramp",
-        "type": "github"
-      }
-    },
     "kv": {
       "flake": false,
       "locked": {
@@ -3544,7 +3512,6 @@
         "easy-escape": "easy-escape",
         "edit-indirect": "edit-indirect",
         "editorconfig": "editorconfig",
-        "eglot": "eglot",
         "eglot-x": "eglot-x",
         "elfeed": "elfeed",
         "elisp-refs": "elisp-refs",
@@ -3632,7 +3599,6 @@
         "json-snatcher": "json-snatcher",
         "kotlin-mode": "kotlin-mode",
         "kubernetes": "kubernetes",
-        "kubernetes-tramp": "kubernetes-tramp",
         "kv": "kv",
         "language-detection": "language-detection",
         "ligature": "ligature",
