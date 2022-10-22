@@ -153,7 +153,7 @@
     };
     emacsql-sqlite = {
       flake = false;
-      owner = "skeeto";
+      owner = "magit";
       repo = "emacsql";
       type = "github";
     };

@@ -403,15 +403,15 @@
     "emacsql-sqlite": {
       "flake": false,
       "locked": {
-        "lastModified": 1649434493,
-        "narHash": "sha256-mkTCzBrq8ny40j//ZoNdZiH1rEZM08b9DkBcDGCQilw=",
-        "owner": "skeeto",
+        "lastModified": 1666264639,
+        "narHash": "sha256-4o3dwOd9WBmhPZ9y+wdAYq/b/wbqfhheoGxHppDfgVg=",
+        "owner": "magit",
         "repo": "emacsql",
-        "rev": "373975cbccf7776af771e23f86043b236a330702",
+        "rev": "67ca8124bc6c4b01ee19ebbd606ec7ab645b0e2e",
         "type": "github"
       },
       "original": {
-        "owner": "skeeto",
+        "owner": "magit",
         "repo": "emacsql",
         "type": "github"
       }
