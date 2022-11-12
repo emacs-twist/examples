@@ -2209,6 +2209,22 @@
         "type": "github"
       }
     },
+    "kind-icon": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1667874570,
+        "narHash": "sha256-09Ne3uM0F+f/+BdpLCBD0KhXVc+8EWOE2YWHtiiBag0=",
+        "owner": "jdtsmith",
+        "repo": "kind-icon",
+        "rev": "02b24406d41739020638205c2a06710fe1d48381",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jdtsmith",
+        "repo": "kind-icon",
+        "type": "github"
+      }
+    },
     "kotlin-mode": {
       "flake": false,
       "locked": {
@@ -2388,15 +2404,15 @@
     "macrostep": {
       "flake": false,
       "locked": {
-        "lastModified": 1479675960,
-        "narHash": "sha256-X0KJxrpZduW691sjTGznVebXhhAiJf6+ZwkJ23oFpLo=",
-        "owner": "joddie",
+        "lastModified": 1666792071,
+        "narHash": "sha256-cHjrSCnv2fs1ERnIxGkXSc9+hEYuQkbAk6TofrnsC9Y=",
+        "owner": "emacsorphanage",
         "repo": "macrostep",
-        "rev": "424e3734a1ee526a1bd7b5c3cd1d3ef19d184267",
+        "rev": "75ecd041219239f0dceab4883594ea2fe366b484",
         "type": "github"
       },
       "original": {
-        "owner": "joddie",
+        "owner": "emacsorphanage",
         "repo": "macrostep",
         "type": "github"
       }
@@ -3597,6 +3613,7 @@
         "json-navigator": "json-navigator",
         "json-process-client": "json-process-client",
         "json-snatcher": "json-snatcher",
+        "kind-icon": "kind-icon",
         "kotlin-mode": "kotlin-mode",
         "kubernetes": "kubernetes",
         "kv": "kv",
@@ -3697,6 +3714,7 @@
         "string-inflection": "string-inflection",
         "stripe-buffer": "stripe-buffer",
         "suggest": "suggest",
+        "svg-lib": "svg-lib",
         "tablist": "tablist",
         "terraform-doc": "terraform-doc",
         "terraform-mode": "terraform-mode",
@@ -4081,6 +4099,22 @@
       "original": {
         "owner": "Wilfred",
         "repo": "suggest.el",
+        "type": "github"
+      }
+    },
+    "svg-lib": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1663752251,
+        "narHash": "sha256-vzP+xTzkDXVsUWcGs2A+hA5HSohKJ5xK2NJMCop/Sc8=",
+        "owner": "rougier",
+        "repo": "svg-lib",
+        "rev": "67d4a38bd724c49ad15806e6ca118236cdb1cf26",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rougier",
+        "repo": "svg-lib",
         "type": "github"
       }
     },

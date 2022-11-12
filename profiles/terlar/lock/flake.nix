@@ -823,6 +823,12 @@
       repo = "json-snatcher";
       type = "github";
     };
+    kind-icon = {
+      flake = false;
+      owner = "jdtsmith";
+      repo = "kind-icon";
+      type = "github";
+    };
     kotlin-mode = {
       flake = false;
       owner = "Emacs-Kotlin-Mode-Maintainers";
@@ -891,7 +897,7 @@
     };
     macrostep = {
       flake = false;
-      owner = "joddie";
+      owner = "emacsorphanage";
       repo = "macrostep";
       type = "github";
     };
@@ -1417,6 +1423,12 @@
       flake = false;
       owner = "Wilfred";
       repo = "suggest.el";
+      type = "github";
+    };
+    svg-lib = {
+      flake = false;
+      owner = "rougier";
+      repo = "svg-lib";
       type = "github";
     };
     tablist = {
