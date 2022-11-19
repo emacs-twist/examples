@@ -457,12 +457,6 @@
       repo = "f.el";
       type = "github";
     };
-    fancy-dabbrev = {
-      flake = false;
-      owner = "jrosdahl";
-      repo = "fancy-dabbrev";
-      type = "github";
-    };
     find-file-rg = {
       flake = false;
       owner = "muffinmad";
