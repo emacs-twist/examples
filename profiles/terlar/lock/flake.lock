@@ -1216,22 +1216,6 @@
         "type": "github"
       }
     },
-    "fancy-dabbrev": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1644561223,
-        "narHash": "sha256-hRz0Cbg7WXI545CxLc14qqPJZ+2UJ+etjhoiQze/6RM=",
-        "owner": "jrosdahl",
-        "repo": "fancy-dabbrev",
-        "rev": "cf4a2f7e3e43e07ab9aa9db16532a21010e9fc8c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jrosdahl",
-        "repo": "fancy-dabbrev",
-        "type": "github"
-      }
-    },
     "find-file-rg": {
       "flake": false,
       "locked": {
@@ -3551,7 +3535,6 @@
         "eval-in-repl": "eval-in-repl",
         "explain-pause-mode": "explain-pause-mode",
         "f": "f",
-        "fancy-dabbrev": "fancy-dabbrev",
         "find-file-rg": "find-file-rg",
         "fish-completion": "fish-completion",
         "fish-mode": "fish-mode",
