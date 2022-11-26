@@ -14,12 +14,6 @@
       repo = "ace-window";
       type = "github";
     };
-    affe = {
-      flake = false;
-      owner = "minad";
-      repo = "affe";
-      type = "github";
-    };
     aio = {
       flake = false;
       owner = "skeeto";
@@ -60,6 +54,12 @@
       flake = false;
       owner = "radian-software";
       repo = "apheleia";
+      type = "github";
+    };
+    attrap = {
+      flake = false;
+      owner = "jyp";
+      repo = "attrap";
       type = "github";
     };
     auto-compile = {
@@ -169,16 +169,16 @@
       repo = "consult";
       type = "github";
     };
+    consult-git-log-grep = {
+      flake = false;
+      owner = "ghosty141";
+      repo = "consult-git-log-grep";
+      type = "github";
+    };
     corfu = {
       flake = false;
       owner = "minad";
       repo = "corfu";
-      type = "github";
-    };
-    corfu-doc = {
-      flake = false;
-      owner = "galeo";
-      repo = "corfu-doc";
       type = "github";
     };
     coverlay = {

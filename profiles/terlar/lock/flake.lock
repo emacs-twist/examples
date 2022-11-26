@@ -32,22 +32,6 @@
         "type": "github"
       }
     },
-    "affe": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1658439067,
-        "narHash": "sha256-+nTG/Bb+9E6j/Fq+GFMUQLzEA39GwjxwOmb8XhMNIWs=",
-        "owner": "minad",
-        "repo": "affe",
-        "rev": "0162da0aab3b30412eee5ebf68427361fc8fc26d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "minad",
-        "repo": "affe",
-        "type": "github"
-      }
-    },
     "aio": {
       "flake": false,
       "locked": {
@@ -157,6 +141,22 @@
       "original": {
         "owner": "radian-software",
         "repo": "apheleia",
+        "type": "github"
+      }
+    },
+    "attrap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1667831647,
+        "narHash": "sha256-NeIRGa+RHReiZKCwJeKbAr9EqicJBnl5fieiGcqIFy0=",
+        "owner": "jyp",
+        "repo": "attrap",
+        "rev": "7cf39d3227d2e99bb2d627bb47fdd90c10a7675a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jyp",
+        "repo": "attrap",
         "type": "github"
       }
     },
@@ -448,6 +448,22 @@
         "type": "github"
       }
     },
+    "consult-git-log-grep": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1669032522,
+        "narHash": "sha256-sxwnMzLWDDXjBvFir9PL76PrHcdAE8+n2nJeczXiZ5Q=",
+        "owner": "ghosty141",
+        "repo": "consult-git-log-grep",
+        "rev": "c58f16c77dfcad68f7768a3046c6260b4eaf3606",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ghosty141",
+        "repo": "consult-git-log-grep",
+        "type": "github"
+      }
+    },
     "corfu": {
       "flake": false,
       "locked": {
@@ -461,22 +477,6 @@
       "original": {
         "owner": "minad",
         "repo": "corfu",
-        "type": "github"
-      }
-    },
-    "corfu-doc": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1655826840,
-        "narHash": "sha256-l+SGrsATTJv5L/402P9F8Y5QqpeKiN6FIztwA6IjFCM=",
-        "owner": "galeo",
-        "repo": "corfu-doc",
-        "rev": "da931367802d01e87e1e496ba5b51aa9126a705d",
-        "type": "github"
-      },
-      "original": {
-        "owner": "galeo",
-        "repo": "corfu-doc",
         "type": "github"
       }
     },
@@ -3461,7 +3461,6 @@
       "inputs": {
         "a": "a",
         "ace-window": "ace-window",
-        "affe": "affe",
         "aio": "aio",
         "alchemist": "alchemist",
         "all-the-icons": "all-the-icons",
@@ -3469,6 +3468,7 @@
         "all-the-icons-dired": "all-the-icons-dired",
         "annotate": "annotate",
         "apheleia": "apheleia",
+        "attrap": "attrap",
         "auto-compile": "auto-compile",
         "auto-minor-mode": "auto-minor-mode",
         "avy": "avy",
@@ -3487,8 +3487,8 @@
         "company": "company",
         "compat": "compat",
         "consult": "consult",
+        "consult-git-log-grep": "consult-git-log-grep",
         "corfu": "corfu",
-        "corfu-doc": "corfu-doc",
         "coverlay": "coverlay",
         "crystal-mode": "crystal-mode",
         "ctrlf": "ctrlf",
