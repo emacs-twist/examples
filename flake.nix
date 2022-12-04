@@ -60,8 +60,8 @@
         inherit system;
         overlays = [
           inputs.emacs-unstable.overlay
-          inputs.org-babel.overlay
-          inputs.twist.overlay
+          inputs.org-babel.overlays.default
+          inputs.twist.overlays.default
         ];
       };
 
