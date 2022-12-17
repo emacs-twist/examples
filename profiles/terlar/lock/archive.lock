@@ -88,6 +88,22 @@
     },
     "version": "0.4"
   },
+  "python": {
+    "archive": {
+      "narHash": "sha256-mXH3Wcu/la7Vudnpxa34xJNNlO/1owD+NIu50DFt1yk=",
+      "type": "tarball",
+      "url": "https://elpa.gnu.org/packages/python-0.28.tar"
+    },
+    "inventory": {
+      "type": "archive",
+      "url": "https://elpa.gnu.org/packages/"
+    },
+    "packageRequires": {
+      "cl-lib": "1.0",
+      "emacs": "24.4"
+    },
+    "version": "0.28"
+  },
   "rainbow-mode": {
     "archive": {
       "narHash": "sha256-Qd5M2ellyZW+UPAxUarkS6s5dv4k3xyTpJtMmKTH9Ug=",

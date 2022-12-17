@@ -14,12 +14,6 @@
       repo = "ace-window";
       type = "github";
     };
-    affe = {
-      flake = false;
-      owner = "minad";
-      repo = "affe";
-      type = "github";
-    };
     aio = {
       flake = false;
       owner = "skeeto";
@@ -62,6 +56,12 @@
       repo = "apheleia";
       type = "github";
     };
+    attrap = {
+      flake = false;
+      owner = "jyp";
+      repo = "attrap";
+      type = "github";
+    };
     auto-compile = {
       flake = false;
       owner = "emacscollective";
@@ -90,12 +90,6 @@
       flake = false;
       owner = "cadadr";
       repo = "elisp";
-      type = "github";
-    };
-    bind-key = {
-      flake = false;
-      owner = "jwiegley";
-      repo = "use-package";
       type = "github";
     };
     browse-at-remote = {
@@ -169,16 +163,16 @@
       repo = "consult";
       type = "github";
     };
+    consult-git-log-grep = {
+      flake = false;
+      owner = "ghosty141";
+      repo = "consult-git-log-grep";
+      type = "github";
+    };
     corfu = {
       flake = false;
       owner = "minad";
       repo = "corfu";
-      type = "github";
-    };
-    corfu-doc = {
-      flake = false;
-      owner = "galeo";
-      repo = "corfu-doc";
       type = "github";
     };
     coverlay = {
@@ -317,6 +311,12 @@
       flake = false;
       owner = "editorconfig";
       repo = "editorconfig-emacs";
+      type = "github";
+    };
+    eglot = {
+      flake = false;
+      owner = "joaotavora";
+      repo = "eglot";
       type = "github";
     };
     eglot-x = {
@@ -733,13 +733,6 @@
       repo = "indent-info.el";
       type = "github";
     };
-    indium = {
-      flake = false;
-      owner = "akirak";
-      ref = "fix-build-error";
-      repo = "Indium";
-      type = "github";
-    };
     inf-crystal = {
       flake = false;
       owner = "brantou";
@@ -788,12 +781,6 @@
       repo = "js2-mode";
       type = "github";
     };
-    js2-refactor = {
-      flake = false;
-      owner = "js-emacs";
-      repo = "js2-refactor.el";
-      type = "github";
-    };
     json-mode = {
       flake = false;
       owner = "joshwnj";
@@ -805,11 +792,6 @@
       owner = "DamienCassou";
       repo = "json-navigator";
       type = "github";
-    };
-    json-process-client = {
-      flake = false;
-      type = "git";
-      url = "https://gitea.petton.fr/nico/json-process-client.git";
     };
     json-snatcher = {
       flake = false;
@@ -960,12 +942,6 @@
       repo = "multicolumn";
       type = "github";
     };
-    multiple-cursors = {
-      flake = false;
-      owner = "magnars";
-      repo = "multiple-cursors.el";
-      type = "github";
-    };
     native-complete = {
       flake = false;
       owner = "CeleritasCelery";
@@ -1061,12 +1037,6 @@
       repo = "org-preview-html";
       type = "github";
     };
-    org-radiobutton = {
-      flake = false;
-      owner = "Fuco1";
-      repo = "org-radiobutton";
-      type = "github";
-    };
     org-roam = {
       flake = false;
       owner = "org-roam";
@@ -1111,7 +1081,7 @@
     };
     packed = {
       flake = false;
-      owner = "emacscollective";
+      owner = "emacsorphanage";
       repo = "packed";
       type = "github";
     };
@@ -1119,6 +1089,12 @@
       flake = false;
       owner = "purcell";
       repo = "page-break-lines";
+      type = "github";
+    };
+    pairable = {
+      flake = false;
+      owner = "terlar";
+      repo = "emacs-config";
       type = "github";
     };
     paredit = {
@@ -1240,6 +1216,12 @@
       repo = "rake";
       type = "github";
     };
+    readable = {
+      flake = false;
+      owner = "terlar";
+      repo = "emacs-config";
+      type = "github";
+    };
     readable-mono-theme = {
       flake = false;
       owner = "terlar";
@@ -1268,6 +1250,12 @@
       flake = false;
       owner = "psibi";
       repo = "rego-mode";
+      type = "github";
+    };
+    related-files = {
+      flake = false;
+      owner = "DamienCassou";
+      repo = "related-files";
       type = "github";
     };
     relative-buffers = {
@@ -1366,6 +1354,12 @@
       repo = "sly";
       type = "github";
     };
+    sly-quicklisp = {
+      flake = false;
+      owner = "joaotavora";
+      repo = "sly-quicklisp";
+      type = "github";
+    };
     smartparens = {
       flake = false;
       owner = "Fuco1";
@@ -1429,6 +1423,12 @@
       flake = false;
       owner = "politza";
       repo = "tablist";
+      type = "github";
+    };
+    tempel = {
+      flake = false;
+      owner = "minad";
+      repo = "tempel";
       type = "github";
     };
     terraform-doc = {
@@ -1597,24 +1597,6 @@
       flake = false;
       owner = "hron";
       repo = "yari.el";
-      type = "github";
-    };
-    yasnippet = {
-      flake = false;
-      owner = "joaotavora";
-      repo = "yasnippet";
-      type = "github";
-    };
-    yasnippet-snippets = {
-      flake = false;
-      owner = "AndreaCrotti";
-      repo = "yasnippet-snippets";
-      type = "github";
-    };
-    yatemplate = {
-      flake = false;
-      owner = "mineo";
-      repo = "yatemplate";
       type = "github";
     };
     zoom-window = {
