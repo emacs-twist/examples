@@ -2,7 +2,7 @@
   pkgs,
   terlar,
 }: {
-  emacsPackage = pkgs.emacsUnstable;
+  emacsPackage = pkgs.emacsGit;
   lockDir = ./lock;
   initFiles = [
     (pkgs.tangleOrgBabelFile "init.el" (terlar + "/init.org") {})
