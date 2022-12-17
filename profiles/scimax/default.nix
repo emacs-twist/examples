@@ -9,7 +9,7 @@ with builtins; let
 
   inherit (pkgs.callPackage ./../../lib/utils.nix {}) sanitizeFile;
 
-  emacsPackage = pkgs.emacsUnstable;
+  emacsPackage = pkgs.emacsGit;
 in {
   inherit emacsPackage;
   lockDir = ./lock;
