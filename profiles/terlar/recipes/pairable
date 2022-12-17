@@ -1,0 +1,2 @@
+(pairable :fetcher github :repo "terlar/emacs-config"
+          :files ("lisp/pairable.el"))
