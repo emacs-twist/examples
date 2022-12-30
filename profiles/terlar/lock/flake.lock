@@ -1859,10 +1859,10 @@
     "idle-highlight-mode": {
       "flake": false,
       "locked": {
-        "lastModified": 1670844218,
-        "narHash": "sha256-+QXPEUDmZFDBKH6uBBBwEqvN5f26iN4bG04iCU/Awvc=",
+        "lastModified": 1672202303,
+        "narHash": "sha256-oCkMgF8XqFVFZjcCWZ1cmdaXYW+4xHWaNJ60lLgjyKU=",
         "ref": "refs/heads/master",
-        "rev": "0cdf8437183766de7e165d5f9ae76646ecccaaa2",
+        "rev": "52f9bd8aff1a911837c371394badd172bf6e5fde",
         "revCount": 65,
         "type": "git",
         "url": "https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git"
