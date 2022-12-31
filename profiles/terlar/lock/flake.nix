@@ -271,12 +271,6 @@
       repo = "docker-compose-mode";
       type = "github";
     };
-    docker-tramp = {
-      flake = false;
-      owner = "emacs-pe";
-      repo = "docker-tramp.el";
-      type = "github";
-    };
     dockerfile-mode = {
       flake = false;
       owner = "spotify";
@@ -1077,12 +1071,6 @@
       flake = false;
       owner = "purcell";
       repo = "package-lint";
-      type = "github";
-    };
-    packed = {
-      flake = false;
-      owner = "emacsorphanage";
-      repo = "packed";
       type = "github";
     };
     page-break-lines = {
