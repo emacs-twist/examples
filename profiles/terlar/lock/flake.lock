@@ -720,22 +720,6 @@
         "type": "github"
       }
     },
-    "docker-tramp": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1645244400,
-        "narHash": "sha256-NjOxB/c65CyX8i7H91KAnd8okMCZm6+pJY8mpwY1JhU=",
-        "owner": "emacs-pe",
-        "repo": "docker-tramp.el",
-        "rev": "930d7b46c180d8a13240a028c1b40af84f2a3219",
-        "type": "github"
-      },
-      "original": {
-        "owner": "emacs-pe",
-        "repo": "docker-tramp.el",
-        "type": "github"
-      }
-    },
     "dockerfile-mode": {
       "flake": false,
       "locked": {
@@ -2896,22 +2880,6 @@
         "type": "github"
       }
     },
-    "packed": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1669847330,
-        "narHash": "sha256-3ba+IkCAqDwbctICkg+ObMTwmHsM+N1/4lWX3JVfbfg=",
-        "owner": "emacsorphanage",
-        "repo": "packed",
-        "rev": "169064f7acfe198cc7dd43d02518b773691e1314",
-        "type": "github"
-      },
-      "original": {
-        "owner": "emacsorphanage",
-        "repo": "packed",
-        "type": "github"
-      }
-    },
     "page-break-lines": {
       "flake": false,
       "locked": {
@@ -3471,7 +3439,6 @@
         "dired-subtree": "dired-subtree",
         "docker": "docker",
         "docker-compose-mode": "docker-compose-mode",
-        "docker-tramp": "docker-tramp",
         "dockerfile-mode": "dockerfile-mode",
         "dtrt-indent": "dtrt-indent",
         "dumb-jump": "dumb-jump",
@@ -3607,7 +3574,6 @@
         "ox-epub": "ox-epub",
         "package-lint": "package-lint",
         "package-lint-flymake": "package-lint-flymake",
-        "packed": "packed",
         "page-break-lines": "page-break-lines",
         "pairable": "pairable",
         "paredit": "paredit",
