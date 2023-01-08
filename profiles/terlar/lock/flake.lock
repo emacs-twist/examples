@@ -403,17 +403,17 @@
     "compat": {
       "flake": false,
       "locked": {
-        "lastModified": 1669157406,
-        "narHash": "sha256-gF67NJPKM+UtB1glp5mee8R0pSYbJpDr+U2ycC6DLe0=",
-        "ref": "refs/heads/master",
-        "rev": "1573aa2e6d478c30cc7f394b72cbaa4db77ef811",
-        "revCount": 418,
-        "type": "git",
-        "url": "https://git.sr.ht/~pkal/compat"
+        "lastModified": 1673124789,
+        "narHash": "sha256-+DQRJqNi/W/25vp68LlTwut3a2uaLyn7+iit5gyHToA=",
+        "owner": "emacs-compat",
+        "repo": "compat",
+        "rev": "887ec71fa3a90bc0d333ae9c333436148e909dbd",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://git.sr.ht/~pkal/compat"
+        "owner": "emacs-compat",
+        "repo": "compat",
+        "type": "github"
       }
     },
     "consult": {
@@ -1843,10 +1843,10 @@
     "idle-highlight-mode": {
       "flake": false,
       "locked": {
-        "lastModified": 1672202303,
-        "narHash": "sha256-oCkMgF8XqFVFZjcCWZ1cmdaXYW+4xHWaNJ60lLgjyKU=",
+        "lastModified": 1672918222,
+        "narHash": "sha256-gkn/FUN8fuANPGrSbVkkU0Acbg1RjYHHIftLJrrJGkk=",
         "ref": "refs/heads/master",
-        "rev": "52f9bd8aff1a911837c371394badd172bf6e5fde",
+        "rev": "f1c1a988a5b4823a841d5802d87eb87d5f9dc549",
         "revCount": 65,
         "type": "git",
         "url": "https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git"
