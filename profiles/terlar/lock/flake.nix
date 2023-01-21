@@ -460,8 +460,9 @@
     };
     fish-completion = {
       flake = false;
-      type = "git";
-      url = "https://gitlab.com/Ambrevar/emacs-fish-completion.git";
+      owner = "Ambrevar";
+      repo = "emacs-fish-completion";
+      type = "gitlab";
     };
     fish-mode = {
       flake = false;
@@ -471,8 +472,9 @@
     };
     fit-text-scale = {
       flake = false;
-      type = "git";
-      url = "https://gitlab.com/marcowahl/fit-text-scale.git";
+      owner = "marcowahl";
+      repo = "fit-text-scale";
+      type = "gitlab";
     };
     flycheck = {
       flake = false;
@@ -536,13 +538,15 @@
     };
     gcmh = {
       flake = false;
-      type = "git";
-      url = "https://gitlab.com/koral/gcmh.git";
+      owner = "koral";
+      repo = "gcmh";
+      type = "gitlab";
     };
     geiser = {
       flake = false;
-      type = "git";
-      url = "https://gitlab.com/emacs-geiser/geiser.git";
+      owner = "emacs-geiser";
+      repo = "geiser";
+      type = "gitlab";
     };
     general = {
       flake = false;
@@ -558,8 +562,9 @@
     };
     gif-screencast = {
       flake = false;
-      type = "git";
-      url = "https://gitlab.com/Ambrevar/emacs-gif-screencast.git";
+      owner = "Ambrevar";
+      repo = "emacs-gif-screencast";
+      type = "gitlab";
     };
     git-commit = {
       flake = false;
@@ -1381,8 +1386,9 @@
     };
     stem-reading-mode = {
       flake = false;
-      type = "git";
-      url = "https://gitlab.com/wavexx/stem-reading-mode.el.git";
+      owner = "wavexx";
+      repo = "stem-reading-mode.el";
+      type = "gitlab";
     };
     string-inflection = {
       flake = false;

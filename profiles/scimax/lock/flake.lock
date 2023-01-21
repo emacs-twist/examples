@@ -195,17 +195,17 @@
     "compat": {
       "flake": false,
       "locked": {
-        "lastModified": 1669157406,
-        "narHash": "sha256-gF67NJPKM+UtB1glp5mee8R0pSYbJpDr+U2ycC6DLe0=",
-        "ref": "refs/heads/master",
-        "rev": "1573aa2e6d478c30cc7f394b72cbaa4db77ef811",
-        "revCount": 418,
-        "type": "git",
-        "url": "https://git.sr.ht/~pkal/compat"
+        "lastModified": 1674240096,
+        "narHash": "sha256-4i2eHdcNAwbGJ+B8FJzKEgizTcsxCI1MuWrQTFcLN60=",
+        "owner": "emacs-compat",
+        "repo": "compat",
+        "rev": "688e2d983c8ca41c1b5a5241d22df31a57575a0a",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://git.sr.ht/~pkal/compat"
+        "owner": "emacs-compat",
+        "repo": "compat",
+        "type": "github"
       }
     },
     "concurrent": {
