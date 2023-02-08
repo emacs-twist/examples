@@ -17,4 +17,4 @@ jobs:
       with:
         extra_nix_config: |
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
-    - run: nix build .#scimax --dry-run
+    - run: nix build .#scimax --dry-run --show-trace

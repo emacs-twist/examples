@@ -16,7 +16,7 @@ jobs:
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
 
     - name: Update flake inputs
-      run: nix flake update
+      run: nix flake update --show-trace
 
     - uses: peter-evans/create-pull-request@v4
       with:

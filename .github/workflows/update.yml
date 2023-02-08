@@ -19,7 +19,7 @@ jobs:
 
     - name: Update Nix libraries
       run: |
-        nix flake lock \
+        nix flake lock --show-trace \
         --update-input twist \
         --update-input flake-utils \
         --update-input org-babel
@@ -29,16 +29,16 @@ jobs:
         cd profiles/terlar
         nix flake update
         cd ../..
-        nix run .#update-terlar --impure
-        nix run .#lock-terlar --impure
+        nix run .#update-terlar --impure --show-trace
+        nix run .#lock-terlar --impure --show-trace
 
     - name: Update dependencies (scimax)
       run: |
         cd profiles/scimax
         nix flake update
         cd ../..
-        nix run .#update-scimax --impure
-        nix run .#lock-scimax --impure
+        nix run .#update-scimax --impure --show-trace
+        nix run .#lock-scimax --impure --show-trace
 
     - uses: peter-evans/create-pull-request@v4
       id: pr

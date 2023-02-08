@@ -18,12 +18,12 @@ jobs:
     - name: Update dependencies (terlar)
       run: |
         nix run .#lock-terlar --impure
-        nix run .#update-terlar --impure
+        nix run .#update-terlar --impure --show-trace
 
     - name: Update dependencies (scimax)
       run: |
         nix run .#lock-scimax --impure
-        nix run .#update-scimax --impure
+        nix run .#update-scimax --impure --show-trace
 
     - run: git push origin ${{ github.ref_name }}
       env:
