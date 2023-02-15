@@ -4,7 +4,7 @@ It is provided as a Nix flake with packages sandboxed with [[https://github.com/
 This means you can try out configurations without installation on Linux.
 For Mac, you need to install configurations somehow.
 
-*Disclaimer*: I am not going maintain these profiles forever. I use this repository as a testbed for the library, and configurations in this repository are likely to be outdated. Also, the original authors of the configurations are not directly related to this project. Please contact me or [[https://github.com/akirak/emacs-twist-examples/issues/new][create a ticket]] if you have found any issue with the use.
+*Disclaimer*: I am not going to maintain these profiles forever. I use this repository as a testbed for the library, and configurations in this repository are likely to be outdated. Also, the original authors of the configurations are not directly related to this project. Please contact me or [[https://github.com/akirak/emacs-twist-examples/issues/new][create a ticket]] if you have found any issue with the use.
 
 Bug reports are welcome. Please feel free to [[https://github.com/emacs-twist/examples/issues/new][file an issue]].
 ** Trying out
