@@ -1,8 +1,9 @@
 {
   pkgs,
+  emacsPackage,
   terlar,
 }: {
-  emacsPackage = pkgs.emacsGit;
+  inherit emacsPackage;
   lockDir = ./lock;
   initFiles = [
     (pkgs.tangleOrgBabelFile "init.el" (terlar + "/init.org") {})

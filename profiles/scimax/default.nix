@@ -1,5 +1,6 @@
 {
   pkgs,
+  emacsPackage,
   scimax,
   parseUsePackages,
   emacsBuiltinLibraries,
@@ -8,8 +9,6 @@ with builtins; let
   inherit (pkgs) lib;
 
   inherit (pkgs.callPackage ./../../lib/utils.nix {}) sanitizeFile;
-
-  emacsPackage = pkgs.emacsGit;
 in {
   inherit emacsPackage;
   lockDir = ./lock;
