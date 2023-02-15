@@ -525,6 +525,12 @@
       repo = "predictive";
       type = "github";
     };
+    request = {
+      flake = false;
+      owner = "tkf";
+      repo = "emacs-request";
+      type = "github";
+    };
     rich-minority = {
       flake = false;
       owner = "Malabarba";

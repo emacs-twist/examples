@@ -115,6 +115,7 @@ in {
           ivy-bibtex = "0";
           helm-bibtex = "0";
           pdf-tools = "0";
+          request = "0";
         }
         // super.packageRequires;
     };
