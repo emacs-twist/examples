@@ -15,6 +15,8 @@ Note: [[file:lib/sandbox.nix][The sandboxing script]] temporarily creates =~/.em
 If you have your Emacs configuration in =~/.config/emacs/= (or =${XDG_CONFIG_HOME}/emacs=), it may leave an empty =~/.emacs.d= directory.
 Please remove the directory after the sandboxed session finishes.
 
+You may encounter build errors. Twist byte-compiles every package, so it is considered strict on grammatical mistakes. If one of the configurations fails to build, it is more likely to be an upstream issue. Please file a report to its corresponding repository.
+
 To run [[https://github.com/terlar/emacs-config][terlar/emacs-config]] inside a sandbox:
 
 #+begin_src sh
