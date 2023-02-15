@@ -30,9 +30,9 @@
   },
   "csv-mode": {
     "archive": {
-      "narHash": "sha256-EH+Vm5v6bdXVyWUxl3dM/JB17N2OS1NqZuUkJUFe8tQ=",
+      "narHash": "sha256-m2BrVFt3HIiy8RNLdL52jvyt4lDzB7hmJQ8cGwBE9wY=",
       "type": "tarball",
-      "url": "https://elpa.gnu.org/packages/csv-mode-1.21.tar"
+      "url": "https://elpa.gnu.org/packages/csv-mode-1.22.tar"
     },
     "inventory": {
       "type": "archive",
@@ -42,7 +42,7 @@
       "cl-lib": "0.5",
       "emacs": "27.1"
     },
-    "version": "1.21"
+    "version": "1.22"
   },
   "cycle-quotes": {
     "archive": {
@@ -119,9 +119,9 @@
   },
   "sml-mode": {
     "archive": {
-      "narHash": "sha256-Yy8edIthcsRro1UXf4vqQmubqWKhaM9nhaSvgnoxneY=",
-      "type": "file",
-      "url": "https://elpa.gnu.org/packages/sml-mode-6.10.el"
+      "narHash": "sha256-EgX9D+3bKxmAxKPD/dKq8nTS9mmk3YbdpapSNnBticg=",
+      "type": "tarball",
+      "url": "https://elpa.gnu.org/packages/sml-mode-6.11.tar"
     },
     "inventory": {
       "type": "archive",
@@ -131,7 +131,7 @@
       "cl-lib": "0.5",
       "emacs": "24.3"
     },
-    "version": "6.10"
+    "version": "6.11"
   },
   "valign": {
     "archive": {
