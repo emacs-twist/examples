@@ -116,6 +116,10 @@ with builtins; {
       ref = "pcase";
     };
   };
+  lispy = _: super: {
+    # le-js depends on indium, which I don't want to install.
+    files = builtins.removeAttrs super.files ["le-js.el"];
+  };
   js2-refactor = _: super: {
     packageRequires =
       {
