@@ -192,38 +192,6 @@
         "type": "github"
       }
     },
-    "compat": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1676323212,
-        "narHash": "sha256-5KLKkRNwGeRq+It0XrV879yz/VkJ+G1J42EfHg41WHg=",
-        "owner": "emacs-compat",
-        "repo": "compat",
-        "rev": "c81ff6a92f74a4ca47da05db46f6b3f69882271e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "emacs-compat",
-        "repo": "compat",
-        "type": "github"
-      }
-    },
-    "concurrent": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1504272644,
-        "narHash": "sha256-ceg2jMNRYsfRNfUDK9viBWlZSvGErPz0euC7eypN5W8=",
-        "owner": "kiwanami",
-        "repo": "emacs-deferred",
-        "rev": "2239671d94b38d92e9b28d4e12fd79814cfb9c16",
-        "type": "github"
-      },
-      "original": {
-        "owner": "kiwanami",
-        "repo": "emacs-deferred",
-        "type": "github"
-      }
-    },
     "counsel": {
       "flake": false,
       "locked": {
@@ -336,22 +304,6 @@
         "type": "github"
       }
     },
-    "direx": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1492867653,
-        "narHash": "sha256-p5KdHsEgumjNaUE/AdS9Hi/E6jW3DDNI54oUnG2DiTo=",
-        "owner": "emacsorphanage",
-        "repo": "direx",
-        "rev": "a79bfdb5980cf6ed7bfb3b41ddc471a7b6c0ede4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "emacsorphanage",
-        "repo": "direx",
-        "type": "github"
-      }
-    },
     "drag-stuff": {
       "flake": false,
       "locked": {
@@ -413,22 +365,6 @@
       "original": {
         "owner": "magit",
         "repo": "emacsql",
-        "type": "github"
-      }
-    },
-    "epc": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1504272819,
-        "narHash": "sha256-oENk0FZhrqyjPVrNi3KOEvFPKMzdNKdjEsgRE5/M05Y=",
-        "owner": "kiwanami",
-        "repo": "emacs-epc",
-        "rev": "e1bfa5ca163273859336e3cc89b4b6460f7f8cda",
-        "type": "github"
-      },
-      "original": {
-        "owner": "kiwanami",
-        "repo": "emacs-epc",
         "type": "github"
       }
     },
@@ -976,54 +912,6 @@
         "type": "github"
       }
     },
-    "jedi": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1649600662,
-        "narHash": "sha256-WZ2wRFxwRvqJf3vu6E4RUXMnwlQsbmvJgc/0twT15l0=",
-        "owner": "tkf",
-        "repo": "emacs-jedi",
-        "rev": "81c5a42b83f3a3c9d062b487f48009def11310f8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "tkf",
-        "repo": "emacs-jedi",
-        "type": "github"
-      }
-    },
-    "jedi-core": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1649600662,
-        "narHash": "sha256-WZ2wRFxwRvqJf3vu6E4RUXMnwlQsbmvJgc/0twT15l0=",
-        "owner": "tkf",
-        "repo": "emacs-jedi",
-        "rev": "81c5a42b83f3a3c9d062b487f48009def11310f8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "tkf",
-        "repo": "emacs-jedi",
-        "type": "github"
-      }
-    },
-    "jedi-direx": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1394444166,
-        "narHash": "sha256-V7GOYwzOmxnQm72hCWusazkr9huP2+P3zU+Vz+0u8d0=",
-        "owner": "tkf",
-        "repo": "emacs-jedi-direx",
-        "rev": "7a2e677400717ed12b959cb5988e7b3fb1c12117",
-        "type": "github"
-      },
-      "original": {
-        "owner": "tkf",
-        "repo": "emacs-jedi-direx",
-        "type": "github"
-      }
-    },
     "lispy": {
       "flake": false,
       "locked": {
@@ -1361,22 +1249,6 @@
         "type": "github"
       }
     },
-    "python-environment": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1425977586,
-        "narHash": "sha256-U1MyalO8wPBHzvEH/Pn2/qApmfPPrn+twbGbbNOKy2A=",
-        "owner": "tkf",
-        "repo": "emacs-python-environment",
-        "rev": "401006584e32864a10c69d29f14414828909362e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "tkf",
-        "repo": "emacs-python-environment",
-        "type": "github"
-      }
-    },
     "queue": {
       "flake": false,
       "locked": {
@@ -1439,8 +1311,6 @@
         "bind-key": "bind-key",
         "button-lock": "button-lock",
         "citeproc": "citeproc",
-        "compat": "compat",
-        "concurrent": "concurrent",
         "counsel": "counsel",
         "counsel-projectile": "counsel-projectile",
         "ctable": "ctable",
@@ -1448,12 +1318,10 @@
         "dashboard": "dashboard",
         "deferred": "deferred",
         "diminish": "diminish",
-        "direx": "direx",
         "drag-stuff": "drag-stuff",
         "elfeed": "elfeed",
         "emacsql": "emacsql",
         "emacsql-sqlite": "emacsql-sqlite",
-        "epc": "epc",
         "epl": "epl",
         "ess": "ess",
         "ess-R-data-view": "ess-R-data-view",
@@ -1488,9 +1356,6 @@
         "ivy-hydra": "ivy-hydra",
         "ivy-xref": "ivy-xref",
         "ivy-yasnippet": "ivy-yasnippet",
-        "jedi": "jedi",
-        "jedi-core": "jedi-core",
-        "jedi-direx": "jedi-direx",
         "lispy": "lispy",
         "lv": "lv",
         "magit": "magit",
@@ -1512,7 +1377,6 @@
         "pretty-hydra": "pretty-hydra",
         "projectile": "projectile",
         "pydoc": "pydoc",
-        "python-environment": "python-environment",
         "queue": "queue",
         "request": "request",
         "rich-minority": "rich-minority",
@@ -1523,7 +1387,6 @@
         "swiper": "swiper",
         "tablist": "tablist",
         "ts": "ts",
-        "undo-tree": "undo-tree",
         "use-package": "use-package",
         "with-editor": "with-editor",
         "ws-butler": "ws-butler",
@@ -1641,22 +1504,6 @@
         "owner": "alphapapa",
         "repo": "ts.el",
         "type": "github"
-      }
-    },
-    "undo-tree": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1616545491,
-        "narHash": "sha256-Lrp9ooVtDQWUE0/xEjfdJmE7tA7WJyJCbQhIJdeIkEQ=",
-        "ref": "refs/heads/master",
-        "rev": "2bf5e230f1d11df7bbd9d8c722749e34482bc458",
-        "revCount": 201,
-        "type": "git",
-        "url": "https://gitlab.com/tsc25/undo-tree"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://gitlab.com/tsc25/undo-tree"
       }
     },
     "use-package": {
