@@ -218,12 +218,6 @@
       repo = "default-text-scale";
       type = "github";
     };
-    deferred = {
-      flake = false;
-      owner = "kiwanami";
-      repo = "emacs-deferred";
-      type = "github";
-    };
     defrepeater = {
       flake = false;
       owner = "alphapapa";
