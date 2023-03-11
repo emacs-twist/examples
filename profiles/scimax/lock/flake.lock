@@ -1401,6 +1401,7 @@
         "smart-mode-line": "smart-mode-line",
         "smex": "smex",
         "sqlite": "sqlite",
+        "sqlite3": "sqlite3",
         "string-inflection": "string-inflection",
         "swiper": "swiper",
         "tablist": "tablist",
@@ -1475,6 +1476,22 @@
         "owner": "cnngimenez",
         "repo": "sqlite.el",
         "type": "gitlab"
+      }
+    },
+    "sqlite3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1677625822,
+        "narHash": "sha256-coZPa6oRY2OQ+x9TiKw+TAg48wnq01nPom6Rs3YPYHU=",
+        "owner": "pekingduck",
+        "repo": "emacs-sqlite3-api",
+        "rev": "50b814063bef617028e4ace4e2315e5d29ed62b9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pekingduck",
+        "repo": "emacs-sqlite3-api",
+        "type": "github"
       }
     },
     "string-inflection": {

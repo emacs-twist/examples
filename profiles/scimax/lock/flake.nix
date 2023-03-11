@@ -519,6 +519,12 @@
       repo = "sqlite.el";
       type = "gitlab";
     };
+    sqlite3 = {
+      flake = false;
+      owner = "pekingduck";
+      repo = "emacs-sqlite3-api";
+      type = "github";
+    };
     string-inflection = {
       flake = false;
       owner = "akicho8";
