@@ -288,22 +288,6 @@
         "type": "github"
       }
     },
-    "deferred": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1504272644,
-        "narHash": "sha256-ceg2jMNRYsfRNfUDK9viBWlZSvGErPz0euC7eypN5W8=",
-        "owner": "kiwanami",
-        "repo": "emacs-deferred",
-        "rev": "2239671d94b38d92e9b28d4e12fd79814cfb9c16",
-        "type": "github"
-      },
-      "original": {
-        "owner": "kiwanami",
-        "repo": "emacs-deferred",
-        "type": "github"
-      }
-    },
     "diminish": {
       "flake": false,
       "locked": {
@@ -1333,7 +1317,6 @@
         "ctable": "ctable",
         "dash": "dash",
         "dashboard": "dashboard",
-        "deferred": "deferred",
         "diminish": "diminish",
         "drag-stuff": "drag-stuff",
         "elfeed": "elfeed",

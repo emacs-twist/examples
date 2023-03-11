@@ -110,12 +110,6 @@
       repo = "emacs-dashboard";
       type = "github";
     };
-    deferred = {
-      flake = false;
-      owner = "kiwanami";
-      repo = "emacs-deferred";
-      type = "github";
-    };
     diminish = {
       flake = false;
       owner = "myrjola";
