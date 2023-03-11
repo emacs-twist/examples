@@ -118,6 +118,7 @@ in {
           request = "0";
         }
         // super.packageRequires;
+      files = removeAttrs super.files ["openalex.el"];
     };
     drag-stuff = _: super: {
       files = removeAttrs super.files ["drag-stuff-pkg.el"];
