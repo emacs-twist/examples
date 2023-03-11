@@ -74,6 +74,12 @@
       repo = "citeproc-el";
       type = "github";
     };
+    compat = {
+      flake = false;
+      owner = "emacs-compat";
+      repo = "compat";
+      type = "github";
+    };
     counsel = {
       flake = false;
       owner = "abo-abo";
@@ -507,6 +513,12 @@
       repo = "smex";
       type = "github";
     };
+    sqlite = {
+      flake = false;
+      owner = "cnngimenez";
+      repo = "sqlite.el";
+      type = "gitlab";
+    };
     string-inflection = {
       flake = false;
       owner = "akicho8";
@@ -531,6 +543,11 @@
       repo = "ts.el";
       type = "github";
     };
+    undo-tree = {
+      flake = false;
+      type = "git";
+      url = "https://gitlab.com/tsc25/undo-tree";
+    };
     use-package = {
       flake = false;
       owner = "jwiegley";
@@ -551,7 +568,7 @@
     };
     yasnippet = {
       flake = false;
-      owner = "joaotavora";
+      owner = "capitaomorte";
       repo = "yasnippet";
       type = "github";
     };

@@ -1,20 +1,4 @@
 {
-  "compat": {
-    "archive": {
-      "narHash": "sha256-ewF1TwscmOfoklXqkwdYEjwG3/sYDtsxD33NqF85GnA=",
-      "type": "tarball",
-      "url": "https://elpa.gnu.org/packages/compat-29.1.4.0.tar"
-    },
-    "inventory": {
-      "type": "archive",
-      "url": "https://elpa.gnu.org/packages/"
-    },
-    "packageRequires": {
-      "emacs": "24.4",
-      "seq": "2.3"
-    },
-    "version": "29.1.4.0"
-  },
   "peg": {
     "archive": {
       "narHash": "sha256-dUg+kDdziNVRo773qr8jRkeCa0vjlIsgBJ6WoMhBGDs=",
@@ -42,21 +26,5 @@
     },
     "packageRequires": {},
     "version": "1.0.6"
-  },
-  "undo-tree": {
-    "archive": {
-      "narHash": "sha256-A/L5iQplG5LVMHQSHgMEYYKhTgTIEfuDpL7KR4yWGAk=",
-      "type": "tarball",
-      "url": "https://elpa.gnu.org/packages/undo-tree-0.8.2.tar"
-    },
-    "inventory": {
-      "type": "archive",
-      "url": "https://elpa.gnu.org/packages/"
-    },
-    "packageRequires": {
-      "emacs": "24.3",
-      "queue": "0.2"
-    },
-    "version": "0.8.2"
   }
 }

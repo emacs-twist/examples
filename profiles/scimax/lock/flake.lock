@@ -192,6 +192,22 @@
         "type": "github"
       }
     },
+    "compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1678403002,
+        "narHash": "sha256-V4FbHPJha1G3ZJmkTjglhDYDSQIv4I9oRIh8GNQKI04=",
+        "owner": "emacs-compat",
+        "repo": "compat",
+        "rev": "32e737b145fef05105e2bad4ca34ca41072e9569",
+        "type": "github"
+      },
+      "original": {
+        "owner": "emacs-compat",
+        "repo": "compat",
+        "type": "github"
+      }
+    },
     "counsel": {
       "flake": false,
       "locked": {
@@ -1311,6 +1327,7 @@
         "bind-key": "bind-key",
         "button-lock": "button-lock",
         "citeproc": "citeproc",
+        "compat": "compat",
         "counsel": "counsel",
         "counsel-projectile": "counsel-projectile",
         "ctable": "ctable",
@@ -1383,10 +1400,12 @@
         "s": "s",
         "smart-mode-line": "smart-mode-line",
         "smex": "smex",
+        "sqlite": "sqlite",
         "string-inflection": "string-inflection",
         "swiper": "swiper",
         "tablist": "tablist",
         "ts": "ts",
+        "undo-tree": "undo-tree",
         "use-package": "use-package",
         "with-editor": "with-editor",
         "ws-butler": "ws-butler",
@@ -1440,6 +1459,22 @@
         "owner": "nonsequitur",
         "repo": "smex",
         "type": "github"
+      }
+    },
+    "sqlite": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1609093335,
+        "narHash": "sha256-FEWOqv8csl1BOwfuTiXhviC5E7VqdPqzhNW7AJiW0wE=",
+        "owner": "cnngimenez",
+        "repo": "sqlite.el",
+        "rev": "f3da716302c929b9df4ba0c281968f72a9d1d188",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "cnngimenez",
+        "repo": "sqlite.el",
+        "type": "gitlab"
       }
     },
     "string-inflection": {
@@ -1506,6 +1541,22 @@
         "type": "github"
       }
     },
+    "undo-tree": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1616545491,
+        "narHash": "sha256-Lrp9ooVtDQWUE0/xEjfdJmE7tA7WJyJCbQhIJdeIkEQ=",
+        "ref": "refs/heads/master",
+        "rev": "2bf5e230f1d11df7bbd9d8c722749e34482bc458",
+        "revCount": 201,
+        "type": "git",
+        "url": "https://gitlab.com/tsc25/undo-tree"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://gitlab.com/tsc25/undo-tree"
+      }
+    },
     "use-package": {
       "flake": false,
       "locked": {
@@ -1559,13 +1610,13 @@
       "locked": {
         "lastModified": 1591238778,
         "narHash": "sha256-dBOScefnGJAYoqgOL66sIJwxUFXqHEqEZ+8i5urT4bI=",
-        "owner": "joaotavora",
+        "owner": "capitaomorte",
         "repo": "yasnippet",
         "rev": "5cbdbf0d2015540c59ed8ee0fcf4788effdf75b6",
         "type": "github"
       },
       "original": {
-        "owner": "joaotavora",
+        "owner": "capitaomorte",
         "repo": "yasnippet",
         "type": "github"
       }
