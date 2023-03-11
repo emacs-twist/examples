@@ -29,13 +29,13 @@ inputs: [
   }
   {
     type = "archive";
-    url = "https://elpa.gnu.org/packages/";
+    url = "https://elpa.gnu.org/devel/";
   }
   # Duplicate attribute set for the locked packages, but would be no
   # problem in functionality.
   {
     type = "archive";
-    url = "https://elpa.nongnu.org/nongnu/";
+    url = "https://elpa.nongnu.org/nongnu-devel/";
   }
   {
     name = "emacsmirror";
