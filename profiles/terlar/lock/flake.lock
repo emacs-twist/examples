@@ -240,22 +240,6 @@
         "type": "github"
       }
     },
-    "bind-key": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1675454678,
-        "narHash": "sha256-BNU81kgKx9bsbCWXKLwsf7iwH3WBly4YYMgikZFCOcc=",
-        "owner": "jwiegley",
-        "repo": "use-package",
-        "rev": "77945e002f11440eae72d8730d3de218163d551e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "jwiegley",
-        "repo": "use-package",
-        "type": "github"
-      }
-    },
     "browse-at-remote": {
       "flake": false,
       "locked": {
@@ -416,6 +400,22 @@
         "type": "github"
       }
     },
+    "compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1678403002,
+        "narHash": "sha256-V4FbHPJha1G3ZJmkTjglhDYDSQIv4I9oRIh8GNQKI04=",
+        "owner": "emacs-compat",
+        "repo": "compat",
+        "rev": "32e737b145fef05105e2bad4ca34ca41072e9569",
+        "type": "github"
+      },
+      "original": {
+        "owner": "emacs-compat",
+        "repo": "compat",
+        "type": "github"
+      }
+    },
     "consult": {
       "flake": false,
       "locked": {
@@ -445,6 +445,22 @@
       "original": {
         "owner": "ghosty141",
         "repo": "consult-git-log-grep",
+        "type": "github"
+      }
+    },
+    "corfu": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1678001570,
+        "narHash": "sha256-ow2QaRbv0xw1GTmfe50hNf6vssgaXj80VaRRcGnMHBQ=",
+        "owner": "minad",
+        "repo": "corfu",
+        "rev": "44df3d98b7ef5b2e745124ea46c761fca9760140",
+        "type": "github"
+      },
+      "original": {
+        "owner": "minad",
+        "repo": "corfu",
         "type": "github"
       }
     },
@@ -621,6 +637,22 @@
       "original": {
         "owner": "dgutov",
         "repo": "diff-hl",
+        "type": "github"
+      }
+    },
+    "dired-git-info": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1577647788,
+        "narHash": "sha256-M75kskJ2Gx1AllWGcbgsj4Kf6MT2myJ7z2oRXdKOJLc=",
+        "owner": "clemera",
+        "repo": "dired-git-info",
+        "rev": "91d57e3a4c5104c66a3abc18e281ee55e8979176",
+        "type": "github"
+      },
+      "original": {
+        "owner": "clemera",
+        "repo": "dired-git-info",
         "type": "github"
       }
     },
@@ -1397,15 +1429,15 @@
       "locked": {
         "lastModified": 1605567102,
         "narHash": "sha256-RXSs1ANy04eZAoz0ZdVVguNOEPome3AzIX1seNFVAXo=",
-        "owner": "koral",
-        "repo": "gcmh",
+        "ref": "refs/heads/master",
         "rev": "0089f9c3a6d4e9a310d0791cf6fa8f35642ecfd9",
-        "type": "gitlab"
+        "revCount": 34,
+        "type": "git",
+        "url": "https://gitlab.com/koral/gcmh"
       },
       "original": {
-        "owner": "koral",
-        "repo": "gcmh",
-        "type": "gitlab"
+        "type": "git",
+        "url": "https://gitlab.com/koral/gcmh"
       }
     },
     "geiser": {
@@ -2093,6 +2125,22 @@
       "original": {
         "owner": "Sterlingg",
         "repo": "json-snatcher",
+        "type": "github"
+      }
+    },
+    "kind-icon": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1677812832,
+        "narHash": "sha256-OVgAr1oSWOJFlCIgqa7SHxua5TDxZxv85AO2JAk3Q28=",
+        "owner": "jdtsmith",
+        "repo": "kind-icon",
+        "rev": "ff36bf5d7a3404a4361c59b3ac7d6c1dc59aaaab",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jdtsmith",
+        "repo": "kind-icon",
         "type": "github"
       }
     },
@@ -3361,7 +3409,6 @@
         "avy": "avy",
         "awscli-capf": "awscli-capf",
         "bibliothek": "bibliothek",
-        "bind-key": "bind-key",
         "browse-at-remote": "browse-at-remote",
         "cakecrumbs": "cakecrumbs",
         "caml": "caml",
@@ -3372,8 +3419,10 @@
         "color-identifiers-mode": "color-identifiers-mode",
         "comment-or-uncomment-sexp": "comment-or-uncomment-sexp",
         "company": "company",
+        "compat": "compat",
         "consult": "consult",
         "consult-git-log-grep": "consult-git-log-grep",
+        "corfu": "corfu",
         "coverlay": "coverlay",
         "crystal-mode": "crystal-mode",
         "ctrlf": "ctrlf",
@@ -3385,6 +3434,7 @@
         "defrepeater": "defrepeater",
         "devdocs": "devdocs",
         "diff-hl": "diff-hl",
+        "dired-git-info": "dired-git-info",
         "dired-hacks-utils": "dired-hacks-utils",
         "dired-sidebar": "dired-sidebar",
         "dired-subtree": "dired-subtree",
@@ -3477,6 +3527,7 @@
         "json-mode": "json-mode",
         "json-navigator": "json-navigator",
         "json-snatcher": "json-snatcher",
+        "kind-icon": "kind-icon",
         "kotlin-mode": "kotlin-mode",
         "kubernetes": "kubernetes",
         "kv": "kv",
@@ -3572,11 +3623,13 @@
         "smartparens": "smartparens",
         "source-peek": "source-peek",
         "spark": "spark",
+        "spinner": "spinner",
         "spray": "spray",
         "stem-reading-mode": "stem-reading-mode",
         "string-inflection": "string-inflection",
         "stripe-buffer": "stripe-buffer",
         "suggest": "suggest",
+        "svg-lib": "svg-lib",
         "tablist": "tablist",
         "tempel": "tempel",
         "terraform-doc": "terraform-doc",
@@ -3587,7 +3640,9 @@
         "tuareg": "tuareg",
         "typescript-mode": "typescript-mode",
         "use-package": "use-package",
+        "valign": "valign",
         "vc-msg": "vc-msg",
+        "vertico": "vertico",
         "virtual-auto-fill": "virtual-auto-fill",
         "visual-fill-column": "visual-fill-column",
         "visual-regexp": "visual-regexp",
@@ -3881,6 +3936,22 @@
         "type": "github"
       }
     },
+    "spinner": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1663246199,
+        "narHash": "sha256-Ad6J3xGUWD+WDP3BbsgKvxJb90VMOkjJuIt/fhBu+rs=",
+        "owner": "Malabarba",
+        "repo": "spinner.el",
+        "rev": "d4647ae87fb0cd24bc9081a3d287c860ff061c21",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Malabarba",
+        "repo": "spinner.el",
+        "type": "github"
+      }
+    },
     "spray": {
       "flake": false,
       "locked": {
@@ -3958,6 +4029,22 @@
       "original": {
         "owner": "Wilfred",
         "repo": "suggest.el",
+        "type": "github"
+      }
+    },
+    "svg-lib": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1677505443,
+        "narHash": "sha256-+A+8yUvXmeVPYzqmwG4HReRFQRjCo2391+HPsq9nzME=",
+        "owner": "rougier",
+        "repo": "svg-lib",
+        "rev": "19db7378ced085782e97f2cf9a42655566ded3fa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "rougier",
+        "repo": "svg-lib",
         "type": "github"
       }
     },
@@ -4121,6 +4208,22 @@
         "type": "github"
       }
     },
+    "valign": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1619917915,
+        "narHash": "sha256-sT10BVyUarzpdwvkvVr9LQlRE2xneDd96trJj+8xzOk=",
+        "owner": "casouri",
+        "repo": "valign",
+        "rev": "be82f6048118cbc81e6e029be1965f933612d871",
+        "type": "github"
+      },
+      "original": {
+        "owner": "casouri",
+        "repo": "valign",
+        "type": "github"
+      }
+    },
     "vc-msg": {
       "flake": false,
       "locked": {
@@ -4134,6 +4237,22 @@
       "original": {
         "owner": "redguardtoo",
         "repo": "vc-msg",
+        "type": "github"
+      }
+    },
+    "vertico": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1678466172,
+        "narHash": "sha256-yKvc7RG4BKqWCwo9W6h3/cTNkjzUEMBLt5KJPcdrRr8=",
+        "owner": "minad",
+        "repo": "vertico",
+        "rev": "18ac70f3007a702dad10f4633654c7466af95ab8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "minad",
+        "repo": "vertico",
         "type": "github"
       }
     },
