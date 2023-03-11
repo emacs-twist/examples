@@ -1,19 +1,5 @@
 {lib}:
 with builtins; {
-  dired-subtree = _: super: {
-    packageRequires =
-      super.packageRequires
-      // {
-        dired-hacks-utils = "0";
-      };
-  };
-  dired-hacks-utils = _: super: {
-    packageRequires =
-      super.packageRequires
-      // {
-        dash = "0";
-      };
-  };
   ghelp = _: super: {
     packageRequires =
       super.packageRequires
@@ -23,14 +9,6 @@ with builtins; {
         eglot = "0";
         geiser = "0";
       };
-  };
-  indium = _: _: {
-    origin = {
-      type = "github";
-      owner = "akirak";
-      repo = "Indium";
-      ref = "fix-build-error";
-    };
   };
   counsel = _: super: {
     files = removeAttrs super.files [
@@ -81,36 +59,6 @@ with builtins; {
         slime = "0";
       };
   };
-  org-babel-eval-in-repl = _: super: {
-    files = removeAttrs super.files [
-      "eval-in-repl-ess.el"
-      # "eval-in-repl-matlab.el"
-    ];
-  };
-  request = _: super: {
-    packageRequires =
-      super.packageRequires
-      // {
-        deferred = "0";
-      };
-  };
-  ess = _: super: {
-    files = removeAttrs super.files [".dir-locals.el"];
-  };
-  org-radiobutton = _: super: {
-    packageRequires =
-      super.packageRequires
-      // {
-        dash = "2";
-      };
-  };
-  smartparens = _: super: {
-    packageRequires =
-      {
-        dash = "2";
-      }
-      // super.packageRequires;
-  };
   suggest = _: super: {
     packageRequires =
       super.packageRequires
@@ -131,21 +79,7 @@ with builtins; {
     # le-js depends on indium, which I don't want to install.
     files = builtins.removeAttrs super.files ["le-js.el"];
   };
-  js2-refactor = _: super: {
-    packageRequires =
-      {
-        dash = "0";
-        yasnippet = "0";
-        s = "0";
-        multiple-cursors = "0";
-        js2-mode = "0";
-      }
-      // super.packageRequires;
-  };
   helm = _: super: {
-    files = removeAttrs super.files [".dir-locals.el"];
-  };
-  ghub = _: super: {
     files = removeAttrs super.files [".dir-locals.el"];
   };
   emacsql = _: super: {
