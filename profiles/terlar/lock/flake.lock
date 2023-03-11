@@ -3625,6 +3625,7 @@
         "spark": "spark",
         "spinner": "spinner",
         "spray": "spray",
+        "sqlite3": "sqlite3",
         "stem-reading-mode": "stem-reading-mode",
         "string-inflection": "string-inflection",
         "stripe-buffer": "stripe-buffer",
@@ -3966,6 +3967,22 @@
         "owner": "~iank",
         "repo": "spray",
         "type": "sourcehut"
+      }
+    },
+    "sqlite3": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1677625822,
+        "narHash": "sha256-coZPa6oRY2OQ+x9TiKw+TAg48wnq01nPom6Rs3YPYHU=",
+        "owner": "pekingduck",
+        "repo": "emacs-sqlite3-api",
+        "rev": "50b814063bef617028e4ace4e2315e5d29ed62b9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "pekingduck",
+        "repo": "emacs-sqlite3-api",
+        "type": "github"
       }
     },
     "stem-reading-mode": {

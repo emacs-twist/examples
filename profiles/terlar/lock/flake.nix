@@ -1383,6 +1383,12 @@
       repo = "spray";
       type = "sourcehut";
     };
+    sqlite3 = {
+      flake = false;
+      owner = "pekingduck";
+      repo = "emacs-sqlite3-api";
+      type = "github";
+    };
     stem-reading-mode = {
       flake = false;
       owner = "wavexx";
