@@ -137,4 +137,12 @@ with builtins; {
   ghub = _: super: {
     files = removeAttrs super.files [".dir-locals.el"];
   };
+  emacsql = _: super: {
+    packageRequires =
+      {
+        sqlite = "0";
+        sqlite3 = "0";
+      }
+      // super.packageRequires;
+  };
 }

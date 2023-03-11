@@ -59,7 +59,6 @@
       pkgs = import nixpkgs {
         inherit system;
         overlays = [
-          inputs.emacs-unstable.overlay
           inputs.org-babel.overlays.default
           inputs.twist.overlays.default
         ];
@@ -67,17 +66,19 @@
 
       inventories = import ./lib/inventories.nix inputs;
 
-      emacsPackage = inputs.emacs-unstable.packages.${system}.emacsUnstable;
+      inherit (inputs.emacs-unstable.packages.${system}) emacsUnstable emacsGit;
 
       profiles = {
         terlar = import ./profiles/terlar {
-          inherit pkgs emacsPackage;
+          inherit pkgs;
           inherit (inputs) terlar;
+          emacsPackage = emacsGit;
         };
 
         scimax = import ./profiles/scimax {
-          inherit pkgs emacsPackage;
+          inherit pkgs;
           inherit (inputs) scimax;
+          emacsPackage = emacsUnstable;
           inherit
             (twist.lib {inherit lib;})
             parseUsePackages

@@ -62,13 +62,21 @@ with builtins; let
           '';
         });
 
-        emacsql-sqlite = esuper.emacsql-sqlite.overrideAttrs (old: {
+        emacsql = esuper.emacsql.overrideAttrs (old: {
           buildInputs = old.buildInputs ++ [sqlite];
 
           postBuild = ''
             cd sqlite
             make
             cd ..
+          '';
+        });
+
+        sqlite3 = esuper.sqlite3.overrideAttrs (old: {
+          buildInputs = old.buildInputs ++ [sqlite];
+
+          postBuild = ''
+            make
           '';
         });
 

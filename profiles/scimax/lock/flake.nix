@@ -80,12 +80,6 @@
       repo = "compat";
       type = "github";
     };
-    concurrent = {
-      flake = false;
-      owner = "kiwanami";
-      repo = "emacs-deferred";
-      type = "github";
-    };
     counsel = {
       flake = false;
       owner = "abo-abo";
@@ -128,12 +122,6 @@
       repo = "diminish.el";
       type = "github";
     };
-    direx = {
-      flake = false;
-      owner = "emacsorphanage";
-      repo = "direx";
-      type = "github";
-    };
     drag-stuff = {
       flake = false;
       owner = "rejeep";
@@ -156,12 +144,6 @@
       flake = false;
       owner = "magit";
       repo = "emacsql";
-      type = "github";
-    };
-    epc = {
-      flake = false;
-      owner = "kiwanami";
-      repo = "emacs-epc";
       type = "github";
     };
     epl = {
@@ -368,24 +350,6 @@
       repo = "ivy-yasnippet";
       type = "github";
     };
-    jedi = {
-      flake = false;
-      owner = "tkf";
-      repo = "emacs-jedi";
-      type = "github";
-    };
-    jedi-core = {
-      flake = false;
-      owner = "tkf";
-      repo = "emacs-jedi";
-      type = "github";
-    };
-    jedi-direx = {
-      flake = false;
-      owner = "tkf";
-      repo = "emacs-jedi-direx";
-      type = "github";
-    };
     lispy = {
       flake = false;
       owner = "abo-abo";
@@ -513,12 +477,6 @@
       repo = "pydoc";
       type = "github";
     };
-    python-environment = {
-      flake = false;
-      owner = "tkf";
-      repo = "emacs-python-environment";
-      type = "github";
-    };
     queue = {
       flake = false;
       owner = "dmgerman";
@@ -553,6 +511,18 @@
       flake = false;
       owner = "nonsequitur";
       repo = "smex";
+      type = "github";
+    };
+    sqlite = {
+      flake = false;
+      owner = "cnngimenez";
+      repo = "sqlite.el";
+      type = "gitlab";
+    };
+    sqlite3 = {
+      flake = false;
+      owner = "pekingduck";
+      repo = "emacs-sqlite3-api";
       type = "github";
     };
     string-inflection = {
@@ -604,7 +574,7 @@
     };
     yasnippet = {
       flake = false;
-      owner = "joaotavora";
+      owner = "capitaomorte";
       repo = "yasnippet";
       type = "github";
     };

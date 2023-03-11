@@ -242,6 +242,12 @@
       repo = "diff-hl";
       type = "github";
     };
+    dired-git-info = {
+      flake = false;
+      owner = "clemera";
+      repo = "dired-git-info";
+      type = "github";
+    };
     dired-hacks-utils = {
       flake = false;
       owner = "Fuco1";
@@ -306,12 +312,6 @@
       flake = false;
       owner = "editorconfig";
       repo = "editorconfig-emacs";
-      type = "github";
-    };
-    eglot = {
-      flake = false;
-      owner = "joaotavora";
-      repo = "eglot";
       type = "github";
     };
     eglot-x = {
@@ -538,9 +538,8 @@
     };
     gcmh = {
       flake = false;
-      owner = "koral";
-      repo = "gcmh";
-      type = "gitlab";
+      type = "git";
+      url = "https://gitlab.com/koral/gcmh";
     };
     geiser = {
       flake = false;
@@ -1384,6 +1383,12 @@
       repo = "spray";
       type = "sourcehut";
     };
+    sqlite3 = {
+      flake = false;
+      owner = "pekingduck";
+      repo = "emacs-sqlite3-api";
+      type = "github";
+    };
     stem-reading-mode = {
       flake = false;
       owner = "wavexx";
@@ -1472,6 +1477,12 @@
       flake = false;
       owner = "jwiegley";
       repo = "use-package";
+      type = "github";
+    };
+    valign = {
+      flake = false;
+      owner = "casouri";
+      repo = "valign";
       type = "github";
     };
     vc-msg = {

@@ -57,20 +57,27 @@
     "packageRequires": {},
     "version": "0.1"
   },
-  "dired-git-info": {
+  "eglot": {
     "archive": {
-      "narHash": "sha256-jAO2VpVAFfBRmGiT8MJglYUr1TYl2RkvHfsbJsPovRw=",
-      "type": "file",
-      "url": "https://elpa.gnu.org/packages/dired-git-info-0.3.1.el"
+      "narHash": "sha256-U3AZEuiwAll1JUhBO00MKU+E1K+7/9Pn36yBgI0GyHg=",
+      "type": "tarball",
+      "url": "https://elpa.gnu.org/packages/eglot-1.11.tar"
     },
     "inventory": {
       "type": "archive",
       "url": "https://elpa.gnu.org/packages/"
     },
     "packageRequires": {
-      "emacs": "25"
+      "eldoc": "1.11.0",
+      "emacs": "26.3",
+      "external-completion": "0.1",
+      "flymake": "1.2.1",
+      "jsonrpc": "1.0.16",
+      "project": "0.9.3",
+      "seq": "2.23",
+      "xref": "1.4.0"
     },
-    "version": "0.3.1"
+    "version": "1.11"
   },
   "org-contrib": {
     "archive": {
@@ -132,20 +139,5 @@
       "emacs": "24.3"
     },
     "version": "6.11"
-  },
-  "valign": {
-    "archive": {
-      "narHash": "sha256-TuqDeg9WrcM4uKv4YG+SOcjubI9CPjSvHJY6YsXPIGw=",
-      "type": "tarball",
-      "url": "https://elpa.gnu.org/packages/valign-3.1.1.tar"
-    },
-    "inventory": {
-      "type": "archive",
-      "url": "https://elpa.gnu.org/packages/"
-    },
-    "packageRequires": {
-      "emacs": "26.0"
-    },
-    "version": "3.1.1"
   }
 }
