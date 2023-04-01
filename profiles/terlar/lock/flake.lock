@@ -2723,15 +2723,15 @@
     "org-noter": {
       "flake": false,
       "locked": {
-        "lastModified": 1573435704,
-        "narHash": "sha256-g55YtQVc8mGoUGrBIM6vmTdvc3Eq2qI20ZBN5cVGX/s=",
-        "owner": "weirdNox",
+        "lastModified": 1680217310,
+        "narHash": "sha256-fwZlQmfkWIfv4R7AZe5JNSQIrcYZ8zq7Wb5yLRXCzb8=",
+        "owner": "org-noter",
         "repo": "org-noter",
-        "rev": "9ead81d42dd4dd5074782d239b2efddf9b8b7b3d",
+        "rev": "870109330a337751e44042d1b407d90d42ca9130",
         "type": "github"
       },
       "original": {
-        "owner": "weirdNox",
+        "owner": "org-noter",
         "repo": "org-noter",
         "type": "github"
       }
@@ -4051,15 +4051,15 @@
     "tablist": {
       "flake": false,
       "locked": {
-        "lastModified": 1588025158,
-        "narHash": "sha256-/xF2bgnPZ7YsrTV5+nT44bgoZAficNDtXfGbJss+F9s=",
-        "owner": "politza",
+        "lastModified": 1679382345,
+        "narHash": "sha256-wiSdo+e9UU9rIWzzEc8JZ8aFCrvNyiPdOsl3XWHedYc=",
+        "owner": "emacsorphanage",
         "repo": "tablist",
-        "rev": "faab7a035ef2258cc4ea2182f67e3aedab7e2af9",
+        "rev": "5f7b71a92bfb25418d7da86ad9c45f14b149496f",
         "type": "github"
       },
       "original": {
-        "owner": "politza",
+        "owner": "emacsorphanage",
         "repo": "tablist",
         "type": "github"
       }

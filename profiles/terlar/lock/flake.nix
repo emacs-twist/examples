@@ -1020,7 +1020,7 @@
     };
     org-noter = {
       flake = false;
-      owner = "weirdNox";
+      owner = "org-noter";
       repo = "org-noter";
       type = "github";
     };
@@ -1415,7 +1415,7 @@
     };
     tablist = {
       flake = false;
-      owner = "politza";
+      owner = "emacsorphanage";
       repo = "tablist";
       type = "github";
     };
