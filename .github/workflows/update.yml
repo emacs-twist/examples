@@ -40,7 +40,7 @@ jobs:
         nix run .#update-scimax --impure --show-trace
         nix run .#lock-scimax --impure --show-trace
 
-    - uses: peter-evans/create-pull-request@v4
+    - uses: peter-evans/create-pull-request@v5
       id: pr
       with:
         commit-message: 'Update flake inputs'
