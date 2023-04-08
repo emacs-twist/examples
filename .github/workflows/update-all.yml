@@ -21,6 +21,7 @@ jobs:
     - uses: peter-evans/create-pull-request@v5
       with:
         commit-message: 'Update flake inputs'
+        token: ${{ secrets.PAT_FOR_PR }}
         base: master
         title: 'chore: Update dependencies'
         branch: create-pull-request/update-all
