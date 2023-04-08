@@ -429,6 +429,12 @@
       repo = "parsebib";
       type = "github";
     };
+    pcache = {
+      flake = false;
+      owner = "sigma";
+      repo = "pcache";
+      type = "github";
+    };
     pdf-tools = {
       flake = false;
       owner = "vedang";
@@ -533,7 +539,7 @@
     };
     tablist = {
       flake = false;
-      owner = "politza";
+      owner = "emacsorphanage";
       repo = "tablist";
       type = "github";
     };
