@@ -513,12 +513,6 @@
       repo = "smex";
       type = "github";
     };
-    sqlite = {
-      flake = false;
-      owner = "cnngimenez";
-      repo = "sqlite.el";
-      type = "gitlab";
-    };
     sqlite3 = {
       flake = false;
       owner = "pekingduck";
