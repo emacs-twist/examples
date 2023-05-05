@@ -506,12 +506,6 @@
       repo = "flymake-shellcheck";
       type = "github";
     };
-    flyspell-correct = {
-      flake = false;
-      owner = "d12frosted";
-      repo = "flyspell-correct";
-      type = "github";
-    };
     focus = {
       flake = false;
       owner = "larstvei";
@@ -760,6 +754,12 @@
       flake = false;
       owner = "Emiller88";
       repo = "emacs-jest";
+      type = "github";
+    };
+    jinx = {
+      flake = false;
+      owner = "minad";
+      repo = "jinx";
       type = "github";
     };
     js-comint = {
