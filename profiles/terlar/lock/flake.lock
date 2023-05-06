@@ -1344,22 +1344,6 @@
         "type": "github"
       }
     },
-    "flyspell-correct": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1653028215,
-        "narHash": "sha256-ta6MMC2UaVaWTJvS/klogIc8n3aGb1dHCy29XiUf0Kw=",
-        "owner": "d12frosted",
-        "repo": "flyspell-correct",
-        "rev": "7d7b6b01188bd28e20a13736ac9f36c3367bd16e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "d12frosted",
-        "repo": "flyspell-correct",
-        "type": "github"
-      }
-    },
     "focus": {
       "flake": false,
       "locked": {
@@ -2029,6 +2013,22 @@
       "original": {
         "owner": "Emiller88",
         "repo": "emacs-jest",
+        "type": "github"
+      }
+    },
+    "jinx": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1683151613,
+        "narHash": "sha256-yT4rAqxBiMEznRGrTpw9/87GKL06EKGLSdXKVmz6Pl8=",
+        "owner": "minad",
+        "repo": "jinx",
+        "rev": "4d7f8f093ae21d47a92e6f40e08f1fff4b067dcc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "minad",
+        "repo": "jinx",
         "type": "github"
       }
     },
@@ -3462,7 +3462,6 @@
         "flymake-quickdef": "flymake-quickdef",
         "flymake-racket": "flymake-racket",
         "flymake-shellcheck": "flymake-shellcheck",
-        "flyspell-correct": "flyspell-correct",
         "focus": "focus",
         "freeze-it": "freeze-it",
         "fullframe": "fullframe",
@@ -3505,6 +3504,7 @@
         "iscroll": "iscroll",
         "javadoc-lookup": "javadoc-lookup",
         "jest": "jest",
+        "jinx": "jinx",
         "js-comint": "js-comint",
         "js2-mode": "js2-mode",
         "json-mode": "json-mode",

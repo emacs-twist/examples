@@ -1400,7 +1400,6 @@
         "s": "s",
         "smart-mode-line": "smart-mode-line",
         "smex": "smex",
-        "sqlite": "sqlite",
         "sqlite3": "sqlite3",
         "string-inflection": "string-inflection",
         "swiper": "swiper",
@@ -1460,22 +1459,6 @@
         "owner": "nonsequitur",
         "repo": "smex",
         "type": "github"
-      }
-    },
-    "sqlite": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1609093335,
-        "narHash": "sha256-FEWOqv8csl1BOwfuTiXhviC5E7VqdPqzhNW7AJiW0wE=",
-        "owner": "cnngimenez",
-        "repo": "sqlite.el",
-        "rev": "f3da716302c929b9df4ba0c281968f72a9d1d188",
-        "type": "gitlab"
-      },
-      "original": {
-        "owner": "cnngimenez",
-        "repo": "sqlite.el",
-        "type": "gitlab"
       }
     },
     "sqlite3": {
