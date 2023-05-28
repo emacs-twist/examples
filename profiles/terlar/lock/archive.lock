@@ -59,9 +59,9 @@
   },
   "org-contrib": {
     "archive": {
-      "narHash": "sha256-75LBqsK9Pyut8J+0n/zsmF+jNGkW8MvaLRtW8tV77HU=",
+      "narHash": "sha256-a1iR883NfeF/xVGjyCcu7g195cYOXUdihBmX64CQemk=",
       "type": "tarball",
-      "url": "https://elpa.nongnu.org/nongnu-devel/org-contrib-0.4.1.0.20221217.162952.tar"
+      "url": "https://elpa.nongnu.org/nongnu-devel/org-contrib-0.4.1.0.20230525.110401.tar"
     },
     "inventory": {
       "type": "archive",
@@ -71,7 +71,7 @@
       "emacs": "25.1",
       "org": "9.4.6"
     },
-    "version": "0.4.1.0.20221217.162952"
+    "version": "0.4.1.0.20230525.110401"
   },
   "rainbow-mode": {
     "archive": {
