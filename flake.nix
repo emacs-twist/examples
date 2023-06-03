@@ -66,19 +66,19 @@
 
       inventories = import ./lib/inventories.nix inputs;
 
-      inherit (inputs.emacs-unstable.packages.${system}) emacsUnstable emacsGit;
+      inherit (inputs.emacs-unstable.packages.${system}) emacs-unstable emacs-git;
 
       profiles = {
         terlar = import ./profiles/terlar {
           inherit pkgs;
           inherit (inputs) terlar;
-          emacsPackage = emacsGit;
+          emacsPackage = emacs-git;
         };
 
         scimax = import ./profiles/scimax {
           inherit pkgs;
           inherit (inputs) scimax;
-          emacsPackage = emacsUnstable;
+          emacsPackage = emacs-unstable;
           inherit
             (twist.lib {inherit lib;})
             parseUsePackages
