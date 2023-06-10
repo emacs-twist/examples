@@ -380,13 +380,6 @@
       repo = "mustache.el";
       type = "github";
     };
-    org-mime = {
-      flake = false;
-      owner = "jkitchin";
-      ref = "file-eqns";
-      repo = "org-mime";
-      type = "github";
-    };
     org-ql = {
       flake = false;
       owner = "alphapapa";

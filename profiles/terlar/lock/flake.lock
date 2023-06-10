@@ -1667,16 +1667,16 @@
     "hcl-mode": {
       "flake": false,
       "locked": {
-        "lastModified": 1632133796,
-        "narHash": "sha256-3Zp/HyWU5GgMcvfYQqHx0gyF07JW3dbBuE8Pi8tTrac=",
-        "owner": "purcell",
-        "repo": "emacs-hcl-mode",
-        "rev": "e4d9eef631e8a386341ae8f94f7c2579586e65b5",
+        "lastModified": 1677753243,
+        "narHash": "sha256-8Q6yA5jbAOvaIxTuQ3tROe99P7kX1SGOkEIQxaHV8CM=",
+        "owner": "hcl-emacs",
+        "repo": "hcl-mode",
+        "rev": "751b79247f326ab52e00032e805775c37ad9f080",
         "type": "github"
       },
       "original": {
-        "owner": "purcell",
-        "repo": "emacs-hcl-mode",
+        "owner": "hcl-emacs",
+        "repo": "hcl-mode",
         "type": "github"
       }
     },
@@ -4099,15 +4099,15 @@
     "terraform-mode": {
       "flake": false,
       "locked": {
-        "lastModified": 1675115632,
-        "narHash": "sha256-5yVvMNtwxwudlnjl2GIp/oChrF5Q95Ja/9ScsIe9zKo=",
-        "owner": "emacsorphanage",
+        "lastModified": 1686165834,
+        "narHash": "sha256-RUXlR/M9nzHUMC2d3sW7L5wIR/noFdzB8YPLnx9fiYU=",
+        "owner": "hcl-emacs",
         "repo": "terraform-mode",
-        "rev": "39d2fd5bfc86c6bf1c7bc38e6f0016d714f2d79d",
+        "rev": "25a22a66f81e35c75f2fdaaab89aad7f9940fe06",
         "type": "github"
       },
       "original": {
-        "owner": "emacsorphanage",
+        "owner": "hcl-emacs",
         "repo": "terraform-mode",
         "type": "github"
       }
