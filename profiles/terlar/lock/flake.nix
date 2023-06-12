@@ -627,8 +627,8 @@
     };
     hcl-mode = {
       flake = false;
-      owner = "purcell";
-      repo = "emacs-hcl-mode";
+      owner = "hcl-emacs";
+      repo = "hcl-mode";
       type = "github";
     };
     helpful = {
@@ -1433,7 +1433,7 @@
     };
     terraform-mode = {
       flake = false;
-      owner = "emacsorphanage";
+      owner = "hcl-emacs";
       repo = "terraform-mode";
       type = "github";
     };
