@@ -1072,22 +1072,6 @@
         "type": "github"
       }
     },
-    "esh-autosuggest": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1630939585,
-        "narHash": "sha256-grsdQ8EvfbEuezzjriwepBSGzZkP0ZFllpN+Ed8tRdQ=",
-        "owner": "dieggsy",
-        "repo": "esh-autosuggest",
-        "rev": "bf676b137d35553debe32ff134dbec25f3978ae7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "dieggsy",
-        "repo": "esh-autosuggest",
-        "type": "github"
-      }
-    },
     "eshell-fringe-status": {
       "flake": false,
       "locked": {
@@ -2067,15 +2051,15 @@
     "json-mode": {
       "flake": false,
       "locked": {
-        "lastModified": 1633933809,
-        "narHash": "sha256-H+HNE9NYXnC7eIQG/hy8a4qbvo7Lpp7oGGFNVLApE2Q=",
-        "owner": "joshwnj",
+        "lastModified": 1689581939,
+        "narHash": "sha256-QSVLbTeVXZEpq+7IyShvxgdeVIFE0J7g8QZwFp9nxsY=",
+        "owner": "json-emacs",
         "repo": "json-mode",
-        "rev": "eedb4560034f795a7950fa07016bd4347c368873",
+        "rev": "20b9c21f44c58e94256c7826d0821205e017dfbb",
         "type": "github"
       },
       "original": {
-        "owner": "joshwnj",
+        "owner": "json-emacs",
         "repo": "json-mode",
         "type": "github"
       }
@@ -3445,7 +3429,6 @@
         "erlang": "erlang",
         "eros": "eros",
         "es-mode": "es-mode",
-        "esh-autosuggest": "esh-autosuggest",
         "eshell-fringe-status": "eshell-fringe-status",
         "ess": "ess",
         "esxml": "esxml",
