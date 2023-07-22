@@ -404,12 +404,6 @@
       repo = "es-mode";
       type = "github";
     };
-    esh-autosuggest = {
-      flake = false;
-      owner = "dieggsy";
-      repo = "esh-autosuggest";
-      type = "github";
-    };
     eshell-fringe-status = {
       flake = false;
       owner = "ryuslash";
@@ -776,7 +770,7 @@
     };
     json-mode = {
       flake = false;
-      owner = "joshwnj";
+      owner = "json-emacs";
       repo = "json-mode";
       type = "github";
     };
