@@ -12,7 +12,7 @@ jobs:
       updated: ${{ steps.pr.outputs.pull-request-operation == 'created' || steps.pr.outputs.pull-request-operation == 'updated' }}
     steps:
     - uses: actions/checkout@v3
-    - uses: cachix/install-nix-action@v21
+    - uses: cachix/install-nix-action@v23
       with:
         extra_nix_config: |
           access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
