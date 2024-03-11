@@ -18,7 +18,7 @@ jobs:
     - name: Update flake inputs
       run: nix flake update --show-trace
 
-    - uses: peter-evans/create-pull-request@v5
+    - uses: peter-evans/create-pull-request@v6
       with:
         commit-message: 'Update flake inputs'
         token: ${{ secrets.PAT_FOR_PR }}
